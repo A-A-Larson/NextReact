@@ -1,9 +1,11 @@
 import ThemeToggle from './components/ThemeToggle'
+import Header from './components/Header';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24
-    dark:bg-white">
+    <main className="bg-white text-black flex min-h-screen flex-col items-center justify-between
+    dark:bg-black text-white">
+      <Header />
       <ThemeToggle />
     </main>
   )
