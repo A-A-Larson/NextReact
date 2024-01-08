@@ -5,3 +5,4 @@ Content:
 -Headshot
 -Tech Stack
 -Hero heading and body text
+-Contact
