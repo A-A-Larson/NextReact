@@ -5,9 +5,9 @@ import { roboto_mono } from '../fonts'
 export default function Content() {
     return (
         <div 
-        className='relative z-10 bg-white dark:bg-black'
+        className='relative z-10 bg-inherit'
         >           
-            <div className=''>
+            <div className='text-headercolor-light dark:text-headercolor-dark'>
                 
                 <h1
                     className='font-mono text-center text-7xl font-bold'

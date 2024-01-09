@@ -11,12 +11,13 @@ module.exports = {
       colors: {
         'dark': '#232A3C',
         'medium': '#293245',
+        'background-light': 'var(--background-light-rgb)',
+        'background-dark': 'var(--background-dark-rgb)',
+        'textclr-light': 'var(--textclr-light-rgb)',
+        'textclr-dark': 'var(--textclr-dark-rgb)',
+        'headercolor-light': 'var(--headercolor-light-rgb)',
+        'headercolor-dark': 'var(--headercolor-dark-rgb)',
       },
-      
-    },
-  },
-  theme: {
-    extend: {
       fontFamily: {
         sans: ['var(--font-inter)'],
         mono: ['var(--font-roboto-mono)'],
