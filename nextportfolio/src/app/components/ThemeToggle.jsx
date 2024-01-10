@@ -22,7 +22,7 @@ const ThemeToggle = () => {
     }, [darkMode])
 
     return (
-        <div className=''>
+        <div className='py-2 flex justify-center'>
             <div
                 className='relative z-60 w-16 h-8 flex items-center dark:bg-gray-900 bg-teal-500
                 cursor-pointer rounded-full p-1'
