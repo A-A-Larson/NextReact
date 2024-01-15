@@ -7,7 +7,10 @@ export default function FloatHands() {
     
     return (
                                 
-            <div className='relative z-20 max-w-screen-xl'>
+            <div 
+            className='relative z-20 max-w-screen-xl'
+            id='landing-section'
+            >
                 <Image  
                     className='hidden dark:block'             
                     src={HandsDark}

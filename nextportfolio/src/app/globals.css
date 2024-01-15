@@ -10,7 +10,7 @@
   --headercolor-light-rgb: rgb(51, 59, 165);
   --headercolor-dark-rgb: rgb(151, 155, 118);
   --buttonColorLight: rgb(23, 68, 182);
-  --buttonColorDark: rgb(204, 16, 16);
+  --buttonColorDark: rgb(235, 204, 126);
 }
 
 @media (prefers-color-scheme: dark) {

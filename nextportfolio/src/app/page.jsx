@@ -1,6 +1,7 @@
 import Hero from './components/Hero';
 import Header from './components/Header';
 import FloatHands from './components/FloatHands';
+import Filler from './components/Filler';
 
 export default function Home() {
   return (
@@ -8,7 +9,8 @@ export default function Home() {
     dark:bg-background-dark dark:text-textclr-dark">
       <Hero />
       <FloatHands />
-      <Header />      
+      <Header />
+      <Filler />    
     </main>
   )
 }

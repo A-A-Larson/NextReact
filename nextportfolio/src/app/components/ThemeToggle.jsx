@@ -2,9 +2,12 @@
 import { useEffect, useState } from 'react';
 import { FaMoon } from 'react-icons/fa';
 import { BsSunFill } from 'react-icons/bs';
+import { LuLightbulb } from "react-icons/lu";
+import { LuLightbulbOff } from "react-icons/lu";
+
 
 const ThemeToggle = () => {
-    const [darkMode, setDarkMode] = useState(true)
+    const [darkMode, setDarkMode] = useState(false)
 
     useEffect(() => {
         const theme = localStorage.getItem('theme')
@@ -22,19 +25,34 @@ const ThemeToggle = () => {
     }, [darkMode])
 
     return (
-        <div className='py-2 flex justify-center'>
-            <div
-                className='relative z-60 w-16 h-8 flex items-center dark:bg-gray-900 bg-teal-500
-                cursor-pointer rounded-full p-1'
+        <div className='
+                py-2 
+                flex 
+                justify-center
+                '
+        >
+            <div className='
+                    relative 
+                    z-60 
+                    w-16 
+                    h-8 
+                    flex 
+                    items-center 
+                    dark:bg-gray-900 
+                    bg-teal-500
+                    cursor-pointer 
+                    rounded-full 
+                    p-1
+                    '
                 onClick={() => setDarkMode(!darkMode)}
             >
-                <FaMoon className="text-white" size={18} />
+                <LuLightbulbOff className="text-white" size={18} />
                 <div
                     className='absolute bg-white dark:bg-medium w-6 h-6 rounded-full 
                     shadow-md transform transition-transform duration-300'
                     style={darkMode ? { right: '2px' } : { left: '2px' }}
                 ></div>
-                <BsSunFill
+                <LuLightbulb
                     className='ml-auto text-yellow-400'
                     size={18} 
                 /> 

@@ -12,8 +12,7 @@ export default function Hero() {
                     width={2930}
                     height={924}
                     src={HeroImg}   
-                    quality={100}                 
-                    objectFit='cover'
+                    quality={100}
                     alt='Man with hands overlapping the top of the webpage as if he is holding onto it'
                 />
             </div>
