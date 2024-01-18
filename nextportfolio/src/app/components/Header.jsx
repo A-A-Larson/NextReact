@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import ThemeToggle from './ThemeToggle';
 import { Button } from '@mui/base/Button';
 import ThemeSwitch from './ThemeSwitch';
 
@@ -47,8 +46,8 @@ export default function Header() {
 
             <div 
                 className='
-                    text-headercolor-light 
-                    dark:text-headercolor-dark
+                    text-lightHdrClr 
+                    dark:text-darkHdrClr
                     '
             >
                 <ThemeSwitch />
@@ -69,7 +68,9 @@ export default function Header() {
                         text-4xl 
                         md:text-6xl
                         lg:text-8xl
-                        font-bold'
+                        font-bold
+                        tracking-tighter
+                        leading-snug'
                 >
                     Andrew Larson
                 </h2> 
@@ -77,19 +78,19 @@ export default function Header() {
                 className='
                     flex
                     justify-center
-                    pt-2'
+                    pt-10'
                 >
                     <Button 
-                    href='#first-section'
-                    onClick={scrollAction}
-                    className='
-                        bg-buttonBgLight
-                        dark:bg-buttonBgDark
-                        text-background-light
-                        dark:text-background-dark
-                        rounded-md
-                        py-1 
-                        px-4'
+                        href='#first-section'
+                        onClick={scrollAction}
+                        className='
+                            scrollbutton
+                            dark:dkbutton
+                            bg-buttonBgLight
+                            dark:bg-buttonBgDark
+                            text-lightHdrClr
+                            dark:text-darkBG
+                            '
                     >
                         Look What I Can Do
                     </Button>    

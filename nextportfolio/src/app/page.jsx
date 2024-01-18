@@ -5,8 +5,17 @@ import Filler from './components/Filler';
 
 export default function Home() {
   return (
-    <main className="bg-background-light text-textclr-light flex min-h-screen flex-col items-center justify-between
-    dark:bg-background-dark dark:text-textclr-dark">
+    <main 
+      className="
+        bg-lightBG 
+        text-lightTxtClr
+        flex 
+        flex-col
+        items-center
+        justify-between
+        min-h-screen       
+        dark:bg-darkBG 
+        dark:text-darkTxtClr">
       <Hero />
       <FloatHands />
       <Header />

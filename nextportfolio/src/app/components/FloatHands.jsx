@@ -1,6 +1,6 @@
 "use client";
 import HandsLight from '../img/HandsResizeLight.png';
-import HandsDark from '../img/HandsResizeDark.png';
+import HandsDark from '../img/HandsResizeDark1.png';
 import Image from 'next/image';
 
 export default function FloatHands() {

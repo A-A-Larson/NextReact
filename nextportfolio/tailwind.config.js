@@ -9,16 +9,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'dark': '#232A3C',
-        'medium': '#293245',
-        'background-light': 'var(--background-light-rgb)',
-        'background-dark': 'var(--background-dark-rgb)',
-        'textclr-light': 'var(--textcolor-light-rgb)',
-        'textclr-dark': 'var(--textcolor-dark-rgb)',
-        'headercolor-light': 'var(--headercolor-light-rgb)',
-        'headercolor-dark': 'var(--headercolor-dark-rgb)',
-        'buttonBgLight': 'var(--buttonColorLight)',
-        'buttonBgDark': 'var(--buttonColorDark)',
+        'lightBG': 'var(--backgroundLight)',
+        'darkBG': 'var(--backgroundDark)',
+        'lightTxtClr': 'var(--textcolorLight)',
+        'darkTxtClr': 'var(--textcolorDark)',
+        'lightHdrClr': 'var(--headercolorLight)',
+        'darkHdrClr': 'var(--headercolorDark)',
+        'lightBttnBG': 'var(--buttonColorLight)',
+        'darkBttnBG': 'var(--buttonColorDark)',
       },
       fontFamily: {
         sans: ['var(--font-inter)'],

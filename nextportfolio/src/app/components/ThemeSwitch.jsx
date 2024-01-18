@@ -27,24 +27,39 @@ const ThemeSwitch = () => {
             className='
                 flex 
                 justify-center
+                pt-2
                 '
-        >
-            <LuLightbulbOff 
+        >            
+            <div className="toggle">
+                <input 
+                    type="checkbox"
+                    checked={darkMode}
+                    onChange={() => setDarkMode(!darkMode)}
+                />
+                <span className="button"></span>
+                <span className="label">☼</span>
+            </div>
+            
+            {/* <LuLightbulbOff 
                 className='
-                    text-white 
+                    dkbutton
+                    text-black 
                     hidden 
-                    dark:block'
-                size={40} 
+                    dark:block
+                    '
+                size={50} 
                 onClick={() => setDarkMode(!darkMode)}
             />
             <LuLightbulb
-                className='                     
+                className='
+                    libutton                     
                     text-yellow-400 
                     block 
-                    dark:hidden'
-                size={40} 
+                    dark:hidden
+                    '
+                size={50} 
                 onClick={() => setDarkMode(!darkMode)}
-            /> 
+            />  */}
             
         </div>
     )
