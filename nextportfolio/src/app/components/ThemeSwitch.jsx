@@ -37,7 +37,26 @@ const ThemeSwitch = () => {
                     onChange={() => setDarkMode(!darkMode)}
                 />
                 <span className="button"></span>
-                <span className="label">☼</span>
+                <span className="label ">
+                    <LuLightbulbOff 
+                        className='
+                            m-auto
+                            dkbutton
+                            text-black 
+                            hidden 
+                            dark:flex
+                            '
+                        size={50} 
+                    />
+                    <LuLightbulb
+                        className='                           
+                            m-auto 
+                            text-yellow-400
+                            dark:hidden
+                            '
+                        size={50} 
+                    />
+                </span>
             </div>
             
             {/* <LuLightbulbOff 
