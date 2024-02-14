@@ -1,7 +1,6 @@
-import Hero from './components/Hero';
-import Header from './components/Header';
-import FloatHands from './components/FloatHands';
-import Filler from './components/Filler';
+import AboutMe from './components/AboutMe';
+import ThemeToggle from './components/ThemeToggle';
+import Landing from './components/Landing';
 
 export default function Home() {
   return (
@@ -9,17 +8,12 @@ export default function Home() {
       className="
         bg-lightBG 
         text-lightTxtClr
-        flex 
-        flex-col
-        items-center
-        justify-between
-        min-h-screen       
         dark:bg-darkBG 
-        dark:text-darkTxtClr">
-      <Hero />
-      <FloatHands />
-      <Header />
-      <Filler />    
+        dark:text-darkTxtClr"
+    >      
+      <ThemeToggle />
+      <Landing />
+      <AboutMe />    
     </main>
   )
 }

@@ -8,7 +8,7 @@ export default function FloatHands() {
     return (
                                 
             <div 
-            className='relative z-20 max-w-screen-xl'
+            className='static z-20'
             id='landing-section'
             >
                 <Image  

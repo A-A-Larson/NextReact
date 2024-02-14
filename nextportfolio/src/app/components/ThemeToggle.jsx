@@ -26,37 +26,25 @@ const ThemeToggle = () => {
 
     return (
         <div className='
+                fixed z-30
+                right-0
                 py-2 
                 flex 
                 justify-center
                 '
-        >
-            <div className='
-                    relative 
-                    z-60 
-                    w-16 
-                    h-8 
-                    flex 
-                    items-center 
-                    dark:bg-gray-900 
-                    bg-teal-500
-                    cursor-pointer 
-                    rounded-full 
-                    p-1
-                    '
-                onClick={() => setDarkMode(!darkMode)}
-            >
-                <LuLightbulbOff className="text-white" size={18} />
-                <div
-                    className='absolute bg-white dark:bg-medium w-6 h-6 rounded-full 
-                    shadow-md transform transition-transform duration-300'
-                    style={darkMode ? { right: '2px' } : { left: '2px' }}
-                ></div>
-                <LuLightbulb
-                    className='ml-auto text-yellow-400'
+        >            
+                <LuLightbulbOff 
+                    className="text-white hidden dark:block" 
                     size={18} 
+                    onClick={() => setDarkMode(!darkMode)}
+                />
+                
+                <LuLightbulb
+                    className='ml-auto text-yellow-400 block dark:hidden'
+                    size={18} 
+                    onClick={() => setDarkMode(!darkMode)}
                 /> 
-            </div>
+            
         </div>
     )
 }
