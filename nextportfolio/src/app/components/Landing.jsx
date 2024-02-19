@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Landing() {
     return (
-        <div className='min-h-screen grid'>
+        <div className='min-h-screen flex flex-col border'>
             <Image
                 className=''                
                 width={2930}
@@ -13,42 +13,41 @@ export default function Landing() {
                 src={HeroImg}   
                 quality={100}
                 alt='Man with hands overlapping the top of the webpage as if he is holding onto it'
-            />
+            />            
             
-            <div 
+            <header 
                 className='
-                    bg-inherit
-                    flex
-                    justify-center
+                    text-lightHdrClr 
+                    dark:text-darkHdrClr  
+                    grid                  
+                    content-center                    
+                    grow  
+                                     
                     '
-            > 
-                <header 
+            >       
+                <h1 
                     className='
-                        text-lightHdrClr 
-                        dark:text-darkHdrClr                    
-                        '
-                >       
-                    <h1 
-                        className='
-                            text-left
-                            text-base'                    
-                        id='first-section' 
-                    >                    
-                        Hi, I'm 
-                    </h1>    
+                        text-left
+                        text-base                        
+                        m-auto
+                        ' 
+                >                    
+                    Hi, I'm 
+                <br/>  
 
-                    <h2
+                    <span
                         className='
                             font-mono  
                             text-5xl 
                             font-bold
                             tracking-tighter
-                            leading-snug'
+                            leading-snug
+                            '
                     >
                         Andrew Larson
-                    </h2>                             
-                </header>   
-            </div> 
+                    </span>
+                </h1>                             
+            </header>             
         </div>
     )
 }
