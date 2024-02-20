@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Landing() {
     return (
-        <div className='min-h-screen flex flex-col border'>
+        <section className='flex flex-col border'>
             <Image
                 className=''                
                 width={2930}
@@ -21,14 +21,14 @@ export default function Landing() {
                     dark:text-darkHdrClr  
                     grid                  
                     content-center                    
-                    grow  
-                                     
+                    grow                                       
                     '
             >       
                 <h1 
                     className='
                         text-left
-                        text-base                        
+                        text-base
+                        sm:text-xl                        
                         m-auto
                         ' 
                 >                    
@@ -38,7 +38,8 @@ export default function Landing() {
                     <span
                         className='
                             font-mono  
-                            text-5xl 
+                            text-5xl
+                            sm:text-6xl 
                             font-bold
                             tracking-tighter
                             leading-snug
@@ -48,6 +49,6 @@ export default function Landing() {
                     </span>
                 </h1>                             
             </header>             
-        </div>
+        </section>
     )
 }
