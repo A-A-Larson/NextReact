@@ -19,22 +19,31 @@ export default function Landing() {
                 className='
                     text-lightHdrClr 
                     dark:text-darkHdrClr  
-                    grid                  
-                    content-center                    
-                    grow                                       
+                    flex
+                    flex-col                   
+                    grow    
+                    justify-center
+                    items-center                                   
                     '
             >       
                 <h1 
                     className='
-                        text-left
                         text-base
-                        sm:text-xl                        
-                        m-auto
+                        sm:text-xl
+                        flex
+                        flex-col
+                        justify-center
+                        items-center
+                        
                         ' 
-                >                    
-                    Hi, I'm 
-                <br/>  
-
+                > 
+                    <span
+                        className='                            
+                            mr-auto'    
+                    >                 
+                        Hi, I'm 
+                    </span>  
+                    <br/>  
                     <span
                         className='
                             font-mono  
@@ -43,6 +52,7 @@ export default function Landing() {
                             font-bold
                             tracking-tighter
                             leading-snug
+                            text-center
                             '
                     >
                         Andrew Larson

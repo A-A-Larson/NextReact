@@ -7,10 +7,19 @@ export default function AboutMe() {
 
     return(
     <section
-        className='flex flex-col justify-center md:flex-row px-24 '
+        className='
+                flex 
+                flex-col 
+                md:flex-row
+                items-center
+                justify-center 
+                p-12'
     >
         <Image
-                className='m-auto rounded-full max-w-sm'                
+                className='
+                    rounded-full
+                    
+                    '                
                 width={718}
                 height={718}
                 src={AboutImg}   
@@ -18,7 +27,7 @@ export default function AboutMe() {
                 alt='Man staring out a window on a train'
         />
 
-        <div className='m-auto'>
+        <div className='pt-12 md:pt-0 md:pl-12'>
             <p>
                 I have 18 years of experience troubleshooting everything from cars to xrays. Now I'm making a career change to Web Developement so I can continue to learn and problem solve as I get too old to turn wrenches. 
             </p>
