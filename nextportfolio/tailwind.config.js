@@ -19,8 +19,7 @@ module.exports = {
         'darkBttnBG': 'var(--buttonColorDark)',
       },
       fontFamily: {
-        sans: ['var(--font-inter)'],
-        mono: ['var(--font-roboto-mono)'],
+        
       },
     },
   },

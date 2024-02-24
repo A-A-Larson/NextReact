@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Landing() {
     return (
-        <section className='flex flex-col border'>
+        <section className='flex flex-col border-b'>
             <Image
                 className=''                
                 width={2930}
@@ -37,26 +37,26 @@ export default function Landing() {
                         
                         ' 
                 > 
-                    <span
+                    <div
                         className='                            
                             mr-auto'    
                     >                 
                         Hi, I'm 
-                    </span>  
+                    </div>  
                     <br/>  
-                    <span
+                    <div
                         className='
-                            font-mono  
+                              
                             text-5xl
                             sm:text-6xl 
-                            font-bold
+                            font-black
                             tracking-tighter
                             leading-snug
                             text-center
                             '
                     >
                         Andrew Larson
-                    </span>
+                    </div>
                 </h1>                             
             </header>             
         </section>

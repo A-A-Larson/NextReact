@@ -13,7 +13,8 @@ export default function AboutMe() {
                 md:flex-row
                 items-center
                 justify-center 
-                p-12'
+                p-12
+                '
     >
         <Image
                 className='
@@ -27,7 +28,7 @@ export default function AboutMe() {
                 alt='Man staring out a window on a train'
         />
 
-        <div className='pt-12 md:pt-0 md:pl-12'>
+        <div className='pt-12 text-lg md:pt-0 md:pl-12'>
             <p>
                 I have 18 years of experience troubleshooting everything from cars to xrays. Now I'm making a career change to Web Developement so I can continue to learn and problem solve as I get too old to turn wrenches. 
             </p>
