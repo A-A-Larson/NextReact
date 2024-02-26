@@ -12,6 +12,7 @@ export default function Landing() {
                 height={924}
                 src={HeroImg}   
                 quality={100}
+                priority={true}
                 alt='Man with hands overlapping the top of the webpage as if he is holding onto it'
             />            
             
@@ -23,7 +24,8 @@ export default function Landing() {
                     flex-col                   
                     grow    
                     justify-center
-                    items-center                                   
+                    items-center
+                                             
                     '
             >       
                 <h1 
@@ -45,9 +47,9 @@ export default function Landing() {
                     </div>  
                     <br/>  
                     <div
-                        className='
-                              
-                            text-5xl
+                        className='                              
+                            text-4xl
+                            xs:text-5xl
                             sm:text-6xl 
                             font-black
                             tracking-tighter

@@ -6,8 +6,11 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   darkMode: 'class',
-  theme: {
+  theme: {    
     extend: {
+      screens: {
+        'xs': '330px'
+      },
       colors: {
         'lightBG': 'var(--backgroundLight)',
         'darkBG': 'var(--backgroundDark)',
@@ -19,7 +22,8 @@ module.exports = {
         'darkBttnBG': 'var(--buttonColorDark)',
       },
       fontFamily: {
-        
+        sans: ['var(--font-inter)'],
+        mono: ['var(--font-roboto-mono)'],
       },
     },
   },

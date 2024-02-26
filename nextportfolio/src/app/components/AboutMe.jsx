@@ -9,26 +9,27 @@ export default function AboutMe() {
     <section
         className='
                 flex 
-                flex-col 
+                flex-col
                 md:flex-row
+                justify-around
                 items-center
                 p-12
                 '
     >
-        <Image
-                className='
-                    rounded-full
-                    
-                    '                
-                width={718}
-                height={718}
-                src={AboutImg}   
-                quality={100}
-                alt='Man staring out a window on a train'
-        />
-
-        <div className='pt-12 text-lg md:pt-0 md:pl-12'>
-            <p>
+        <div className='max-w-xl flex-1'>
+            <Image
+                    className='
+                        rounded-full                        
+                        '                
+                    width={718}
+                    height={718}
+                    src={AboutImg}   
+                    quality={100}
+                    alt='Man staring out a window on a train'
+            />
+        </div>
+        <div className='pt-12 text-lg md:pt-0 md:pl-12 xl:pl-0 max-w-xl flex-1'>
+            <p className=''>
                 I have 18 years of experience troubleshooting everything from cars to xrays. Now I'm making a career change to Web Developement so I can continue to learn and problem solve as I get too old to turn wrenches. 
             </p>
         </div>

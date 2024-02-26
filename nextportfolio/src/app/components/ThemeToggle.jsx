@@ -26,22 +26,33 @@ const ThemeToggle = () => {
 
     return (
         <div className='
-                fixed z-30
+                fixed 
+                z-30
                 right-0
-                py-2 
+                bottom-0
+                p-4 
                 flex 
                 justify-center
+                cursor-pointer
                 '
         >            
                 <LuLightbulbOff 
-                    className="text-white hidden dark:block" 
-                    size={18} 
+                    className='
+                        text-white 
+                        hidden 
+                        dark:block
+                        ' 
+                    size={36} 
                     onClick={() => setDarkMode(!darkMode)}
                 />
                 
                 <LuLightbulb
-                    className='ml-auto text-yellow-400 block dark:hidden'
-                    size={18} 
+                    className='
+                    text-yellow-400 
+                    block 
+                    dark:hidden
+                    '
+                    size={36} 
                     onClick={() => setDarkMode(!darkMode)}
                 /> 
             
