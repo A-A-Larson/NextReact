@@ -12,7 +12,6 @@ export default function AboutMe() {
                 flex-col 
                 md:flex-row
                 items-center
-                justify-center 
                 p-12
                 '
     >
