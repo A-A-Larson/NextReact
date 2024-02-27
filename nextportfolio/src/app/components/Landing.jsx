@@ -6,6 +6,7 @@ import Image from 'next/image';
 export default function Landing() {
     return (
         <section className='flex flex-col border-b'>
+            <div className='max-w-screen-lg m-auto'>
             <Image
                 className=''                
                 width={2930}
@@ -15,7 +16,7 @@ export default function Landing() {
                 priority={true}
                 alt='Man with hands overlapping the top of the webpage as if he is holding onto it'
             />            
-            
+            </div>
             <header 
                 className='
                     text-lightHdrClr 

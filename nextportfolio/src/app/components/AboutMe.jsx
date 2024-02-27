@@ -13,10 +13,10 @@ export default function AboutMe() {
                 md:flex-row
                 justify-around
                 items-center
-                p-12
+                p-8
                 '
     >
-        <div className='max-w-xl flex-1'>
+        <div className='max-w-md flex-1'>
             <Image
                     className='
                         rounded-full                        
