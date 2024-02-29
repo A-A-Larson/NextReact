@@ -13,6 +13,7 @@ export default function AboutMe() {
                 md:flex-row
                 justify-around
                 items-center
+                border-b
                 p-8
                 '
     >

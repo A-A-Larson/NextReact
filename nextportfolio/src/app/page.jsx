@@ -1,6 +1,7 @@
 import AboutMe from './components/AboutMe';
 import ThemeToggle from './components/ThemeToggle';
 import Landing from './components/Landing';
+import Tech from './components/Tech';
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
     >      
       <ThemeToggle />
       <Landing />
-      <AboutMe />    
+      <AboutMe />
+      <Tech /> 
     </main>
   )
 }

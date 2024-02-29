@@ -1,7 +1,5 @@
 "use client";
 import { useEffect, useState } from 'react';
-import { FaMoon } from 'react-icons/fa';
-import { BsSunFill } from 'react-icons/bs';
 import { LuLightbulb } from "react-icons/lu";
 import { LuLightbulbOff } from "react-icons/lu";
 
