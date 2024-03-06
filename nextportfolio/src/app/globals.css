@@ -29,3 +29,16 @@ section {
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
+
+.techGrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(5, 1fr);
+  
+}
+
+@media (min-width: 768px) {
+  .techGrid {
+    grid-auto-flow: column;
+  }
+}

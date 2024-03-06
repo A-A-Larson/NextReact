@@ -11,42 +11,33 @@ import { SiTailwindcss } from "react-icons/si";
 
 export default function Tech() {
     return (
-        <section className='
-            flex
-            flex-col
-            p-8
-            border-b
-            
-            '
+        <section             
+            className='
+                techGrid                
+                p-8
+                border-b
+                bg-white
+                '
         >
-            <h1 className='flex-1 flex flex-col justify-center items-center text-3xl'>
+            <h1 className='text-3xl bg-red-600'>
                 Tech Stack:
-            </h1>
-            <div className='
-                flex 
-                flex-1
-                flex-col
-                md:flex-row
-                justify-center
-                content-center'
-            >
-                <div className='flex-1 flex justify-start items-start text-lg'>
-                    <ul className=''> Languages:
-                        <li className='flex flex-row'><FaHtml5 /> HTML</li>
-                        <li className='flex flex-row'><FaCss3Alt /> CSS</li>
-                        <li className='flex flex-row'><SiJavascript /> Javascript</li>
-                        <li className='flex flex-row'><FaJava /> Java</li>
-                        <li className='flex flex-row'><FaReact /> React</li>
-                    </ul>
-                </div>
-                <div className='flex-1 flex justify-start items-start text-lg'>
-                    <ul className=''> Web Technologies:
-                        <li className='flex flex-row'><SiNextdotjs /> Next.js</li>
-                        <li className='flex flex-row'><FaNpm /> NPM</li>
-                        <li className='flex flex-row'><SiTailwindcss /> Tailwind</li>
-                    </ul>                
-                </div>
+            </h1>            
+            <div className='text-lg bg-green-600'>
+                <ul className=''> Languages:
+                    <li className='flex flex-row'><FaHtml5 /> HTML</li>
+                    <li className='flex flex-row'><FaCss3Alt /> CSS</li>
+                    <li className='flex flex-row'><SiJavascript /> Javascript</li>
+                    <li className='flex flex-row'><FaJava /> Java</li>
+                    <li className='flex flex-row'><FaReact /> React</li>
+                </ul>
             </div>
+            <div className='text-lg bg-blue-600'>
+                <ul className=''> Web Technologies:
+                    <li className='flex flex-row'><SiNextdotjs /> Next.js</li>
+                    <li className='flex flex-row'><FaNpm /> NPM</li>
+                    <li className='flex flex-row'><SiTailwindcss /> Tailwind</li>
+                </ul>                
+            </div>            
         </section>
     )
 }
