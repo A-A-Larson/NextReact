@@ -1,4 +1,4 @@
-"use client";
+"use cdivent";
 import React from 'react';
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
@@ -11,33 +11,80 @@ import { SiTailwindcss } from "react-icons/si";
 
 export default function Tech() {
     return (
-        <section             
-            className='
-                techGrid                
-                p-8
-                border-b
-                bg-white
-                '
-        >
-            <h1 className='text-3xl bg-red-600'>
-                Tech Stack:
-            </h1>            
-            <div className='text-lg bg-green-600'>
-                <ul className=''> Languages:
-                    <li className='flex flex-row'><FaHtml5 /> HTML</li>
-                    <li className='flex flex-row'><FaCss3Alt /> CSS</li>
-                    <li className='flex flex-row'><SiJavascript /> Javascript</li>
-                    <li className='flex flex-row'><FaJava /> Java</li>
-                    <li className='flex flex-row'><FaReact /> React</li>
-                </ul>
-            </div>
-            <div className='text-lg bg-blue-600'>
-                <ul className=''> Web Technologies:
-                    <li className='flex flex-row'><SiNextdotjs /> Next.js</li>
-                    <li className='flex flex-row'><FaNpm /> NPM</li>
-                    <li className='flex flex-row'><SiTailwindcss /> Tailwind</li>
-                </ul>                
-            </div>            
+        <section className='techLayout'>        
+            <div className='techGrid'>
+                <div id='html' className='skillCard '>
+                    <div className='skillLogo'>
+                        <FaHtml5 color='red' /> 
+                    </div>    
+                    <div className='skillName'>
+                        HTML
+                    </div>
+                </div>
+
+                <div id='css' className='skillCard'>
+                    <div className='skillLogo'>
+                        <FaCss3Alt color='blue' />
+                    </div>
+                    <div className='skillName'>
+                        CSS
+                    </div>    
+                </div>
+
+                <div id='javascript' className='skillCard'>
+                    <div className='skillLogo'>
+                        <SiJavascript color='yellow' /> 
+                    </div>
+                    <div className='skillName'>
+                        Javascript
+                    </div>    
+                </div>
+
+                <div id='java' className='skillCard'>
+                    <div className='skillLogo'>
+                        <FaJava color='darkblue' />
+                    </div>
+                    <div className='skillName'>
+                        Java    
+                    </div>                         
+                </div>
+
+                <div id='react' className='skillCard'>
+                    <div className='skillLogo'>
+                        <FaReact color='aqua' />
+                    </div>
+                    <div className='skillName'>
+                        React        
+                    </div>
+                </div>
+
+                <div id='next' className='skillCard'>
+                    <div className='skillLogo'>
+                        <SiNextdotjs color='black' />
+                    </div>
+                    <div className='skillName'>
+                        Next.js    
+                    </div>    
+                </div>
+
+                <div id='npm' className='skillCard'>
+                    <div className='skillLogo'>
+                        <FaNpm color='red' /> 
+                    </div>
+                    <div className='skillName'>
+                        NPM    
+                    </div>    
+                </div>
+
+                <div id='tailwind' className='skillCard'>
+                    <div className='skillLogo'>
+                        <SiTailwindcss color='teal' />
+                    </div>
+                    <div className='skillName'>
+                        Tailwind    
+                    </div>
+                </div>     
+            </div>                                           
         </section>
     )
 }

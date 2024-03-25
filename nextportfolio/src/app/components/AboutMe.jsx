@@ -20,7 +20,9 @@ export default function AboutMe() {
         <div className='max-w-md flex-1'>
             <Image
                     className='
-                        rounded-full                        
+                        rounded-full
+                        shadow-2xl
+                        shadow-gray-900                     
                         '                
                     width={718}
                     height={718}
