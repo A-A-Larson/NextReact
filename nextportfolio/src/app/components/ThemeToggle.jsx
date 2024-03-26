@@ -23,15 +23,10 @@ const ThemeToggle = () => {
     }, [darkMode])
 
     return (
-        <div className='
-                fixed 
+        <div className='                
                 z-30
-                right-0
-                bottom-0
-                p-4 
-                flex 
-                justify-center
                 cursor-pointer
+                absolute
                 '
         >            
                 <LuLightbulbOff 
