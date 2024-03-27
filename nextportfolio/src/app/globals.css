@@ -42,11 +42,11 @@ section {
 .techGrid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-areas: 'tailwind .  .  .  .'
-                        '.  css   .   .   .'
-                        '.   .  html  .   next'
-                        '. java . javascript .'
-                        '.  .  npm  .   react';  
+  grid-template-areas: 'java  .    .      .   .'
+                        '.    .    .      .   .'
+                        '.    .    html   .   next'
+                        '.    css  . javascript .'
+                        'tailwind  .  npm  .   react';  
   justify-items: center;
   align-items: center;
   max-width: 304px;

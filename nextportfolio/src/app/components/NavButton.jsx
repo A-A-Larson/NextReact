@@ -20,7 +20,7 @@ export default function NavButton() {
                     <a href="#" className="menu-item fa fa-facebook"></a>
                     <a href="#" className="menu-item fa fa-twitter"></a>
                     <a href="#" className="menu-item fa fa-google-plus"></a>
-                    <a href="#" className="menu-item"><ThemeToggle /></a>
+                    <a href="#" className="menu-item "><ThemeToggle /></a>
                 </menu>
             </div>            
         </div>
