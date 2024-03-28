@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import ThemeToggle from './ThemeToggle';
+import { FaPlus } from "react-icons/fa";
 
 export default function NavButton() {
 
@@ -13,14 +14,14 @@ export default function NavButton() {
             <div id="circularMenu" className="circular-menu">
 
                 <a className="floating-btn" onClick={openMenu}>
-                    <i className="fa fa-plus"></i>
+                    <i className="flex justify-center items-center h-full text-green-600"><FaPlus /></i>
                 </a>
 
                 <menu className="items-wrapper">
-                    <a href="#" className="menu-item fa fa-facebook"></a>
-                    <a href="#" className="menu-item fa fa-twitter"></a>
-                    <a href="#" className="menu-item fa fa-google-plus"></a>
-                    <a href="#" className="menu-item "><ThemeToggle /></a>
+                    <a href="#" className="menu-item"></a>
+                    <a href="#" className="menu-item"></a>
+                    <a href="#" className="menu-item"></a>
+                    <a href="#" className="menu-item"><ThemeToggle /></a>
                 </menu>
             </div>            
         </div>

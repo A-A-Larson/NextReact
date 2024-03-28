@@ -26,7 +26,10 @@ const ThemeToggle = () => {
         <div className='                
                 z-30
                 cursor-pointer
-                absolute
+                flex
+                justify-center
+                items-center
+                h-full
                 '
         >            
                 <LuLightbulbOff 

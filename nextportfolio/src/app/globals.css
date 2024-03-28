@@ -140,7 +140,7 @@ body {
   width: 3.5em;
   height: 3.5em;
   border-radius: 50%;
-  background-color: hsl(4, 98%, 60%);
+  background-color: hsl(0, 0%, 100%);
   box-shadow: 0 2px 5px 0 hsla(0, 0%, 0%, .26);  
   color: hsl(0, 0%, 100%);
   text-align: center;
@@ -164,6 +164,7 @@ body {
 
 .circular-menu.active .floating-btn i {
   transform: rotate(-45deg);
+  color: red;
 }
 
 .circular-menu:after {
@@ -176,7 +177,7 @@ body {
   top: 0;
   right: 0;
   z-index: -2;
-  background-color: hsl(4, 98%, 60%);
+  background-color: #ccaf94;
   transition: all .3s ease;
 }
 
