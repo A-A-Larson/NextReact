@@ -16,7 +16,6 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --backgroundDark: #222831;
-
   }
 }
 
@@ -70,8 +69,10 @@ section {
   align-items: center;
   min-height: 60px;
   min-width: 60px;
-  box-shadow: 0px 0px 15px;
+  box-shadow: 0px 0px 15px gray;
   border: 2px solid lightgray;
+  background-color: white;
+  color: black;
 } 
 
 .skillLogo {
@@ -131,14 +132,14 @@ body {
 }
 .circular-menu {
   position: fixed;
-  bottom: 1em;
-  right: 1em;
+  bottom: 0.5em;
+  right: 0.5em;
 }
 
 .circular-menu .floating-btn {
   display: block;
-  width: 3.5em;
-  height: 3.5em;
+  width: 2.5em;
+  height: 2.5em;
   border-radius: 50%;
   background-color: hsl(0, 0%, 100%);
   box-shadow: 0 2px 5px 0 hsla(0, 0%, 0%, .26);  
@@ -170,15 +171,16 @@ body {
 .circular-menu:after {
   display: block;
   content: ' ';
-  width: 3.5em;
-  height: 3.5em;
+  width: 2.5em;
+  height: 2.5em;
   border-radius: 50%;
   position: absolute;
   top: 0;
   right: 0;
   z-index: -2;
-  background-color: #ccaf94;
+  background-color: white;
   transition: all .3s ease;
+  box-shadow: 0 4px 8px 0 hsla(0, 0%, 0%, .4);
 }
 
 .circular-menu.active:after {
@@ -193,20 +195,23 @@ body {
 
 .circular-menu .menu-item {
   position: absolute;
-  top: .2em;
-  right: .2em;
+  top: 0em;
+  right: 0em;
   z-index: -1;
   display: block;
   text-decoration: none;
   color: hsl(0, 0%, 100%);
   font-size: 1em;
-  width: 3em;
-  height: 3em;
+  width: 2.5em;
+  height: 2.5em;
   border-radius: 50%;
   text-align: center;
   line-height: 3;
-  background-color: hsla(0,0%,0%,.1);
+  background-color: hsla(0,0%,0%,.3);
   transition: transform .3s ease, background .2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .circular-menu .menu-item:hover {
@@ -218,24 +223,28 @@ body {
 }
 
 .circular-menu.active .menu-item:nth-child(1) {
-  transform: translate3d(1em,-7em,0);
+  transform: translate3d(0.3em,-5.2em,0);
 }
 
 .circular-menu.active .menu-item:nth-child(2) {
-  transform: translate3d(-3.5em,-6.3em,0);
+  transform: translate3d(-2.5em,-4.6em,0);
 }
 
 .circular-menu.active .menu-item:nth-child(3) {
-  transform: translate3d(-6.5em,-3.2em,0);
+  transform: translate3d(-4.5em,-2.5em,0);
 }
 
 .circular-menu.active .menu-item:nth-child(4) {
-  transform: translate3d(-7em,1em,0);
+  transform: translate3d(-5.1em,0.3em,0);
 }
 
 /* NAVIGATION END */
 
 @media (min-width: 768px) {
+  .circular-menu {
+    display: none;
+  }
+
   .techGrid {
     max-width: 504px;
     max-height: 504px;

@@ -23,32 +23,23 @@ const ThemeToggle = () => {
     }, [darkMode])
 
     return (
-        <div className='                
-                z-30
-                cursor-pointer
-                flex
-                justify-center
-                items-center
-                h-full
-                '
+        <div className=''
         >            
                 <LuLightbulbOff 
-                    className='
-                        text-white 
+                    className=' 
                         hidden 
                         dark:block
                         ' 
-                    size={36} 
+                    size={30} 
                     onClick={() => setDarkMode(!darkMode)}
                 />
                 
                 <LuLightbulb
                     className='
-                    text-yellow-400 
-                    block 
-                    dark:hidden
-                    '
-                    size={36} 
+                        block 
+                        dark:hidden
+                        '
+                    size={30} 
                     onClick={() => setDarkMode(!darkMode)}
                 /> 
             

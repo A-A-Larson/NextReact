@@ -9,7 +9,6 @@ export default function FloatHands() {
                                 
             <div 
             className='static z-20'
-            id='landing-section'
             >
                 <Image  
                     className='hidden dark:block'             

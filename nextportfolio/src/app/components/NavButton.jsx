@@ -2,6 +2,9 @@
 import React from 'react';
 import ThemeToggle from './ThemeToggle';
 import { FaPlus } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
+import { IoMdContact } from "react-icons/io";
 
 export default function NavButton() {
 
@@ -10,20 +13,20 @@ export default function NavButton() {
     }
 
     return (
-        <div>
+        <nav>
             <div id="circularMenu" className="circular-menu">
 
                 <a className="floating-btn" onClick={openMenu}>
-                    <i className="flex justify-center items-center h-full text-green-600"><FaPlus /></i>
+                    <i className="flex justify-center items-center h-full text-green-700"><FaPlus /></i>
                 </a>
 
                 <menu className="items-wrapper">
-                    <a href="#" className="menu-item"></a>
-                    <a href="#" className="menu-item"></a>
-                    <a href="#" className="menu-item"></a>
+                    <a href="#" className="menu-item"><FaHome size={30} /></a>
+                    <a href="#" className="menu-item"><FaCode size={30} /></a>
+                    <a href="#" className="menu-item"><IoMdContact size={30} /></a>
                     <a href="#" className="menu-item"><ThemeToggle /></a>
                 </menu>
             </div>            
-        </div>
+        </nav>
     )
 };

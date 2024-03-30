@@ -1,5 +1,4 @@
 "use client";
-import React, { useState, useEffect } from 'react';
 import HeroImg from '../img/HeaderEdit4Resize.png';
 import Image from 'next/image';
 
