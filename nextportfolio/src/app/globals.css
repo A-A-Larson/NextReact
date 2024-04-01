@@ -195,15 +195,15 @@ body {
 
 .circular-menu .menu-item {
   position: absolute;
-  top: 0em;
-  right: 0em;
+  top: 0.1em;
+  right: 0.01em;
   z-index: -1;
   display: block;
   text-decoration: none;
   color: hsl(0, 0%, 100%);
   font-size: 1em;
-  width: 2.5em;
-  height: 2.5em;
+  width: 2.4em;
+  height: 2.4em;
   border-radius: 50%;
   text-align: center;
   line-height: 3;
