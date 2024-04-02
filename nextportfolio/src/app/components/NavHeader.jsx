@@ -17,7 +17,7 @@ export default function NavHeader() {
                         <FaHome size={30} />
                     </a>
                 </li>
-                <li>
+                <li className='navLI'>
                     <a 
                         href="#"
                         className='navAnchor'
@@ -25,7 +25,7 @@ export default function NavHeader() {
                         <FaCode size={30} />
                     </a>
                 </li>
-                <li>
+                <li className='navLI'>
                     <a 
                         href="#"
                         className='navAnchor'
@@ -33,7 +33,7 @@ export default function NavHeader() {
                         <IoMdContact size={30} />
                     </a>
                 </li>
-                <li>
+                <li className='navLI'>
                     <a 
                         href="#"
                         className='navAnchor'

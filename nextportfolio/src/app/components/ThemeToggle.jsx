@@ -29,6 +29,7 @@ const ThemeToggle = () => {
                     className=' 
                         hidden 
                         dark:block
+                        text-white
                         ' 
                     size={30} 
                     onClick={() => setDarkMode(!darkMode)}
@@ -38,6 +39,7 @@ const ThemeToggle = () => {
                     className='
                         block 
                         dark:hidden
+                        text-yellow-400
                         '
                     size={30} 
                     onClick={() => setDarkMode(!darkMode)}

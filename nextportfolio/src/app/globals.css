@@ -127,9 +127,7 @@ section {
 /* TECH STACK END */
 
 /* NAVIGATION START */
-body {
-  background-color: #EDEDED;
-}
+
 .circular-menu {
   position: fixed;
   bottom: 0.5em;
@@ -138,8 +136,8 @@ body {
 
 .circular-menu .floating-btn {
   display: block;
-  width: 2.5em;
-  height: 2.5em;
+  width: 2.6em;
+  height: 2.6em;
   border-radius: 50%;
   background-color: hsl(0, 0%, 100%);
   box-shadow: 0 2px 5px 0 hsla(0, 0%, 0%, .26);  
@@ -196,7 +194,7 @@ body {
 .circular-menu .menu-item {
   position: absolute;
   top: 0.1em;
-  right: 0.01em;
+  right: 0.1em;
   z-index: -1;
   display: block;
   text-decoration: none;
@@ -238,9 +236,32 @@ body {
   transform: translate3d(-5.1em,0.3em,0);
 }
 
+/* NAVIGATION HEADER START */
+.navHeader {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  display: none;
+}
+
+.navUL {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navLI {
+  color: var(--headercolorLight);
+}
+
+/* NAVIGATION HEADER END */
 /* NAVIGATION END */
 
 @media (min-width: 768px) {
+
+  .navHeader {
+    display: inline;
+  }
+
   .circular-menu {
     display: none;
   }

@@ -1,4 +1,5 @@
 import NavButton from './components/NavButton';
+import NavHeader from './components/NavHeader';
 import HeroImg from './img/HeaderEdit4Resize.png';
 import AboutImg from './img/aboutMe.jpg';
 import Image from 'next/image';
@@ -20,7 +21,9 @@ export default function Home() {
         dark:bg-darkBG 
         dark:text-darkTxtClr"
     >     
-      <NavButton />       
+
+      <NavButton />   
+
       <section className='flex flex-col border-b'>
         <div className='max-w-screen-lg m-auto'>
           <Image
@@ -75,11 +78,12 @@ export default function Home() {
                 text-center
                 '
             >
-                Andrew Larson
+              Andrew Larson
             </div>
           </h1>                             
         </header>             
-      </section>
+      </section>      
+      <NavHeader />
       <section
         className='
           flex 
