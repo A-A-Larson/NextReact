@@ -50,16 +50,8 @@ section {
   align-items: center;
   max-width: 304px;
   max-height: 304px;
-  margin: auto;
-  --b: 2px;   /* thickness of the border */
-  --c: lightgray;   /* color of the border */
-  --w: 90px;  /* width of border */
-  border: var(--b) ridge #0000; /* space for the border */
-  --_g: #0000 90deg,var(--c) 0;
-  --_p: var(--w) var(--w) border-box no-repeat;
-  background:
-    conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g)) 100% 0    / var(--_p),
-    conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 0    100% / var(--_p);
+  margin: auto; 
+  gap: 1px; 
 }
 
 .skillCard {
@@ -238,19 +230,19 @@ section {
 
 /* NAVIGATION HEADER START */
 .navHeader {
-  position: -webkit-sticky; /* Safari */
+  position: -webkit-sticky; 
   position: sticky;
   top: 0;
-  display: none;
 }
 
 .navUL {
-  display: flex;
-  justify-content: space-evenly;
+  display: none;  
+  padding-top: 1rem;
 }
 
 .navLI {
   color: var(--headercolorLight);
+  
 }
 
 /* NAVIGATION HEADER END */
@@ -258,8 +250,9 @@ section {
 
 @media (min-width: 768px) {
 
-  .navHeader {
-    display: inline;
+  .navUL {
+    display: flex;
+    justify-content: space-evenly;
   }
 
   .circular-menu {

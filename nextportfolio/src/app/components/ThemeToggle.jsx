@@ -23,12 +23,13 @@ const ThemeToggle = () => {
     }, [darkMode])
 
     return (
-        <div className=''
+        <div className='flex justify-center items-center'
         >            
                 <LuLightbulbOff 
                     className=' 
-                        hidden 
-                        dark:block
+                        sticky
+                        invisible 
+                        dark:visible
                         text-white
                         ' 
                     size={30} 
@@ -37,8 +38,9 @@ const ThemeToggle = () => {
                 
                 <LuLightbulb
                     className='
-                        block 
-                        dark:hidden
+                        absolute
+                        visible 
+                        dark:invisible
                         text-yellow-400
                         '
                     size={30} 

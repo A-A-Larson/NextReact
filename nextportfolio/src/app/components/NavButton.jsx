@@ -24,7 +24,7 @@ export default function NavButton() {
                     <a href="#" className="menu-item"><FaHome size={30} /></a>
                     <a href="#" className="menu-item"><FaCode size={30} /></a>
                     <a href="#" className="menu-item"><IoMdContact size={30} /></a>
-                    <a href="#" className="menu-item"><ThemeToggle /></a>
+                    <a className="menu-item"><ThemeToggle /></a>
                 </menu>
             </div>            
         </nav>

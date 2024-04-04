@@ -9,7 +9,7 @@ export default function NavHeader() {
     return (
         <nav className='navHeader'>
             <ul className='navUL'>
-                <li className='navLI'>
+                <li className='navLI dark:text-darkTxtClr'>
                     <a 
                         href="#"
                         className='navAnchor'
@@ -17,7 +17,7 @@ export default function NavHeader() {
                         <FaHome size={30} />
                     </a>
                 </li>
-                <li className='navLI'>
+                <li className='navLI dark:text-darkTxtClr'>
                     <a 
                         href="#"
                         className='navAnchor'
@@ -25,7 +25,7 @@ export default function NavHeader() {
                         <FaCode size={30} />
                     </a>
                 </li>
-                <li className='navLI'>
+                <li className='navLI dark:text-darkTxtClr'>
                     <a 
                         href="#"
                         className='navAnchor'
@@ -35,7 +35,7 @@ export default function NavHeader() {
                 </li>
                 <li className='navLI'>
                     <a 
-                        href="#"
+                        
                         className='navAnchor'
                     >
                         <ThemeToggle />
