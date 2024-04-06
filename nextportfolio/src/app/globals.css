@@ -41,17 +41,17 @@ section {
 .techGrid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-areas: 'java  .    .      .   .'
-                        '.    .    .      .   .'
-                        '.    .    html   .   next'
-                        '.    css  . javascript .'
-                        'tailwind  .  npm  .   react';  
+  grid-template-areas: '.... ........ .........  ...  ....'
+                       '.... ........ .........  ...  ....'
+                       '.... ........ react      ...  ....'
+                       '.... tailwind next       sql  ....'
+                       'html css      javascript php  java';  
   justify-items: center;
   align-items: center;
   max-width: 304px;
   max-height: 304px;
   margin: auto; 
-  gap: 1px; 
+  gap: 2px; 
 }
 
 .skillCard {
@@ -75,47 +75,57 @@ section {
 .skillName {
   margin-top: auto;
   font-size: 0.7em;
+  color: black;
 }
 
 #html {
   grid-area: html;
-  
+  animation: fall 1s linear forwards;
 }
 
 #css {
   grid-area: css;
-  
+  animation: fall 1.2s linear forwards;
 }
 
 #javascript {
   grid-area: javascript;
-  
+  animation: fall 1.6s linear forwards;
+}
+
+#php {
+  grid-area: php;
+  color: #7a86b8;
+  animation: fall 1.8s linear forwards;
 }
 
 #java {
   grid-area: java;
-  
-}
-
-#react {
-  grid-area: react;
-  
-}
-
-#next {
-  grid-area: next;
-  
-}
-
-#npm {
-  grid-area: npm;
-  
+  animation: fall 1.9s linear forwards;
 }
 
 #tailwind {
   grid-area: tailwind;
-  
+  animation: fall 2s linear forwards;
 }
+
+#next {
+  grid-area: next;
+  animation: fall 2.4s linear forwards;
+}
+
+#sql {
+  grid-area: sql;
+  color: #db7533;
+  animation: fall 2.5s linear forwards;  
+}
+
+#react {
+  grid-area: react;
+  animation: fall 2.7s linear forwards;
+  animation-delay: calc(var(--scroll) * -1s);
+}
+
 /* TECH STACK END */
 
 /* NAVIGATION START */
@@ -276,5 +286,14 @@ section {
   
   .skillName {
     font-size: 1em;
+  }
+}
+
+@keyframes fall{
+  0%{
+    transform: translateY(-200em);
+  }
+  100%{
+    transform: translateY(0em);
   }
 }

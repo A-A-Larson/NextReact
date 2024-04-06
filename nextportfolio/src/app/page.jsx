@@ -1,3 +1,5 @@
+'use client';
+import { useEffect } from 'react';
 import NavButton from './components/NavButton';
 import NavHeader from './components/NavHeader';
 import HeroImg from './img/HeaderEdit4Resize.png';
@@ -9,10 +11,20 @@ import { SiJavascript } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
 import { SiNextdotjs } from "react-icons/si";
-import { FaNpm } from "react-icons/fa";
+import { SiPhp } from "react-icons/si";
 import { SiTailwindcss } from "react-icons/si";
+import { BsFiletypeSql } from "react-icons/bs";
+
+
 
 export default function Home() {
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+        document.body.style.setProperty('--scroll', window.scrollY / (document.body.offsetHeight - window.innerHeight));
+      }, false);
+  }, [])
+
   return (
     <main 
       className="
@@ -172,12 +184,12 @@ export default function Home() {
             </div>    
           </div>
 
-          <div id='npm' className='skillCard'>
+          <div id='php' className='skillCard'>
             <div className='skillLogo'>
-              <FaNpm color='red' /> 
+            <SiPhp /> 
             </div>
             <div className='skillName'>
-              NPM    
+              PHP    
             </div>    
           </div>
 
@@ -188,7 +200,17 @@ export default function Home() {
             <div className='skillName'>
               Tailwind    
             </div>
-          </div>     
+          </div> 
+
+          <div id='sql' className='skillCard'>
+            <div className='skillLogo'>
+            <BsFiletypeSql />
+            </div>
+            <div className='skillName'>
+              SQL    
+            </div>
+          </div> 
+
         </div>                                          
       </section>
     </main>
