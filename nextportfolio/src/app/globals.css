@@ -47,17 +47,39 @@ section {
   grid-area: landing;
 }
 
-.navHeaderSection {
-}
-
 .aboutSection {
   grid-area: aboutMe;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutPara-grid-animation {
+  animation: slideLeft 2.3s ease forwards;
+}
+
+.aboutImg-grid-animation {
+  animation: slideRight 2.3s ease forwards;
 }
 
 /* TECH STACK START */
 .techSection {
-  display: grid;
-  grid-area: techSec;
+  grid-area: techSec;  
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.techObserve {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+#techHead {
+  grid-area: techHead;
 }
 
 .techGrid {
@@ -74,6 +96,7 @@ section {
   max-height: 304px;
   margin: auto; 
   gap: 2px; 
+  padding-top: 3rem
 }
 
 .skillCard {
@@ -174,6 +197,10 @@ section {
   animation: fall 2.2s linear forwards;
 }
 
+.techHead-grid-animation {
+  animation: slideRight 2.3s ease forwards;
+}
+
 /* TECH STACK END */
 
 /* NAVIGATION START */
@@ -182,6 +209,7 @@ section {
   position: fixed;
   bottom: 0.5em;
   right: 0.5em;
+  z-index: 20;
 }
 
 .circular-menu .floating-btn {
@@ -300,8 +328,7 @@ section {
 }
 
 .navLI {
-  color: var(--headercolorLight);
-  
+  color: var(--headercolorLight);  
 }
 
 /* NAVIGATION HEADER END */
@@ -318,6 +345,11 @@ section {
     display: none;
   }
 
+  .aboutSection {
+    display: flex;
+    flex-direction: row;
+  }
+
   .aboutPara {
     padding-left: 3rem;
   }
@@ -325,7 +357,6 @@ section {
   .techGrid {
     max-width: 504px;
     max-height: 504px;
-    --w: 150px;
   }
 
   .skillCard {
@@ -353,9 +384,18 @@ section {
                          ".  techSec  .";
   }
 
-  .aboutPara {
+  .techObserve {    
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    }
+
+    .techGrid {      
     padding-left: 3rem;
-  }
+    padding-top: 0;
+    }
+  
 }
 
 @keyframes fall{
@@ -364,5 +404,23 @@ section {
   }
   100%{
     transform: translateY(0em);
+  }
+}
+
+@keyframes slideRight{
+  0%{
+    transform: translateX(-75em);
+  }
+  100%{
+    transform: translateX(0em);
+  }
+}
+
+@keyframes slideLeft{
+  0%{
+    transform: translateX(75em);
+  }
+  100%{
+    transform: translateX(0em);
   }
 }

@@ -7,7 +7,12 @@ import { IoMdContact } from "react-icons/io";
 
 export default function NavHeader() {
     return (
-        <nav className='navHeader'>
+        <nav className='
+                navHeader
+                bg-lightBG
+                dark:bg-darkBG
+                z-20
+                '>
             <ul className='navUL'>
                 <li className='navLI dark:text-darkTxtClr'>
                     <a 
@@ -19,7 +24,7 @@ export default function NavHeader() {
                 </li>
                 <li className='navLI dark:text-darkTxtClr'>
                     <a 
-                        href="#"
+                        href="https://github.com/drewdarko0"
                         className='navAnchor'
                     >
                         <FaCode size={30} />
@@ -27,7 +32,7 @@ export default function NavHeader() {
                 </li>
                 <li className='navLI dark:text-darkTxtClr'>
                     <a 
-                        href="#"
+                        href="mailto:drewlars83@gmail.com"
                         className='navAnchor'
                     >
                         <IoMdContact size={30} />

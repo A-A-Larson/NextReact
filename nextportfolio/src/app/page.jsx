@@ -2,6 +2,8 @@
 import { useEffect } from 'react';
 import NavHeader from './components/NavHeader';
 import HeroImg from './img/HeaderEdit4Resize.png';
+import HandsLight from './img/HandsResizeLight.png';
+import HandsDark from './img/HandsResizeDark1.png';
 import AboutImg from './img/aboutMe.jpg';
 import Image from 'next/image';
 import { FaHtml5 } from "react-icons/fa";
@@ -31,6 +33,7 @@ export default function Home() {
         const javascriptAnim = entry.target.querySelector('#javascript');
         const cssAnim = entry.target.querySelector('#css');
         const htmlAnim = entry.target.querySelector('#html');
+        const techHeadAnim = entry.target.querySelector('.techHead');
         
     
         if (entry.isIntersecting) {
@@ -43,7 +46,8 @@ export default function Home() {
           javascriptAnim.classList.add('javascript-grid-animation');
           cssAnim.classList.add('css-grid-animation');
           htmlAnim.classList.add('html-grid-animation');
-
+          techHeadAnim.classList.add('techHead-grid-animation');
+          
         return; // if we added the class, exit the function
         }
     
@@ -57,11 +61,37 @@ export default function Home() {
         javascriptAnim.classList.remove('javascript-grid-animation');
         cssAnim.classList.remove('css-grid-animation');
         htmlAnim.classList.remove('html-grid-animation');
+        techHeadAnim.classList.remove('techHead-grid-animation');
       });
-    });
+    }, { threshold: 0.1 });
     
-    observer.observe(document.querySelector('.techGrid'));
-  }, [])
+    observer.observe(document.querySelector('.techSection'));
+
+
+    const observer2 = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const aboutImgAnim = entry.target.querySelector('.aboutImg');
+        const aboutParaAnim = entry.target.querySelector('.aboutPara');
+        
+    
+        if (entry.isIntersecting) {
+          aboutImgAnim.classList.add('aboutImg-grid-animation');
+          aboutParaAnim.classList.add('aboutPara-grid-animation');
+
+        return; // if we added the class, exit the function
+        }
+    
+        // We're not intersecting, so remove the class!
+        aboutImgAnim.classList.remove('aboutImg-grid-animation');
+        aboutParaAnim.classList.remove('aboutPara-grid-animation');
+      });
+    }, { threshold: 0.1 });
+    
+    observer2.observe(document.querySelector('.aboutSection'));
+    
+  }, 
+  
+  [])
 
   return (
     <main 
@@ -71,12 +101,10 @@ export default function Home() {
         text-lightTxtClr
         dark:bg-darkBG 
         dark:text-darkTxtClr"
-    >     
+    >             
 
-        
-
-      <section className='landingSection flex flex-col border-b'>
-        <div className='max-w-screen-lg m-auto'>
+      <section className='landingSection flex flex-col'>
+        <div className='max-w-screen-lg m-auto fixed '>
           <Image
             className=''                
             width={2930}
@@ -87,16 +115,36 @@ export default function Home() {
             alt='Man with hands overlapping the top of the webpage as if he is holding onto it'
           />            
         </div>
+        <div 
+            className='static z-20'
+            >
+                <Image  
+                    className='hidden dark:block'             
+                    src={HandsDark}
+                    alt='Floating hands'
+                    width={2930}
+                    height={924}                        
+                />
+                <Image       
+                    className='block dark:hidden'        
+                    src={HandsLight}
+                    alt='Floating hands'
+                    width={2930}
+                    height={924}                        
+                />                     
+            </div>
         <header 
           className='
+            bg-lightBG
+            dark:bg-darkBG
+            z-10
             text-lightHdrClr 
             dark:text-darkHdrClr  
             flex
             flex-col                   
             grow    
             justify-center
-            items-center
-                                      
+            items-center                         
             '
         >       
           <h1 
@@ -115,7 +163,7 @@ export default function Home() {
                 mr-auto
                 '    
             >                 
-                Hi, I'm 
+                Hi, I&apos;m 
             </div>  
             <br/>  
             <div
@@ -141,16 +189,13 @@ export default function Home() {
       <section
         className='
           aboutSection
-          flex 
-          flex-col
-          md:flex-row
-          justify-around
-          items-center
-          border-b
+          bg-lightBG
+          dark:bg-darkBG
+          z-10
           p-8
           '
       >
-        <div className='max-w-md flex-1'>
+        <div className='aboutImg max-w-md flex-1'>
           <Image
             className='
               rounded-full
@@ -166,97 +211,120 @@ export default function Home() {
         </div>
         <div className='aboutPara pt-12 text-lg md:pt-0 max-w-xl flex-1'>
           <p className=''>
-              I have 18 years of experience troubleshooting everything from cars to xrays. Now I'm making a career change to Web Developement so I can continue to learn and problem solve as I get too old to turn wrenches. 
+              I have 18 years of experience troubleshooting everything from cars to xrays. Now I&apos;m making a career change to Web Developement so I can continue to learn and problem solve as I get too old to turn wrenches. 
           </p>
         </div>
       </section>
 
-      <section className='techSection'>        
-        
-        <div className='techGrid'>
-          
-          <div id='html' className='skillCard '>
-            <div className='skillLogo'>
-              <FaHtml5 color='red' /> 
-            </div>    
-            <div className='skillName'>
-              HTML
-            </div>
-          </div>
+      <section className='
+                techSection
+                bg-lightBG
+                dark:bg-darkBG
+                z-10
+                '>        
+        <div className='techObserve'>
+          <h1 className='
+                  techHead                              
+                  text-4xl
+                  xs:text-5xl
+                  md:text-6xl 
+                  font-black
+                  tracking-tighter
+                  leading-snug
+                  text-center
+                  text-lightHdrClr 
+                  dark:text-darkHdrClr
+                  '>
+            Tech Stack:
+          </h1>
 
-          <div id='css' className='skillCard'>
-            <div className='skillLogo'>
-              <FaCss3Alt color='blue' />
+          <div className='
+                techGrid
+                '>
+            
+            <div id='html' className='skillCard '>
+              <div className='skillLogo'>
+                <FaHtml5 color='red' /> 
+              </div>    
+              <div className='skillName'>
+                HTML
+              </div>
             </div>
-            <div className='skillName'>
-              CSS
-            </div>    
-          </div>
 
-          <div id='javascript' className='skillCard'>
-            <div className='skillLogo'>
-              <SiJavascript color='yellow' /> 
+            <div id='css' className='skillCard'>
+              <div className='skillLogo'>
+                <FaCss3Alt color='blue' />
+              </div>
+              <div className='skillName'>
+                CSS
+              </div>    
             </div>
-            <div className='skillName'>
-              Javascript
-            </div>    
-          </div>
 
-          <div id='java' className='skillCard'>
-            <div className='skillLogo'>
-              <FaJava color='darkblue' />
+            <div id='javascript' className='skillCard'>
+              <div className='skillLogo'>
+                <SiJavascript color='yellow' /> 
+              </div>
+              <div className='skillName'>
+                Javascript
+              </div>    
             </div>
-            <div className='skillName'>
-              Java    
-            </div>                         
-          </div>
 
-          <div id='react' className='skillCard .grid-animation'>
-            <div className='skillLogo'>
-              <FaReact color='aqua' />
+            <div id='java' className='skillCard'>
+              <div className='skillLogo'>
+                <FaJava color='darkblue' />
+              </div>
+              <div className='skillName'>
+                Java    
+              </div>                         
             </div>
-            <div className='skillName'>
-              React        
-            </div>
-          </div>
 
-          <div id='next' className='skillCard'>
-            <div className='skillLogo'>
-              <SiNextdotjs color='black' />
+            <div id='react' className='skillCard .grid-animation'>
+              <div className='skillLogo'>
+                <FaReact color='aqua' />
+              </div>
+              <div className='skillName'>
+                React        
+              </div>
             </div>
-            <div className='skillName'>
-              Next.js    
-            </div>    
-          </div>
 
-          <div id='php' className='skillCard'>
-            <div className='skillLogo'>
-            <SiPhp /> 
+            <div id='next' className='skillCard'>
+              <div className='skillLogo'>
+                <SiNextdotjs color='black' />
+              </div>
+              <div className='skillName'>
+                Next.js    
+              </div>    
             </div>
-            <div className='skillName'>
-              PHP    
-            </div>    
-          </div>
 
-          <div id='tailwind' className='skillCard'>
-            <div className='skillLogo'>
-              <SiTailwindcss color='teal' />
+            <div id='php' className='skillCard'>
+              <div className='skillLogo'>
+              <SiPhp /> 
+              </div>
+              <div className='skillName'>
+                PHP    
+              </div>    
             </div>
-            <div className='skillName'>
-              Tailwind    
-            </div>
-          </div> 
 
-          <div id='sql' className='skillCard'>
-            <div className='skillLogo'>
-            <BsFiletypeSql />
-            </div>
-            <div className='skillName'>
-              SQL    
-            </div>
-          </div> 
+            <div id='tailwind' className='skillCard'>
+              <div className='skillLogo'>
+                <SiTailwindcss color='teal' />
+              </div>
+              <div className='skillName'>
+                Tailwind    
+              </div>
+            </div> 
 
-        </div>                                          
+            <div id='sql' className='skillCard'>
+              <div className='skillLogo'>
+              <BsFiletypeSql />
+              </div>
+              <div className='skillName'>
+                SQL    
+              </div>
+            </div> 
+
+          </div>  
+        </div>                                        
       </section>
     </main>
   )
