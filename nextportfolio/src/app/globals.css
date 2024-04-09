@@ -33,9 +33,31 @@ section {
   scroll-snap-stop: always;
 }
 
-/* TECH STACK START */
-.techLayout {
+.mainGrid {
   display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "landing landing landing"
+                       "navHead navHead navHead"
+                       "aboutMe aboutMe aboutMe"
+                       "techSec techSec techSec";
+}
+
+.landingSection {
+  grid-area: landing;
+}
+
+.navHeaderSection {
+}
+
+.aboutSection {
+  grid-area: aboutMe;
+}
+
+/* TECH STACK START */
+.techSection {
+  display: grid;
+  grid-area: techSec;
 }
 
 .techGrid {
@@ -80,50 +102,76 @@ section {
 
 #html {
   grid-area: html;
-  animation: fall 1s linear forwards;
 }
 
 #css {
   grid-area: css;
-  animation: fall 1.2s linear forwards;
 }
 
 #javascript {
   grid-area: javascript;
-  animation: fall 1.6s linear forwards;
 }
 
 #php {
   grid-area: php;
   color: #7a86b8;
-  animation: fall 1.8s linear forwards;
 }
 
 #java {
   grid-area: java;
-  animation: fall 1.9s linear forwards;
 }
 
 #tailwind {
   grid-area: tailwind;
-  animation: fall 2s linear forwards;
 }
 
 #next {
   grid-area: next;
-  animation: fall 2.4s linear forwards;
 }
 
 #sql {
   grid-area: sql;
   color: #db7533;
-  animation: fall 2.5s linear forwards;  
 }
 
 #react {
-  grid-area: react;
-  animation: fall 2.7s linear forwards;
-  animation-delay: calc(var(--scroll) * -1s);
+  grid-area: react;  
+}
+
+.html-grid-animation {
+  animation: fall 0.5s linear forwards;  
+}
+
+.css-grid-animation {
+  animation: fall 0.7s linear forwards;  
+}
+
+.javascript-grid-animation {
+  animation: fall 1.1s linear forwards;  
+}
+
+.php-grid-animation {
+  animation: fall 1.3s linear forwards;  
+}
+
+.java-grid-animation {  
+  animation: fall 1.4s linear forwards;
+}
+
+.tailwind-grid-animation {
+  animation: fall 1.5s linear forwards;
+}
+
+.next-grid-animation {  
+  animation: fall 1.9s linear forwards;
+}
+
+.sql-grid-animation {
+  animation: fall 2s linear forwards;  
+}
+
+.react-grid-animation {
+  animation: fall 2.2s linear forwards;
 }
 
 /* TECH STACK END */
@@ -243,6 +291,7 @@ section {
   position: -webkit-sticky; 
   position: sticky;
   top: 0;
+  grid-area: navHead;
 }
 
 .navUL {
@@ -269,6 +318,10 @@ section {
     display: none;
   }
 
+  .aboutPara {
+    padding-left: 3rem;
+  }
+
   .techGrid {
     max-width: 504px;
     max-height: 504px;
@@ -286,6 +339,22 @@ section {
   
   .skillName {
     font-size: 1em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mainGrid {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto 1024px auto;
+    grid-template-areas: ".  landing  ."
+                         ".  navHead  ."
+                         ".  aboutMe  ."
+                         ".  techSec  .";
+  }
+
+  .aboutPara {
+    padding-left: 3rem;
   }
 }
 

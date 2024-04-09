@@ -1,5 +1,6 @@
-import localFont from 'next/font/local'
-import './globals.css'
+import localFont from 'next/font/local';
+import './globals.css';
+import NavButton from './components/NavButton';
 
 const myFont = localFont({
   src: './font/Inter-VariableFont_slnt,wght.ttf',
@@ -18,7 +19,8 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body>        
-        {children}
+        <NavButton /> 
+          {children}
       </body>
     </html>
   )

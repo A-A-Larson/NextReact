@@ -1,6 +1,5 @@
 'use client';
 import { useEffect } from 'react';
-import NavButton from './components/NavButton';
 import NavHeader from './components/NavHeader';
 import HeroImg from './img/HeaderEdit4Resize.png';
 import AboutImg from './img/aboutMe.jpg';
@@ -20,23 +19,63 @@ import { BsFiletypeSql } from "react-icons/bs";
 export default function Home() {
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-        document.body.style.setProperty('--scroll', window.scrollY / (document.body.offsetHeight - window.innerHeight));
-      }, false);
+    
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const reactAnim = entry.target.querySelector('#react');
+        const sqlAnim = entry.target.querySelector('#sql');
+        const nextAnim = entry.target.querySelector('#next');
+        const tailwindAnim = entry.target.querySelector('#tailwind');
+        const javaAnim = entry.target.querySelector('#java');
+        const phpAnim = entry.target.querySelector('#php');
+        const javascriptAnim = entry.target.querySelector('#javascript');
+        const cssAnim = entry.target.querySelector('#css');
+        const htmlAnim = entry.target.querySelector('#html');
+        
+    
+        if (entry.isIntersecting) {
+          reactAnim.classList.add('react-grid-animation');
+          sqlAnim.classList.add('sql-grid-animation');
+          nextAnim.classList.add('next-grid-animation');
+          tailwindAnim.classList.add('tailwind-grid-animation');
+          javaAnim.classList.add('java-grid-animation');
+          phpAnim.classList.add('php-grid-animation');
+          javascriptAnim.classList.add('javascript-grid-animation');
+          cssAnim.classList.add('css-grid-animation');
+          htmlAnim.classList.add('html-grid-animation');
+
+        return; // if we added the class, exit the function
+        }
+    
+        // We're not intersecting, so remove the class!
+        reactAnim.classList.remove('react-grid-animation');
+        sqlAnim.classList.remove('sql-grid-animation');
+        nextAnim.classList.remove('next-grid-animation');
+        tailwindAnim.classList.remove('tailwind-grid-animation');
+        javaAnim.classList.remove('java-grid-animation');
+        phpAnim.classList.remove('php-grid-animation');
+        javascriptAnim.classList.remove('javascript-grid-animation');
+        cssAnim.classList.remove('css-grid-animation');
+        htmlAnim.classList.remove('html-grid-animation');
+      });
+    });
+    
+    observer.observe(document.querySelector('.techGrid'));
   }, [])
 
   return (
     <main 
       className="
+        mainGrid
         bg-lightBG 
         text-lightTxtClr
         dark:bg-darkBG 
         dark:text-darkTxtClr"
     >     
 
-      <NavButton />   
+        
 
-      <section className='flex flex-col border-b'>
+      <section className='landingSection flex flex-col border-b'>
         <div className='max-w-screen-lg m-auto'>
           <Image
             className=''                
@@ -92,12 +131,16 @@ export default function Home() {
             >
               Andrew Larson
             </div>
-          </h1>                             
+          </h1>   
+                                    
         </header>             
-      </section>      
+      </section> 
+
       <NavHeader />
+
       <section
         className='
+          aboutSection
           flex 
           flex-col
           md:flex-row
@@ -121,15 +164,17 @@ export default function Home() {
             alt='Man staring out a window on a train'
           />
         </div>
-        <div className='pt-12 text-lg md:pt-0 md:pl-12 xl:pl-0 max-w-xl flex-1'>
+        <div className='aboutPara pt-12 text-lg md:pt-0 max-w-xl flex-1'>
           <p className=''>
               I have 18 years of experience troubleshooting everything from cars to xrays. Now I'm making a career change to Web Developement so I can continue to learn and problem solve as I get too old to turn wrenches. 
           </p>
         </div>
       </section>
 
-      <section className='techLayout'>        
+      <section className='techSection'>        
+        
         <div className='techGrid'>
+          
           <div id='html' className='skillCard '>
             <div className='skillLogo'>
               <FaHtml5 color='red' /> 
@@ -166,7 +211,7 @@ export default function Home() {
             </div>                         
           </div>
 
-          <div id='react' className='skillCard'>
+          <div id='react' className='skillCard .grid-animation'>
             <div className='skillLogo'>
               <FaReact color='aqua' />
             </div>
