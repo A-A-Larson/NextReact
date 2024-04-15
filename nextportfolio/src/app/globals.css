@@ -33,6 +33,10 @@ section {
   scroll-snap-stop: always;
 }
 
+.footerSection {
+  grid-area: footers;
+}
+
 .mainGrid {
   display: grid;
   grid-template-rows: auto;
@@ -40,7 +44,8 @@ section {
   grid-template-areas: "landing landing landing"
                        "navHead navHead navHead"
                        "aboutMe aboutMe aboutMe"
-                       "techSec techSec techSec";
+                       "techSec techSec techSec"
+                       "footers footers footers";
 }
 
 .landingSection {
@@ -381,7 +386,8 @@ section {
     grid-template-areas: ".  landing  ."
                          ".  navHead  ."
                          ".  aboutMe  ."
-                         ".  techSec  .";
+                         ".  techSec  ."
+                         ".  footers  .";
   }
 
   .techObserve {    
@@ -424,3 +430,4 @@ section {
     transform: translateX(0em);
   }
 }
+

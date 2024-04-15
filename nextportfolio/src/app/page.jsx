@@ -1,11 +1,12 @@
 'use client';
 import { useEffect } from 'react';
 import NavHeader from './components/NavHeader';
-import HeroImg from './img/HeaderEdit4Resize.png';
+import HeroImg from './img/NewHeroSm.png';
 import HandsLight from './img/HandsResizeLight.png';
 import HandsDark from './img/HandsResizeDark1.png';
 import AboutImg from './img/aboutMe.jpg';
 import Image from 'next/image';
+import FooterImg from './img/footerImg.png';
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { SiJavascript } from "react-icons/si";
@@ -104,18 +105,18 @@ export default function Home() {
     >             
 
       <section className='landingSection flex flex-col'>
-        <div className='max-w-screen-lg m-auto fixed '>
+        <div className='max-w-screen-lg'>
           <Image
             className=''                
-            width={2930}
-            height={924}
+            width={3024}
+            height={3024}
             src={HeroImg}   
             quality={100}
             priority={true}
             alt='Man with hands overlapping the top of the webpage as if he is holding onto it'
           />            
         </div>
-        <div 
+        {/* <div 
             className='static z-20'
             >
                 <Image  
@@ -132,7 +133,7 @@ export default function Home() {
                     width={2930}
                     height={924}                        
                 />                     
-            </div>
+            </div> */}
         <header 
           className='
             bg-lightBG
@@ -325,6 +326,19 @@ export default function Home() {
 
           </div>  
         </div>                                        
+      </section>
+
+      <section className='footerSection bg-white z-30 flex flex-col justify-end'>
+        <div className='max-w-screen-lg relative bottom-0'>
+                <Image
+                    className=''                
+                    width={3024}
+                    height={620}
+                    src={FooterImg}   
+                    quality={100}
+                    alt='Feet sticking out from the bottom of the webpage.'
+                />
+        </div>
       </section>
     </main>
   )
