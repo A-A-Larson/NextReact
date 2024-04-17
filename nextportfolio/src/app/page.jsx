@@ -104,12 +104,12 @@ export default function Home() {
         dark:text-darkTxtClr"
     >             
 
-      <section className='landingSection flex flex-col'>
-        <div className='max-w-screen-lg'>
+      <section className='landingSection flex flex-col items-center'>
+        <div className='max-w-screen-md'>
           <Image
             className=''                
             width={3024}
-            height={3024}
+            height={2016}
             src={HeroImg}   
             quality={100}
             priority={true}
@@ -328,8 +328,8 @@ export default function Home() {
         </div>                                        
       </section>
 
-      <section className='footerSection bg-white z-30 flex flex-col justify-end'>
-        <div className='max-w-screen-lg relative bottom-0'>
+      <section className='footerSection bg-white z-30 flex flex-col justify-end items-center'>
+        <div className='max-w-screen-md relative bottom-0'>
                 <Image
                     className=''                
                     width={3024}
