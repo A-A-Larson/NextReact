@@ -16,6 +16,9 @@ import { SiNextdotjs } from "react-icons/si";
 import { SiPhp } from "react-icons/si";
 import { SiTailwindcss } from "react-icons/si";
 import { BsFiletypeSql } from "react-icons/bs";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
 
 
 
@@ -329,16 +332,30 @@ export default function Home() {
       </section>
 
       <section className='footerSection bg-white z-30 flex flex-col justify-end items-center'>
-        <div className='max-w-screen-md relative bottom-0'>
-                <Image
-                    className=''                
-                    width={3024}
-                    height={620}
-                    src={FooterImg}   
-                    quality={100}
-                    alt='Feet sticking out from the bottom of the webpage.'
-                />
-        </div>
+        <footer className=''>
+            
+          <div className='max-w-screen-md relative bottom-0'>
+            <div className='absolute flex justify-center items-center h-full w-full'>
+              <div className='footer-icon'>
+                <FaLinkedin size={35} color='#cdeaf4' />
+              </div>
+              <div className='footer-icon'>
+                <FaGithub size={35} color='#cdeaf4'/>
+              </div>
+              <div className='footer-icon'>
+                <IoIosMail size={35} color='#cdeaf4'/>
+              </div>
+            </div>
+            <Image
+              className=''                
+              width={3024}
+              height={620}
+              src={FooterImg}   
+              quality={100}
+              alt='Feet sticking out from the bottom of the webpage.'
+            />
+          </div>
+        </footer>
       </section>
     </main>
   )

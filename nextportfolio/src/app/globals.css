@@ -350,6 +350,20 @@ section {
 /* NAVIGATION HEADER END */
 /* NAVIGATION END */
 
+/* FOOTER START */
+
+.footer-icon {
+  rotate: x -55deg;
+  transition: transform 0.5s;
+  padding-right: 1em;
+}
+
+.footer-icon:hover {  
+  transform: rotateX(55deg);  
+}
+
+/* FOOTER END */
+
 @media (min-width: 768px) {
 
   .navUL {
