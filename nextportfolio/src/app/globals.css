@@ -356,6 +356,8 @@ section {
   rotate: x -55deg;
   transition: transform 0.5s;
   padding-right: 1em;
+  opacity: .8;
+  color: #cfeffc;
 }
 
 .footer-icon:hover {  
