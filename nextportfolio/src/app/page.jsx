@@ -338,13 +338,13 @@ export default function Home() {
           <div className='max-w-screen-md relative bottom-0'>
             <div className='absolute flex justify-center items-center h-full w-full'>
               <div className='footer-icon'>
-                <FaLinkedin size={35} color='#cdeaf4' />
+                <FaLinkedin size={35} />
               </div>
               <div className='footer-icon'>
-                <FaGithub size={35} color='#cdeaf4'/>
+                <FaGithub size={35} />
               </div>
               <div className='footer-icon'>
-                <IoIosMail size={35} color='#cdeaf4'/>
+                <IoIosMail size={35} />
               </div>
             </div>
             <Image
