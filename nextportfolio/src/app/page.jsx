@@ -2,8 +2,8 @@
 import { useEffect } from 'react';
 import NavHeader from './components/NavHeader';
 import HeroImg from './img/NewHeroSm.png';
-import HandsLight from './img/HandsResizeLight.png';
-import HandsDark from './img/HandsResizeDark1.png';
+import HandsLight from './img/Hands2.png';
+import HandsDark from './img/Hands2.png';
 import AboutImg from './img/aboutMe.jpg';
 import Image from 'next/image';
 import FooterImg from './img/footerImg.png';
@@ -108,7 +108,7 @@ export default function Home() {
     >             
 
       <section className='landingSection flex flex-col items-center'>
-        <div className='max-w-screen-md'>
+        <div className='fixed max-w-screen-md'>
           <Image
             className=''                
             width={3024}
@@ -119,24 +119,24 @@ export default function Home() {
             alt='Man with hands overlapping the top of the webpage as if he is holding onto it'
           />            
         </div>
-        {/* <div 
-            className='static z-20'
+        <div 
+            className='relative z-20 max-w-screen-md'
             >
                 <Image  
                     className='hidden dark:block'             
                     src={HandsDark}
                     alt='Floating hands'
-                    width={2930}
-                    height={924}                        
+                    width={3024}
+                    height={3024}                        
                 />
                 <Image       
                     className='block dark:hidden'        
                     src={HandsLight}
                     alt='Floating hands'
-                    width={2930}
-                    height={924}                        
+                    width={3024}
+                    height={3024}                        
                 />                     
-            </div> */}
+            </div>
         <header 
           className='
             bg-lightBG
@@ -148,7 +148,8 @@ export default function Home() {
             flex-col                   
             grow    
             justify-center
-            items-center                         
+            items-center 
+            w-full                        
             '
         >       
           <h1 
