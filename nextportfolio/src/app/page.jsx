@@ -1,9 +1,10 @@
 'use client';
 import { useEffect } from 'react';
 import NavHeader from './components/NavHeader';
-import HeroImg from './img/NewHeroSm.png';
-import HandsLight from './img/Hands2.png';
-import HandsDark from './img/Hands2.png';
+import HeroImg from './img/BackgroundLayer1.png';
+import BodyImg from './img/BodyLayer1.png';
+import HandsLight from './img/HandsLayer1.png';
+import HandsDark from './img/HandsLayer1.png';
 import AboutImg from './img/aboutMe.jpg';
 import Image from 'next/image';
 import FooterImg from './img/footerImg.png';
@@ -107,49 +108,53 @@ export default function Home() {
         dark:text-darkTxtClr"
     >             
 
-      <section className='landingSection flex flex-col items-center'>
-        <div className='fixed max-w-screen-md'>
+      <section className='landingSection'>
+        <div className='parallax'>
           <Image
-            className=''                
+            className='backgroundLayer'                
             width={3024}
             height={2016}
             src={HeroImg}   
             quality={100}
             priority={true}
             alt='Man with hands overlapping the top of the webpage as if he is holding onto it'
-          />            
+          />    
+          <Image
+            className='bodyLayer'                
+            width={3024}
+            height={2016}
+            src={BodyImg}   
+            quality={100}
+            priority={true}
+            alt='Man with hands overlapping the top of the webpage as if he is holding onto it'
+          />           
+          <Image  
+            className='hidden dark:block'             
+            src={HandsDark}
+            alt='Floating hands'
+            width={3024}
+            height={3024}                        
+          />
+          <Image       
+            className='block dark:hidden'        
+            src={HandsLight}
+            alt='Floating hands'
+            width={3024}
+            height={3024}                        
+          />        
         </div>
-        <div 
-            className='relative z-20 max-w-screen-md'
-            >
-                <Image  
-                    className='hidden dark:block'             
-                    src={HandsDark}
-                    alt='Floating hands'
-                    width={3024}
-                    height={3024}                        
-                />
-                <Image       
-                    className='block dark:hidden'        
-                    src={HandsLight}
-                    alt='Floating hands'
-                    width={3024}
-                    height={3024}                        
-                />                     
-            </div>
+        
         <header 
           className='
+            headerLayer
             bg-lightBG
             dark:bg-darkBG
-            z-10
             text-lightHdrClr 
             dark:text-darkHdrClr  
             flex
-            flex-col                   
-            grow    
+            flex-col  
             justify-center
-            items-center 
-            w-full                        
+            items-center                        
             '
         >       
           <h1 

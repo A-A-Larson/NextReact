@@ -18,6 +18,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
       </head>
       <body>        
         <NavButton /> 

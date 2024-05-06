@@ -29,8 +29,8 @@ html {
 
 section {
   min-height: 100vh;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+  /* scroll-snap-align: start;
+  scroll-snap-stop: always; */
 }
 
 .footerSection {
@@ -49,7 +49,45 @@ section {
 }
 
 .landingSection {
-  grid-area: landing;
+  grid-area: landing;  
+  background-color: white;
+  z-index: 1;
+}
+
+.parallax {
+  position: relative;
+  z-index: 0;
+  display: grid;
+  grid-template-areas: stack; 
+  justify-content: center;
+  align-content: end;
+}
+
+.parallax > * {
+  grid-area: stack;
+  animation: parallax linear;
+  animation-timeline: scroll();
+  flex-grow: 1;
+}
+
+.parallax > img {
+  
+}
+
+.backgroundLayer {
+  --parallax-speed: -200;
+}
+
+.bodyLayer {
+  --parallax-speed: -150;
+}
+
+.hands{
+  --parallax-speed: -5;
+}
+
+.headerLayer {
+  position: relative;
 }
 
 .aboutSection {
@@ -336,6 +374,7 @@ section {
   position: sticky;
   top: 0;
   grid-area: navHead;
+  z-index: 1;
 }
 
 .navUL {
@@ -561,5 +600,11 @@ section {
             transform: translateY(0);
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
+  }
+}
+
+@keyframes parallax {
+  to {
+    transform: translateY(calc(var(--parallax-speed) * -10px));
   }
 }

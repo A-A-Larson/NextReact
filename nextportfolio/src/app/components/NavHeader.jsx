@@ -11,7 +11,7 @@ export default function NavHeader() {
                 navHeader
                 bg-lightBG
                 dark:bg-darkBG
-                z-20
+                grow
                 '>
             <ul className='navUL'>
                 <li className='navLI dark:text-darkTxtClr'>
