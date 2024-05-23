@@ -20,6 +20,7 @@ import { BsFiletypeSql } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
+import Script from 'next/script';
 
 
 
@@ -109,6 +110,7 @@ export default function Home() {
     >             
 
       <section className='landingSection'>
+      <Script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js" strategy='beforeInteractive' />
         <div className='parallax'>
           <Image
             className='backgroundLayer'                
@@ -127,21 +129,21 @@ export default function Home() {
             quality={100}
             priority={true}
             alt='Man with hands overlapping the top of the webpage as if he is holding onto it'
-          />           
-          <Image  
-            className='hidden dark:block'             
-            src={HandsDark}
-            alt='Floating hands'
-            width={3024}
-            height={3024}                        
-          />
+          />    
           <Image       
             className='block dark:hidden'        
             src={HandsLight}
             alt='Floating hands'
             width={3024}
             height={3024}                        
-          />        
+          />      
+          <Image  
+            className='hidden dark:block'             
+            src={HandsDark}
+            alt='Floating hands'
+            width={3024}
+            height={3024}                        
+          />  
         </div>
         
         <header 
@@ -177,14 +179,11 @@ export default function Home() {
             </div>  
             <br/>  
             <div
-              className='                              
+              className='  
+                headerName                            
                 text-4xl
                 xs:text-5xl
                 sm:text-6xl 
-                font-black
-                tracking-tighter
-                leading-snug
-                text-center
                 '
             >
               Andrew Larson
@@ -201,8 +200,6 @@ export default function Home() {
           aboutSection
           bg-lightBG
           dark:bg-darkBG
-          z-10
-          p-8
           '
       >
         <div className='aboutImg max-w-md flex-1'>
@@ -230,7 +227,6 @@ export default function Home() {
                 techSection
                 bg-lightBG
                 dark:bg-darkBG
-                z-10
                 '>        
         <div className='techObserve'>
           <h1 className='
@@ -337,7 +333,7 @@ export default function Home() {
         </div>                                        
       </section>
 
-      <section className='footerSection bg-white z-30 flex flex-col justify-end items-center'>
+      <section className='footerSection bg-white flex flex-col justify-end items-center'>
         <footer className=''>
             
           <div className='max-w-screen-md relative bottom-0'>
