@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Inter';
+  src: url(./font/inter-variablefont_slntwght-webfont.woff2) format('woff2'),
+       url(./font/inter-variablefont_slntwght-webfont.woff) format('woff');
+}
+
 :root {
   --backgroundLight: rgb(255, 255, 255);
   --backgroundDark: #222831;
@@ -23,7 +29,7 @@ html {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   color-scheme: dark light;
-  font-family: var(--inter-font);
+  font-family: Inter, system-ui, sans-serif;
 }
 
 section {
@@ -34,6 +40,7 @@ section {
 
 .footerSection {
   grid-area: footers;
+  z-index: 1;
 }
 
 .mainGrid {
@@ -61,28 +68,26 @@ section {
 
 .parallax > * {
   animation: parallax linear;
-  animation-timeline: scroll();
+  animation-timeline: scroll(block root);
   position: absolute;
   height: 80vh;
   object-fit: scale-down;
 }
 
-
 .backgroundLayer {
-  --parallax-speed: -200;
+  --parallax-speed: -185;
 }
 
 .bodyLayer {
-  --parallax-speed: -150;
-}
-
-.hands{
+  --parallax-speed: -145;
 }
 
 .headerLayer {
   position: relative;
   height: 20vh;
   z-index: 1;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .headerName {
@@ -99,15 +104,10 @@ section {
   justify-content: center;
   align-items: center;
   z-index: 1;
+  padding: 1em;
 }
 
-.aboutPara-grid-animation {
-  animation: slideLeft 2.3s ease forwards;
-}
 
-.aboutImg-grid-animation {
-  animation: slideRight 2.3s ease forwards;
-}
 
 /* TECH STACK START */
 .techSection {

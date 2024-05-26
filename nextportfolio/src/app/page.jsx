@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import NavHeader from './components/NavHeader';
 import HeroImg from './img/BackgroundLayer1.png';
-import BodyImg from './img/BodyLayer1.png';
+import BodyImg from './img/BodyLayer1TouchUp.png';
 import HandsLight from './img/HandsLayer1.png';
 import HandsDark from './img/HandsLayer1.png';
 import AboutImg from './img/aboutMe.jpg';
@@ -20,7 +20,6 @@ import { BsFiletypeSql } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
-import Script from 'next/script';
 
 
 
@@ -110,7 +109,7 @@ export default function Home() {
     >             
 
       <section className='landingSection'>
-      <Script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js" strategy='beforeInteractive' />
+      
         <div className='parallax'>
           <Image
             className='backgroundLayer'                
@@ -180,8 +179,7 @@ export default function Home() {
             <br/>  
             <div
               className='  
-                headerName                            
-                text-4xl
+                headerName 
                 xs:text-5xl
                 sm:text-6xl 
                 '
