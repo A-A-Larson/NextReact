@@ -186,11 +186,10 @@ export default function Home() {
             >
               Andrew Larson
             </div>
-          </h1>   
-                                    
+          </h1>                                       
         </header>             
       </section> 
-
+    
       <NavHeader />
 
       <section
