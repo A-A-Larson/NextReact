@@ -2,12 +2,11 @@
 import { useEffect } from 'react';
 import NavHeader from './components/NavHeader';
 import HeroImg from './img/BackgroundLayer1.png';
-import BodyImg from './img/BodyLayer1TouchUp.png';
-import HandsLight from './img/HandsLayer1.png';
-import HandsDark from './img/HandsLayer1.png';
+import BodyImg from './img/BodyLayer1TouchUpResize.png';
+import HandsLight from './img/HandsLayer1Resize.png';
+import HandsDark from './img/HandsLayer1Resize.png';
 import AboutImg from './img/aboutMe.jpg';
 import Image from 'next/image';
-import FooterImg from './img/footerImg.png';
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { SiJavascript } from "react-icons/si";
@@ -17,9 +16,8 @@ import { SiNextdotjs } from "react-icons/si";
 import { SiPhp } from "react-icons/si";
 import { SiTailwindcss } from "react-icons/si";
 import { BsFiletypeSql } from "react-icons/bs";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { IoIosMail } from "react-icons/io";
+import BGImage from './components/BGImg';
+import Footer from './components/Footer';
 
 
 
@@ -106,7 +104,8 @@ export default function Home() {
         text-lightTxtClr
         dark:bg-darkBG 
         dark:text-darkTxtClr"
-    >             
+    >           
+    
 
       <section className='landingSection'>
       
@@ -130,14 +129,14 @@ export default function Home() {
             alt='Man with hands overlapping the top of the webpage as if he is holding onto it'
           />    
           <Image       
-            className='block dark:hidden'        
+            className='hands block dark:hidden'        
             src={HandsLight}
             alt='Floating hands'
             width={3024}
             height={3024}                        
           />      
           <Image  
-            className='hidden dark:block'             
+            className='hands hidden dark:block'             
             src={HandsDark}
             alt='Floating hands'
             width={3024}
@@ -329,8 +328,7 @@ export default function Home() {
           </div>  
         </div>                                        
       </section>
-
-      <section className='footerSection bg-white flex flex-col justify-end items-center'>
+      {/* <section className='footerSection bg-white flex flex-col justify-end items-center'>
         <footer className=''>
             
           <div className='max-w-screen-md relative bottom-0'>
@@ -355,7 +353,8 @@ export default function Home() {
             />
           </div>
         </footer>
-      </section>
+      </section> */}         
+      <Footer /> 
     </main>
   )
 };

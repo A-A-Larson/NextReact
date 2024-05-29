@@ -32,18 +32,28 @@ html {
   font-family: Inter, system-ui, sans-serif;
 }
 
+body {
+  position: relative;
+}
+
 section {
   min-height: 100vh;
   /* scroll-snap-align: start;
   scroll-snap-stop: always; */
 }
 
-.footerSection {
+.footerLayer {
   grid-area: footers;
   z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  background-color: gray;
 }
 
 .mainGrid {
+  position: relative;
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr 1fr;
@@ -56,14 +66,13 @@ section {
 
 .landingSection {
   grid-area: landing;  
-  background-color: white;
-  display: grid;
-  grid-template-rows: .85fr .15fr;
 }
 
 .parallax {
   position: relative;
   height: 80vh;
+  display: flex;
+  justify-content: center;
 }
 
 .parallax > * {
@@ -71,15 +80,19 @@ section {
   animation-timeline: scroll(block root);
   position: absolute;
   height: 80vh;
-  object-fit: scale-down;
+  object-fit: cover;
 }
 
 .backgroundLayer {
-  --parallax-speed: -185;
+  --parallax-speed: -85;
+  animation: parallax linear;
+  animation-timeline: scroll(block root);
+  grid-area: BGImg;
+  object-fit: fill;
 }
 
 .bodyLayer {
-  --parallax-speed: -145;
+  --parallax-speed: -55;
 }
 
 .headerLayer {
@@ -379,7 +392,6 @@ section {
   top: 0;
   grid-area: navHead;
   z-index: 2;
-  border-radius: 25px;
   box-shadow: 0px 1px 4px gray;
 }
 
@@ -396,12 +408,16 @@ section {
 
 /* FOOTER START */
 
+.footerImg {
+  object-fit: cover;
+}
+
 .footer-icon {
   rotate: x -55deg;
   transition: transform 0.5s;
   padding-right: 1em;
   opacity: .8;
-  color: #cfeffc;
+  color: #f9feff;
 }
 
 .footer-icon:hover {  
@@ -454,11 +470,19 @@ section {
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: auto 1024px auto;
-    grid-template-areas: ".  landing  ."
+    grid-template-areas: "landing  landing  landing"
                          ".  navHead  ."
                          ".  aboutMe  ."
                          ".  techSec  ."
-                         ".  footers  .";
+                         "footers  footers  footers";
+  }
+
+  .bodyLayer {
+    max-width: 1024px;
+  }
+
+  .hands {
+    max-width: 1024px;
   }
 
   .techObserve {    
