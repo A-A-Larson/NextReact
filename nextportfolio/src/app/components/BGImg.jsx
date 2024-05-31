@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import BGImage from '../img/IMG_5084.jpg'
+import BGImage from '../img/BackgroundLayer1.png'
 
 export default function BGImg() {
     return (
@@ -8,8 +8,7 @@ export default function BGImg() {
             alt='maple tree'
             src={BGImage}
             quality={100}
-            height={100}
-
+            fill
         />
     )
 }

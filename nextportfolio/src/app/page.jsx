@@ -1,7 +1,7 @@
 'use client';
 import { useEffect } from 'react';
 import NavHeader from './components/NavHeader';
-import HeroImg from './img/BackgroundLayer1.png';
+import HeroImg from './img/BGImg.jpg';
 import BodyImg from './img/BodyLayer1TouchUpResize.png';
 import HandsLight from './img/HandsLayer1Resize.png';
 import HandsDark from './img/HandsLayer1Resize.png';
@@ -105,20 +105,19 @@ export default function Home() {
         dark:bg-darkBG 
         dark:text-darkTxtClr"
     >           
-    
+    <Image
+            className='backgroundLayer'    
+            src={HeroImg}   
+            quality={100}
+            priority={true}
+            fill
+            alt='Man with hands overlapping the top of the webpage as if he is holding onto it'
+          />    
 
       <section className='landingSection'>
       
         <div className='parallax'>
-          <Image
-            className='backgroundLayer'                
-            width={3024}
-            height={2016}
-            src={HeroImg}   
-            quality={100}
-            priority={true}
-            alt='Man with hands overlapping the top of the webpage as if he is holding onto it'
-          />    
+          
           <Image
             className='bodyLayer'                
             width={3024}

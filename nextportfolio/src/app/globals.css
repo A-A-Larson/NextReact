@@ -49,10 +49,11 @@ section {
   display: flex;
   justify-content: center;
   position: absolute;
-  background-color: gray;
+  background-color: rgba(211, 211, 211, 0.655);
 }
 
 .mainGrid {
+  background-color: lightgray;
   position: relative;
   display: grid;
   grid-template-rows: auto;
@@ -84,15 +85,13 @@ section {
 }
 
 .backgroundLayer {
-  --parallax-speed: -85;
+  --parallax-speed: -120;
   animation: parallax linear;
-  animation-timeline: scroll(block root);
-  grid-area: BGImg;
-  object-fit: fill;
+  animation-timeline: scroll(block root);  
 }
 
 .bodyLayer {
-  --parallax-speed: -55;
+  --parallax-speed: -85;
 }
 
 .headerLayer {
@@ -470,11 +469,14 @@ section {
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: auto 1024px auto;
-    grid-template-areas: "landing  landing  landing"
+    grid-template-areas: ".  landing  ."
                          ".  navHead  ."
                          ".  aboutMe  ."
                          ".  techSec  ."
                          "footers  footers  footers";
+  }
+
+  .backgroundLayer {
   }
 
   .bodyLayer {
