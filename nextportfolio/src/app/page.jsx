@@ -1,10 +1,10 @@
 'use client';
 import { useEffect } from 'react';
 import NavHeader from './components/NavHeader';
-import HeroImg from './img/BGImg.jpg';
-import BodyImg from './img/BodyLayer1TouchUpResize.png';
-import HandsLight from './img/HandsLayer1Resize.png';
-import HandsDark from './img/HandsLayer1Resize.png';
+import BGImg from './img/BGImg5.jpg';
+import BodyImg from './img/BodyLayerV2.png';
+import HandsLight from './img/HandsUW.png';
+import HandsDark from './img/HandsUW.png';
 import AboutImg from './img/aboutMe.jpg';
 import Image from 'next/image';
 import { FaHtml5 } from "react-icons/fa";
@@ -16,7 +16,6 @@ import { SiNextdotjs } from "react-icons/si";
 import { SiPhp } from "react-icons/si";
 import { SiTailwindcss } from "react-icons/si";
 import { BsFiletypeSql } from "react-icons/bs";
-import BGImage from './components/BGImg';
 import Footer from './components/Footer';
 
 
@@ -105,14 +104,14 @@ export default function Home() {
         dark:bg-darkBG 
         dark:text-darkTxtClr"
     >           
-    <Image
-            className='backgroundLayer'    
-            src={HeroImg}   
-            quality={100}
-            priority={true}
-            fill
-            alt='Man with hands overlapping the top of the webpage as if he is holding onto it'
-          />    
+      <Image
+        className='backgroundLayer'    
+        src={BGImg}   
+        quality={100}
+        priority={true}
+        fill
+        alt='Man with hands overlapping the top of the webpage as if he is holding onto it'
+      />    
 
       <section className='landingSection'>
       
@@ -132,15 +131,16 @@ export default function Home() {
             src={HandsLight}
             alt='Floating hands'
             width={3024}
-            height={3024}                        
+            height={1500}                        
           />      
           <Image  
             className='hands hidden dark:block'             
             src={HandsDark}
             alt='Floating hands'
             width={3024}
-            height={3024}                        
+            height={1500}                        
           />  
+
         </div>
         
         <header 
@@ -326,33 +326,7 @@ export default function Home() {
 
           </div>  
         </div>                                        
-      </section>
-      {/* <section className='footerSection bg-white flex flex-col justify-end items-center'>
-        <footer className=''>
-            
-          <div className='max-w-screen-md relative bottom-0'>
-            <div className='absolute flex justify-center items-center h-full w-full'>
-              <div className='footer-icon'>
-                <FaLinkedin size={35} />
-              </div>
-              <div className='footer-icon'>
-                <FaGithub size={35} />
-              </div>
-              <div className='footer-icon'>
-                <IoIosMail size={35} />
-              </div>
-            </div>
-            <Image
-              className=''                
-              width={3024}
-              height={620}
-              src={FooterImg}   
-              quality={100}
-              alt='Feet sticking out from the bottom of the webpage.'
-            />
-          </div>
-        </footer>
-      </section> */}         
+      </section>            
       <Footer /> 
     </main>
   )

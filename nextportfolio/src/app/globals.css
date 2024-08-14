@@ -42,18 +42,8 @@ section {
   scroll-snap-stop: always; */
 }
 
-.footerLayer {
-  grid-area: footers;
-  z-index: 1;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  background-color: rgba(211, 211, 211, 0.655);
-}
-
 .mainGrid {
-  background-color: lightgray;
+  
   position: relative;
   display: grid;
   grid-template-rows: auto;
@@ -78,7 +68,7 @@ section {
 
 .parallax > * {
   animation: parallax linear;
-  animation-timeline: scroll(block root);
+  animation-timeline: scroll();
   position: absolute;
   height: 80vh;
   object-fit: cover;
@@ -87,7 +77,9 @@ section {
 .backgroundLayer {
   --parallax-speed: -120;
   animation: parallax linear;
-  animation-timeline: scroll(block root);  
+  animation-timeline: scroll(); 
+  object-position: top center;
+  filter: blur(1px);
 }
 
 .bodyLayer {
@@ -407,8 +399,31 @@ section {
 
 /* FOOTER START */
 
+.footerLayer {
+  grid-area: footers;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
+.footer-icon-wrapper {
+  position: relative;
+  bottom: 0px;
+  max-width: 1024px;
+}
+
+.footer-bg {
+  z-index: -1;
+  --parallax-speed: 0;
+  animation: parallax linear;
+  animation-timeline: scroll();
+}
+
 .footerImg {
   object-fit: cover;
+  z-index: 1;
 }
 
 .footer-icon {
@@ -466,17 +481,19 @@ section {
 
 @media (min-width: 1024px) {
   .mainGrid {
+    
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: auto 1024px auto;
-    grid-template-areas: ".  landing  ."
-                         ".  navHead  ."
-                         ".  aboutMe  ."
-                         ".  techSec  ."
+    grid-template-areas: "landing  landing  landing"
+                         "navHead  navHead  navHead"
+                         "aboutMe  aboutMe  aboutMe"
+                         "techSec  techSec  techSec"
                          "footers  footers  footers";
   }
 
   .backgroundLayer {
+    width: 100vh;
   }
 
   .bodyLayer {
@@ -484,7 +501,7 @@ section {
   }
 
   .hands {
-    max-width: 1024px;
+    max-width: 100%;
   }
 
   .techObserve {    

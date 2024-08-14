@@ -4,12 +4,22 @@ import FooterImg from '../img/footerLayer1.png';
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
+import FooterBG from '../img/footerBG.png'
 
 
 export default function Footer() {
     return (
-        <footer className='footerLayer'>            
-          <div className='max-w-screen-lg relative bottom-0'>
+        <footer className='footerLayer'>   
+        <Image
+            className='footer-bg'    
+            src={FooterBG}   
+            quality={100}
+            priority={true}
+            fill
+            alt='Cement pavement with the name Andrew Larson written in chalk'
+          />          
+          <div className='footer-icon-wrapper'>
+          
             <div className='absolute flex justify-center items-center h-full w-full'>
               <div className='footer-icon'>
                 <FaLinkedin size={35} />
