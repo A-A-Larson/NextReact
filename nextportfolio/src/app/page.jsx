@@ -1,5 +1,6 @@
 'use client';
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { useInView } from "react-intersection-observer";
 import NavHeader from './components/NavHeader';
 import BGImg from './img/BGImg5.jpg';
 import BodyImg from './img/BodyLayerV2.png';
@@ -21,80 +22,8 @@ import Footer from './components/Footer';
 
 
 export default function Home() {
-
-  useEffect(() => {
+  const { ref: techRef, inView: techIsVisible } = useInView();
     
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        const reactAnim = entry.target.querySelector('#react');
-        const sqlAnim = entry.target.querySelector('#sql');
-        const nextAnim = entry.target.querySelector('#next');
-        const tailwindAnim = entry.target.querySelector('#tailwind');
-        const javaAnim = entry.target.querySelector('#java');
-        const phpAnim = entry.target.querySelector('#php');
-        const javascriptAnim = entry.target.querySelector('#javascript');
-        const cssAnim = entry.target.querySelector('#css');
-        const htmlAnim = entry.target.querySelector('#html');
-        const techHeadAnim = entry.target.querySelector('.techHead');
-        
-    
-        if (entry.isIntersecting) {
-          reactAnim.classList.add('react-grid-animation');
-          sqlAnim.classList.add('sql-grid-animation');
-          nextAnim.classList.add('next-grid-animation');
-          tailwindAnim.classList.add('tailwind-grid-animation');
-          javaAnim.classList.add('java-grid-animation');
-          phpAnim.classList.add('php-grid-animation');
-          javascriptAnim.classList.add('javascript-grid-animation');
-          cssAnim.classList.add('css-grid-animation');
-          htmlAnim.classList.add('html-grid-animation');
-          techHeadAnim.classList.add('techHead-grid-animation');
-          
-        return; // if we added the class, exit the function
-        }
-    
-        // We're not intersecting, so remove the class!
-        reactAnim.classList.remove('react-grid-animation');
-        sqlAnim.classList.remove('sql-grid-animation');
-        nextAnim.classList.remove('next-grid-animation');
-        tailwindAnim.classList.remove('tailwind-grid-animation');
-        javaAnim.classList.remove('java-grid-animation');
-        phpAnim.classList.remove('php-grid-animation');
-        javascriptAnim.classList.remove('javascript-grid-animation');
-        cssAnim.classList.remove('css-grid-animation');
-        htmlAnim.classList.remove('html-grid-animation');
-        techHeadAnim.classList.remove('techHead-grid-animation');
-      });
-    }, { threshold: 0.1 });
-    
-    observer.observe(document.querySelector('.techSection'));
-
-
-    const observer2 = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        const aboutImgAnim = entry.target.querySelector('.aboutImg');
-        const aboutParaAnim = entry.target.querySelector('.aboutPara');
-        
-    
-        if (entry.isIntersecting) {
-          aboutImgAnim.classList.add('aboutImg-grid-animation');
-          aboutParaAnim.classList.add('aboutPara-grid-animation');
-
-        return; // if we added the class, exit the function
-        }
-    
-        // We're not intersecting, so remove the class!
-        aboutImgAnim.classList.remove('aboutImg-grid-animation');
-        aboutParaAnim.classList.remove('aboutPara-grid-animation');
-      });
-    }, { threshold: 0.1 });
-    
-    observer2.observe(document.querySelector('.aboutSection'));
-    
-  }, 
-  
-  [])
-
   return (
     <main 
       className="
@@ -104,12 +33,17 @@ export default function Home() {
         dark:bg-darkBG 
         dark:text-darkTxtClr"
     >           
-      
 
       <section className='landingSection'>
       
         <div className='parallax'>
-          
+          <Image
+            className='backgroundLayer'
+            src={BGImg}   
+            fill
+            priority={true}
+            alt='Man with hands overlapping the top of the webpage as if he is holding onto it'
+          /> 
           <Image
             className='bodyLayer'                
             width={3024}
@@ -211,24 +145,24 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='
+      <section  className='
                 techSection
                 bg-lightBG
                 dark:bg-darkBG
                 '>        
-        <div className='techObserve'>
-          <h1 className='
-                  techHead                              
-                  text-4xl
-                  xs:text-5xl
-                  md:text-6xl 
-                  font-black
-                  tracking-tighter
-                  leading-snug
-                  text-center
-                  text-lightHdrClr 
-                  dark:text-darkHdrClr
-                  '>
+        <div ref={techRef} className='techObserve'>
+          <h1 className={`${'techHead'} 
+                          ${'text-4xl'}
+                          ${'xs:text-5xl'}
+                          ${'md:text-6xl'}
+                          ${'font-black'}
+                          ${'tracking-tighter'}
+                          ${'leading-snug'}
+                          ${'text-center'}
+                          ${'text-lightHdrClr'}
+                          ${'dark:text-darkHdrClr'}
+                          ${techIsVisible ? 'techHead-grid-animation' : ''}
+                        `}>
             Tech Stack:
           </h1>
 
@@ -236,7 +170,7 @@ export default function Home() {
                 techGrid
                 '>
             
-            <div id='html' className='skillCard '>
+            <div id='html' className={`${'skillCard'} ${techIsVisible ? 'column1-grid-animation' : ''}`}>
               <div className='skillLogo'>
                 <FaHtml5 color='red' /> 
               </div>    
@@ -245,7 +179,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div id='css' className='skillCard'>
+            <div id='css' className={`${'skillCard'} ${techIsVisible ? 'column2-grid-animation' : ''}`}>
               <div className='skillLogo'>
                 <FaCss3Alt color='blue' />
               </div>
@@ -254,7 +188,7 @@ export default function Home() {
               </div>    
             </div>
 
-            <div id='javascript' className='skillCard'>
+            <div id='javascript' className={`${'skillCard'} ${techIsVisible ? 'column3-grid-animation' : ''}`}>
               <div className='skillLogo'>
                 <SiJavascript color='yellow' /> 
               </div>
@@ -263,7 +197,7 @@ export default function Home() {
               </div>    
             </div>
 
-            <div id='java' className='skillCard'>
+            <div id='java' className={`${'skillCard'} ${techIsVisible ? 'column5-grid-animation' : ''}`}>
               <div className='skillLogo'>
                 <FaJava color='darkblue' />
               </div>
@@ -272,7 +206,7 @@ export default function Home() {
               </div>                         
             </div>
 
-            <div id='react' className='skillCard'>
+            <div id='react' className={`${'skillCard'} ${techIsVisible ? 'column3-grid-animation' : ''}`}>
               <div className='skillLogo'>
                 <FaReact color='aqua' />
               </div>
@@ -281,7 +215,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div id='next' className='skillCard'>
+            <div id='next' className={`${'skillCard'} ${techIsVisible ? 'column3-grid-animation' : ''}`}>
               <div className='skillLogo'>
                 <SiNextdotjs color='black' />
               </div>
@@ -290,7 +224,7 @@ export default function Home() {
               </div>    
             </div>
 
-            <div id='php' className='skillCard'>
+            <div id='php' className={`${'skillCard'} ${techIsVisible ? 'column4-grid-animation' : ''}`}>
               <div className='skillLogo'>
               <SiPhp /> 
               </div>
@@ -299,7 +233,7 @@ export default function Home() {
               </div>    
             </div>
 
-            <div id='tailwind' className='skillCard'>
+            <div id='tailwind' className={`${'skillCard'} ${techIsVisible ? 'column2-grid-animation' : ''}`}>
               <div className='skillLogo'>
                 <SiTailwindcss color='teal' />
               </div>
@@ -308,7 +242,7 @@ export default function Home() {
               </div>
             </div> 
 
-            <div id='sql' className='skillCard'>
+            <div id='sql' className={`${'skillCard'} ${techIsVisible ? 'column4-grid-animation' : ''}`}>
               <div className='skillLogo'>
               <BsFiletypeSql />
               </div>
