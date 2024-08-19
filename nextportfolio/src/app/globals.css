@@ -78,8 +78,8 @@ section {
   --parallax-speed: -120;
   animation: parallax linear;
   animation-timeline: scroll(); 
-  object-position: top center;
   filter: blur(1px);
+  object-fit: cover;
 }
 
 .bodyLayer {

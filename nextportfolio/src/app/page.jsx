@@ -104,14 +104,7 @@ export default function Home() {
         dark:bg-darkBG 
         dark:text-darkTxtClr"
     >           
-      <Image
-        className='backgroundLayer'    
-        src={BGImg}   
-        quality={100}
-        priority={true}
-        fill
-        alt='Man with hands overlapping the top of the webpage as if he is holding onto it'
-      />    
+      
 
       <section className='landingSection'>
       
@@ -279,7 +272,7 @@ export default function Home() {
               </div>                         
             </div>
 
-            <div id='react' className='skillCard .grid-animation'>
+            <div id='react' className='skillCard'>
               <div className='skillLogo'>
                 <FaReact color='aqua' />
               </div>
