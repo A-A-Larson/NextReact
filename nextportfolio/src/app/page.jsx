@@ -22,7 +22,7 @@ import Footer from './components/Footer';
 
 
 export default function Home() {
-  const { ref: techRef, inView: techIsVisible } = useInView();
+  const { ref: techRef, inView: techIsVisible } = useInView({});
     
   return (
     <main 
@@ -169,87 +169,104 @@ export default function Home() {
           <div className='
                 techGrid
                 '>
-            
-            <div id='html' className={`${'skillCard'} ${techIsVisible ? 'column1-grid-animation' : ''}`}>
-              <div className='skillLogo'>
-                <FaHtml5 color='red' /> 
-              </div>    
-              <div className='skillName'>
-                HTML
+            <div id='html' className='cardWrapper'>
+              <div className={`${'skillCard'} ${techIsVisible ? 'column1-grid-animation' : ''}`}>
+                <div className='skillLogo'>
+                  <FaHtml5 color='red' /> 
+                </div>    
+                <div className='skillName'>
+                  HTML
+                </div>
               </div>
             </div>
 
-            <div id='css' className={`${'skillCard'} ${techIsVisible ? 'column2-grid-animation' : ''}`}>
-              <div className='skillLogo'>
-                <FaCss3Alt color='blue' />
-              </div>
-              <div className='skillName'>
-                CSS
-              </div>    
-            </div>
-
-            <div id='javascript' className={`${'skillCard'} ${techIsVisible ? 'column3-grid-animation' : ''}`}>
-              <div className='skillLogo'>
-                <SiJavascript color='yellow' /> 
-              </div>
-              <div className='skillName'>
-                Javascript
-              </div>    
-            </div>
-
-            <div id='java' className={`${'skillCard'} ${techIsVisible ? 'column5-grid-animation' : ''}`}>
-              <div className='skillLogo'>
-                <FaJava color='darkblue' />
-              </div>
-              <div className='skillName'>
-                Java    
-              </div>                         
-            </div>
-
-            <div id='react' className={`${'skillCard'} ${techIsVisible ? 'column3-grid-animation' : ''}`}>
-              <div className='skillLogo'>
-                <FaReact color='aqua' />
-              </div>
-              <div className='skillName'>
-                React        
+            <div id='css' className='cardWrapper'>
+              <div className={`${'skillCard'} ${techIsVisible ? 'column2-grid-animation' : ''}`}>
+                <div className='skillLogo'>
+                  <FaCss3Alt color='blue' />
+                </div>
+                <div className='skillName'>
+                  CSS
+                </div>    
               </div>
             </div>
 
-            <div id='next' className={`${'skillCard'} ${techIsVisible ? 'column3-grid-animation' : ''}`}>
-              <div className='skillLogo'>
-                <SiNextdotjs color='black' />
+            <div id='javascript' className='cardWrapper'>
+              <div className={`${'skillCard'} ${techIsVisible ? 'column3-grid-animation' : ''}`}>
+                <div className='skillLogo'>
+                  <SiJavascript color='yellow' /> 
+                </div>
+                <div className='skillName'>
+                  Javascript
+                </div>    
               </div>
-              <div className='skillName'>
-                Next.js    
-              </div>    
             </div>
 
-            <div id='php' className={`${'skillCard'} ${techIsVisible ? 'column4-grid-animation' : ''}`}>
-              <div className='skillLogo'>
-              <SiPhp /> 
+            <div id='java' className='cardWrapper'>
+              <div className={`${'skillCard'} ${techIsVisible ? 'column5-grid-animation' : ''}`}>
+                <div className='skillLogo'>
+                  <FaJava color='darkblue' />
+                </div>
+                <div className='skillName'>
+                  Java    
+                </div>                         
               </div>
-              <div className='skillName'>
-                PHP    
-              </div>    
             </div>
 
-            <div id='tailwind' className={`${'skillCard'} ${techIsVisible ? 'column2-grid-animation' : ''}`}>
-              <div className='skillLogo'>
-                <SiTailwindcss color='teal' />
+            <div id='react' className='cardWrapper'>
+              <div className={`${'skillCard'} ${techIsVisible ? 'column3-grid-animation' : ''}`}>
+                <div className='skillLogo'>
+                  <FaReact color='aqua' />
+                </div>
+                <div className='skillName'>
+                  React        
+                </div>
               </div>
-              <div className='skillName'>
-                Tailwind    
-              </div>
-            </div> 
+            </div>
 
-            <div id='sql' className={`${'skillCard'} ${techIsVisible ? 'column4-grid-animation' : ''}`}>
-              <div className='skillLogo'>
-              <BsFiletypeSql />
+            <div id='next' className='cardWrapper'>
+              <div className={`${'skillCard'} ${techIsVisible ? 'column3-grid-animation' : ''}`}>
+                <div className='skillLogo'>
+                  <SiNextdotjs color='black' />
+                </div>
+                <div className='skillName'>
+                  Next.js    
+                </div>    
               </div>
-              <div className='skillName'>
-                SQL    
+            </div>
+
+            <div id='php' className='cardWrapper'>
+              <div  className={`${'skillCard'} ${techIsVisible ? 'column4-grid-animation' : ''}`}>
+                <div className='skillLogo'>
+                <SiPhp /> 
+                </div>
+                <div className='skillName'>
+                  PHP    
+                </div>    
               </div>
-            </div> 
+            </div>
+
+            <div id='tailwind' className='cardWrapper'>
+              <div className={`${'skillCard'} ${techIsVisible ? 'column2-grid-animation' : ''}`}>
+                <div className='skillLogo'>
+                  <SiTailwindcss color='teal' />
+                </div>
+                <div className='skillName'>
+                  Tailwind    
+                </div>
+              </div> 
+            </div>
+
+            <div id='sql' className='cardWrapper'>
+              <div className={`${'skillCard'} ${techIsVisible ? 'column4-grid-animation' : ''}`}>
+                <div className='skillLogo'>
+                <BsFiletypeSql />
+                </div>
+                <div className='skillName'>
+                  SQL    
+                </div>
+              </div> 
+            </div>
 
           </div>  
         </div>                                        

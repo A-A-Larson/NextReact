@@ -163,9 +163,12 @@ section {
   color: black;
 } 
 
-.skillCard:hover {
-  animation: none !important;
-  transform: scale(1.5);
+.cardWrapper {
+  animation: offHover .3s both;
+}
+
+.cardWrapper:hover {
+  animation: onHover .3s forwards;
   z-index: 99;
 } 
 
@@ -194,6 +197,9 @@ section {
 
 #php {
   grid-area: php;
+}
+
+#php > * {
   color: #7a86b8;
 }
 
@@ -211,6 +217,9 @@ section {
 
 #sql {
   grid-area: sql;
+}
+
+#sql > * {
   color: #db7533;
 }
 
@@ -638,5 +647,23 @@ section {
 @keyframes parallax {
   to {
     transform: translateY(calc(var(--parallax-speed) * -10px));
+  }
+}
+
+@keyframes onHover {
+  0%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(1.1);
+  }
+}
+
+@keyframes offHover {
+  0%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
   }
 }
