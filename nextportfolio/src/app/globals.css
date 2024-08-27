@@ -72,12 +72,11 @@ section {
   position: absolute;
   height: 80vh;
   object-fit: cover;
+  z-index: 1;
 }
 
 .backgroundLayer {
   --parallax-speed: -120;
-  animation: parallax linear;
-  animation-timeline: scroll(); 
   filter: blur(1px);
   object-fit: cover;
 }
@@ -111,8 +110,6 @@ section {
   padding: 1em;
 }
 
-
-
 /* TECH STACK START */
 .techSection {
   grid-area: techSec;  
@@ -120,6 +117,7 @@ section {
   justify-content: center;
   align-items:center;
   z-index: 1;
+  box-shadow: 0 4px 4px -2px black;
 }
 
 .techObserve {
@@ -170,6 +168,12 @@ section {
 .cardWrapper:hover {
   animation: onHover .3s forwards;
   z-index: 99;
+} 
+
+.cardWrapper:active {
+  animation: onHover .3s forwards;
+  z-index: -1;
+  
 } 
 
 .skillLogo {
@@ -387,36 +391,49 @@ section {
   color: var(--headercolorLight);  
 }
 
+.themetoggle {
+  cursor: pointer;
+}
+
 /* NAVIGATION HEADER END */
 /* NAVIGATION END */
 
 /* FOOTER START */
 
-.footerLayer {
+.footerSection {
   grid-area: footers;
-  z-index: 1;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.footerParallax {
+  position: relative;
+  z-index: 0;
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.footerParallax > * {
   position: absolute;
+  z-index: 1;
+  object-fit: cover;
 }
 
 .footer-icon-wrapper {
-  position: relative;
-  bottom: 0px;
-  max-width: 1024px;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-bg {
-  z-index: -1;
-  --parallax-speed: 0;
-  animation: parallax linear;
-  animation-timeline: scroll();
+  object-fit: cover;
 }
 
 .footerImg {
-  object-fit: cover;
-  z-index: 1;
+  height: 100%;
+  max-width: 1536px;
 }
 
 .footer-icon {

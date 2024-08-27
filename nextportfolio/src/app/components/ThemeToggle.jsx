@@ -23,7 +23,7 @@ const ThemeToggle = () => {
     }, [darkMode])
 
     return (
-        <div className='flex justify-center items-center'
+        <div className='themetoggle flex justify-center items-center'
         >            
                 <LuLightbulbOff 
                     className=' 
