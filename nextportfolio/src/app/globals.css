@@ -155,10 +155,11 @@ section {
   align-items: center;
   min-height: 60px;
   min-width: 60px;
-  box-shadow: 0px 0px 15px gray;
+  box-shadow: 0px 10px 8px gray;
   border: 2px solid lightgray;
   background-color: white;
   color: black;
+  border-radius: 7px;
 } 
 
 .cardWrapper {
@@ -193,14 +194,17 @@ section {
 
 #css {
   grid-area: css;
+  z-index: 1;
 }
 
 #javascript {
   grid-area: javascript;
+  z-index: 1;
 }
 
 #php {
   grid-area: php;
+  z-index: 1;
 }
 
 #php > * {
@@ -426,6 +430,7 @@ section {
 .footer-icon-wrapper {
   display: flex;
   justify-content: center;
+  z-index: 2;
 }
 
 .footer-bg {
