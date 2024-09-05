@@ -2,8 +2,8 @@
 import { useInView } from "react-intersection-observer";
 import NavHeader from './components/NavHeader';
 import BGImg from './img/BGImg5.jpg';
-import BodyImg from './img/BodyLayerV2.png';
-import HandsLight from './img/HandsUW.png';
+import BodyImg from './img/BlueshirtV2HSave.png';
+import HandsLight from './img/HandsUWv2.png';
 import HandsDark from './img/HandsUWDark.png';
 import AboutImg from './img/aboutMe.jpg';
 import Image from 'next/image';

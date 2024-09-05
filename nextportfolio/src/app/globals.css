@@ -76,13 +76,13 @@ section {
 }
 
 .backgroundLayer {
-  --parallax-speed: -120;
+  --parallax-speed: -175;
   filter: blur(1px);
   object-fit: cover;
 }
 
 .bodyLayer {
-  --parallax-speed: -85;
+  --parallax-speed: -145;
 }
 
 .headerLayer {
@@ -404,6 +404,7 @@ section {
   grid-area: footers;
   height: 50vh;
   overflow: hidden;
+  z-index: 1;
 }
 
 .footerParallax {
