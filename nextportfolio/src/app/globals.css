@@ -76,7 +76,7 @@ section {
 }
 
 .backgroundLayer {
-  --parallax-speed: -175;
+  --parallax-speed: -160;
   filter: blur(1px);
   object-fit: cover;
 }
@@ -446,8 +446,8 @@ section {
   rotate: x -55deg;
   transition: transform 0.5s;
   padding-right: 1em;
-  opacity: .8;
-  color: #f9feff;
+  color: #f7fefe;
+  filter: blur(0.65px);
 }
 
 .footer-icon:hover {  

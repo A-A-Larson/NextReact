@@ -23,13 +23,13 @@ export default function Footer() {
 
             <div className='footer-icon-wrapper'>      
               <div className='footer-icon'>
-                <FaLinkedin size={35} />
+                <FaLinkedin size={40} />
               </div>
               <div className='footer-icon'>
-                <FaGithub size={35} />
+                <FaGithub size={40} />
               </div>
               <div className='footer-icon'>
-                <IoIosMail size={35} />
+                <IoIosMail size={40} />
               </div>                          
             </div>
 

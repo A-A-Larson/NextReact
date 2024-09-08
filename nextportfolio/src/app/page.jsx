@@ -4,7 +4,7 @@ import NavHeader from './components/NavHeader';
 import BGImg from './img/BGImg5.jpg';
 import BodyImg from './img/BlueshirtV2HSave.png';
 import HandsLight from './img/HandsUWv2.png';
-import HandsDark from './img/HandsUWDark.png';
+import HandsDark from './img/HandsUWDarkv2.png';
 import AboutImg from './img/aboutMe.jpg';
 import Image from 'next/image';
 import { FaHtml5 } from "react-icons/fa";
@@ -57,14 +57,16 @@ export default function Home() {
             src={HandsLight}
             alt='Floating hands'
             width={3024}
-            height={1500}                        
+            height={1500}   
+            priority={true}                     
           />      
           <Image  
             className='hands hidden dark:block'             
             src={HandsDark}
             alt='Floating hands'
             width={3024}
-            height={1500}                        
+            height={1500}     
+            priority={true}                   
           />  
 
         </div>
