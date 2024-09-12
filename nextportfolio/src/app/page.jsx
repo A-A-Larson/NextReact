@@ -5,7 +5,6 @@ import BGImg from './img/BGImg5.jpg';
 import BodyImg from './img/BlueshirtV2HSave.png';
 import HandsLight from './img/HandsUWv2.png';
 import HandsDark from './img/HandsUWDarkv2.png';
-import AboutImg from './img/aboutMe.jpg';
 import Image from 'next/image';
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
@@ -125,23 +124,21 @@ export default function Home() {
           dark:bg-darkBG
           '
       >
-        <div className='aboutImg max-w-md flex-1'>
-          <Image
-            className='
-              rounded-full
-              shadow-2xl
-              shadow-gray-900                     
-              '                
-            width={718}
-            height={718}
-            src={AboutImg}   
-            quality={100}
-            alt='Man staring out a window on a train'
-          />
-        </div>
-        <div className='aboutPara pt-12 text-lg md:pt-0 max-w-xl flex-1'>
+        
+        <div className='aboutPara 
+                        pt-12 
+                        text-lg 
+                        md:pt-0 
+                        max-w-xl 
+                        flex-1
+                        text-lightHdrClr 
+                        dark:text-darkHdrClr'>
+          <h1 className="aboutH1">About Me</h1> <br/>
           <p className=''>
-              I have 18 years of experience troubleshooting everything from cars to xrays. Now I&apos;m making a career change to Web Developement so I can continue to learn and problem solve as I get too old to turn wrenches. 
+          I have 18 years of experience troubleshooting everything from cars to xrays. I made a career change to software development to continue to learn and problem solve new things. 
+          <br/><br/>
+          My education covered full stack development so I am open to all roles, but I have enjoyed front end, UI design and graphic design the most so far. Most of my recent projects were made with React or Python. 
+
           </p>
         </div>
       </section>

@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Inter';
-  src: url(./font/inter-variablefont_slntwght-webfont.woff2) format('woff2'),
-       url(./font/inter-variablefont_slntwght-webfont.woff) format('woff');
-}
-
 :root {
   --backgroundLight: rgb(255, 255, 255);
   --backgroundDark: #222831;
@@ -29,7 +23,7 @@ html {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   color-scheme: dark light;
-  font-family: Inter, system-ui, sans-serif;
+  font-family: system-ui, sans-serif;
 }
 
 body {
@@ -76,8 +70,7 @@ section {
 }
 
 .backgroundLayer {
-  --parallax-speed: -160;
-  filter: blur(1px);
+  --parallax-speed: -155;
   object-fit: cover;
 }
 
@@ -108,6 +101,10 @@ section {
   align-items: center;
   z-index: 1;
   padding: 1em;
+}
+
+.aboutH1 {
+  font-size: 2em;
 }
 
 /* TECH STACK START */
