@@ -135,9 +135,32 @@ export default function Home() {
                         dark:text-darkHdrClr'>
           <h1 className="aboutH1">About Me</h1> <br/>
           <p className=''>
-          I have 18 years of experience troubleshooting everything from cars to xrays. I made a career change to software development to continue to learn and problem solve new things. 
+          I have 18 years of experience diagnosing and repairing everything from cars to xrays. I made a career change to software development to continue to learn and problem solve new things.
           <br/><br/>
-          My education covered full stack development so I am open to all roles, but I have enjoyed front end, UI design and graphic design the most so far. Most of my recent projects were made with React or Python. 
+          My Computer Science degree and certificates are focused on full stack web/mobile app development and computer programming. Front end, UI design and graphic design are areas that I have enjoyed the most so far. Most of my recent projects were made with React or Python.  
+
+          </p>
+        </div>
+      </section>
+
+      <section
+        className='
+          projectSection
+          bg-lightBG
+          dark:bg-darkBG
+          '
+      >
+        
+        <div className='aboutPara 
+                        text-lg 
+                        md:pt-0 
+                        max-w-xl 
+                        flex-1
+                        text-lightHdrClr 
+                        dark:text-darkHdrClr'>
+          <h1 className="aboutH1">This Project</h1> <br/>
+          <p className=''>
+          This project was a key learning experience for me in building a portfolio while working with Next.js, Tailwind CSS, and React. It gave me practical insights into animations and content creation, particularly through photography. I also focused on responsive web design and accessibility, learning how to make sites work well on various devices and for all users. Additionally, I explored the use of polyfills to ensure compatibility with older browsers, enhancing my understanding of modern web development challenges. 
 
           </p>
         </div>

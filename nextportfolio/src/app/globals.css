@@ -45,6 +45,7 @@ section {
   grid-template-areas: "landing landing landing"
                        "navHead navHead navHead"
                        "aboutMe aboutMe aboutMe"
+                       "project project project"
                        "techSec techSec techSec"
                        "footers footers footers";
 }
@@ -100,11 +101,25 @@ section {
   justify-content: center;
   align-items: center;
   z-index: 1;
-  padding: 1em;
+  padding: 3em;
+}
+
+.aboutPara {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .aboutH1 {
   font-size: 2em;
+}
+
+.projectSection {
+  grid-area: project;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  padding: 3em;
 }
 
 /* TECH STACK START */
@@ -469,10 +484,6 @@ section {
     flex-direction: row;
   }
 
-  .aboutPara {
-    padding-left: 3rem;
-  }
-
   .techGrid {
     max-width: 504px;
     max-height: 504px;
@@ -501,6 +512,7 @@ section {
     grid-template-areas: "landing  landing  landing"
                          "navHead  navHead  navHead"
                          "aboutMe  aboutMe  aboutMe"
+                         "project  project  project"
                          "techSec  techSec  techSec"
                          "footers  footers  footers";
   }
