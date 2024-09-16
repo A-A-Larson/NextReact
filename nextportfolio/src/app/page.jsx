@@ -15,6 +15,8 @@ import { SiNextdotjs } from "react-icons/si";
 import { SiPhp } from "react-icons/si";
 import { SiTailwindcss } from "react-icons/si";
 import { BsFiletypeSql } from "react-icons/bs";
+import { BsExclamation } from "react-icons/bs";
+import { GiCheckMark } from "react-icons/gi";
 import Footer from './components/Footer';
 
 
@@ -126,11 +128,6 @@ export default function Home() {
       >
         
         <div className='aboutPara 
-                        pt-12 
-                        text-lg 
-                        md:pt-0 
-                        max-w-xl 
-                        flex-1
                         text-lightHdrClr 
                         dark:text-darkHdrClr'>
           <h1 className="aboutH1">About Me</h1> <br/>
@@ -152,17 +149,23 @@ export default function Home() {
       >
         
         <div className='aboutPara 
-                        text-lg 
-                        md:pt-0 
-                        max-w-xl 
-                        flex-1
                         text-lightHdrClr 
                         dark:text-darkHdrClr'>
           <h1 className="aboutH1">This Project</h1> <br/>
-          <p className=''>
-          This project was a key learning experience for me in building a portfolio while working with Next.js, Tailwind CSS, and React. It gave me practical insights into animations and content creation, particularly through photography. I also focused on responsive web design and accessibility, learning how to make sites work well on various devices and for all users. Additionally, I explored the use of polyfills to ensure compatibility with older browsers, enhancing my understanding of modern web development challenges. 
-
-          </p>
+          <h1 className="projectH1">Goals</h1>
+          <br />
+          <ul>
+            <li className="oppli">Build a portfolio <GiCheckMark className="goalsSVG" color="green" /></li>
+            <li className="oppli">Get more experience using Next.js, Tailwind CSS, and React <GiCheckMark className="goalsSVG" color="green" /></li>
+            <li className="oppli">Practiced what I've learned of responsive web design and accessibility <GiCheckMark className="goalsSVG" color="green" /></li>
+          </ul>
+          <br />
+          <h1 className="projectH1">Opportunities</h1>
+          <br />
+          <ul>
+            <li className="oppli"> <BsExclamation className="oppSVG" color="yellow" /> Learned about animations, content creation and even photography</li>
+            <li className="oppli"> <BsExclamation className="oppSVG" color="yellow" /> Learned about polyfills and scripts to get the animations to work on more browsers</li>
+          </ul>
         </div>
       </section>
 

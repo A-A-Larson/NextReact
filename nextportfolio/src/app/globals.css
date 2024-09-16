@@ -107,10 +107,19 @@ section {
 .aboutPara {
   font-size: 1.125rem;
   line-height: 1.75rem;
+  padding-top: 3rem;
+  flex: 1 1 0%;
+  max-width: 40rem;
 }
 
 .aboutH1 {
   font-size: 2em;
+  font-weight: 900;
+}
+
+.projectH1 {
+  font-size: 2em;
+  font-weight: 600;
 }
 
 .projectSection {
@@ -120,6 +129,20 @@ section {
   align-items: center;
   z-index: 1;
   padding: 3em;
+}
+
+.oppli {  
+  display: flex;
+  align-items: center;
+}
+
+.oppSVG {
+  font-size: 40px;;
+}
+
+.goalsSVG {
+  font-size: 20px;
+  padding-left: 3px;
 }
 
 /* TECH STACK START */
