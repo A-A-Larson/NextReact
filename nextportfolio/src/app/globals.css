@@ -62,8 +62,6 @@ section {
 }
 
 .parallax > * {
-  animation: parallax linear;
-  animation-timeline: scroll();
   position: absolute;
   height: 80vh;
   object-fit: cover;
@@ -71,12 +69,13 @@ section {
 }
 
 .backgroundLayer {
-  --parallax-speed: -155;
   object-fit: cover;
+  position: fixed;
+  width: 100vw;
 }
 
 .bodyLayer {
-  --parallax-speed: -145;
+  position: fixed;
 }
 
 .headerLayer {
@@ -540,7 +539,6 @@ section {
   }
 
   .backgroundLayer {
-    width: 100vh;
   }
 
   .bodyLayer {
@@ -695,12 +693,6 @@ section {
             transform: translateY(0);
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
-  }
-}
-
-@keyframes parallax {
-  to {
-    transform: translateY(calc(var(--parallax-speed) * -10px));
   }
 }
 

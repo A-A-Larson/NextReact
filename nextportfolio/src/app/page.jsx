@@ -1,7 +1,8 @@
 'use client';
 import { useInView } from "react-intersection-observer";
 import NavHeader from './components/NavHeader';
-import BGImg from './img/BGImg5.jpg';
+import BGImg from './img/BGImg4.jpg';
+import BGImgDark from './img/BGImg11.jpg';
 import BodyImg from './img/BlueshirtV2HSave.png';
 import HandsLight from './img/HandsUWv2.png';
 import HandsDark from './img/HandsUWDarkv2.png';
@@ -40,11 +41,16 @@ export default function Home() {
         <div className='parallax'>
           <Image
             className='backgroundLayer'
-            src={BGImg}   
-            fill
+            src={BGImg}  
             priority={true}
-            alt='Man with hands overlapping the top of the webpage as if he is holding onto it'
+            alt='Cloudy sky during the day'
           /> 
+          <Image  
+            className='backgroundLayer hidden dark:block'             
+            src={BGImgDark}
+            alt='Night sky'
+            priority={true}                   
+          />  
           <Image
             className='bodyLayer'                
             width={3024}
