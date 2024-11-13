@@ -5,7 +5,6 @@ import BGImg from './img/BGImg5.jpg';
 import BodyImg from './img/BlueshirtV2HSave.png';
 import HandsLight from './img/HandsUWv2.png';
 import HandsDark from './img/HandsUWDarkv2.png';
-import pyLogo from './img/python-logo-only.png'
 import Image from 'next/image';
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
