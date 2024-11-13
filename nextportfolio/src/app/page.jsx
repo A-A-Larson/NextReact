@@ -5,12 +5,14 @@ import BGImg from './img/BGImg5.jpg';
 import BodyImg from './img/BlueshirtV2HSave.png';
 import HandsLight from './img/HandsUWv2.png';
 import HandsDark from './img/HandsUWDarkv2.png';
+import pyLogo from './img/python-logo-only.png'
 import Image from 'next/image';
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { SiJavascript } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
+import { FaPython } from "react-icons/fa";
 import { SiNextdotjs } from "react-icons/si";
 import { SiPhp } from "react-icons/si";
 import { SiTailwindcss } from "react-icons/si";
@@ -190,54 +192,9 @@ export default function Home() {
             Tech Stack:
           </h1>
 
-          <div className='
-                techGrid
-                '>
-            <div id='html' className='cardWrapper'>
-              <div className={`${'skillCard'} ${techIsVisible ? 'column1-grid-animation' : ''}`}>
-                <div className='skillLogo'>
-                  <FaHtml5 color='red' /> 
-                </div>    
-                <div className='skillName'>
-                  HTML
-                </div>
-              </div>
-            </div>
+          <div className='techGrid'>           
 
-            <div id='css' className='cardWrapper'>
-              <div className={`${'skillCard'} ${techIsVisible ? 'column2-grid-animation' : ''}`}>
-                <div className='skillLogo'>
-                  <FaCss3Alt color='blue' />
-                </div>
-                <div className='skillName'>
-                  CSS
-                </div>    
-              </div>
-            </div>
-
-            <div id='javascript' className='cardWrapper'>
-              <div className={`${'skillCard'} ${techIsVisible ? 'column3-grid-animation' : ''}`}>
-                <div className='skillLogo'>
-                  <SiJavascript color='yellow' /> 
-                </div>
-                <div className='skillName'>
-                  Javascript
-                </div>    
-              </div>
-            </div>
-
-            <div id='java' className='cardWrapper'>
-              <div className={`${'skillCard'} ${techIsVisible ? 'column5-grid-animation' : ''}`}>
-                <div className='skillLogo'>
-                  <FaJava color='darkblue' />
-                </div>
-                <div className='skillName'>
-                  Java    
-                </div>                         
-              </div>
-            </div>
-
-            <div id='react' className='cardWrapper'>
+            <a id='react' className='cardWrapper' href="https://github.com/search?q=user%3AA-A-Larson+topic%3Areact&type=repositories">
               <div className={`${'skillCard'} ${techIsVisible ? 'column3-grid-animation' : ''}`}>
                 <div className='skillLogo'>
                   <FaReact color='aqua' />
@@ -246,42 +203,20 @@ export default function Home() {
                   React        
                 </div>
               </div>
-            </div>
+            </a>       
 
-            <div id='next' className='cardWrapper'>
-              <div className={`${'skillCard'} ${techIsVisible ? 'column3-grid-animation' : ''}`}>
+            <a id='python' className='cardWrapper' href="https://github.com/search?q=user%3AA-A-Larson+topic%3Areact&type=repositories">
+              <div className={`${'skillCard'} ${techIsVisible ? 'column5-grid-animation' : ''}`}>
                 <div className='skillLogo'>
-                  <SiNextdotjs color='black' />
+                  <FaPython color="#0172b6" />
                 </div>
                 <div className='skillName'>
-                  Next.js    
-                </div>    
+                  Python        
+                </div>
               </div>
-            </div>
+            </a>     
 
-            <div id='php' className='cardWrapper'>
-              <div  className={`${'skillCard'} ${techIsVisible ? 'column4-grid-animation' : ''}`}>
-                <div className='skillLogo'>
-                <SiPhp /> 
-                </div>
-                <div className='skillName'>
-                  PHP    
-                </div>    
-              </div>
-            </div>
-
-            <div id='tailwind' className='cardWrapper'>
-              <div className={`${'skillCard'} ${techIsVisible ? 'column2-grid-animation' : ''}`}>
-                <div className='skillLogo'>
-                  <SiTailwindcss color='teal' />
-                </div>
-                <div className='skillName'>
-                  Tailwind    
-                </div>
-              </div> 
-            </div>
-
-            <div id='sql' className='cardWrapper'>
+            <a id='sql' className='cardWrapper' href="https://github.com/search?q=user%3AA-A-Larson+topic%3Asql&type=repositories">
               <div className={`${'skillCard'} ${techIsVisible ? 'column4-grid-animation' : ''}`}>
                 <div className='skillLogo'>
                 <BsFiletypeSql />
@@ -290,7 +225,84 @@ export default function Home() {
                   SQL    
                 </div>
               </div> 
-            </div>
+            </a>
+
+            <a id='next' className='cardWrapper' href="https://github.com/search?q=user%3AA-A-Larson+topic%3Anextjs&type=repositories">
+              <div className={`${'skillCard'} ${techIsVisible ? 'column3-grid-animation' : ''}`}>
+                <div className='skillLogo'>
+                  <SiNextdotjs color='black' />
+                </div>
+                <div className='skillName'>
+                  Next.js    
+                </div>    
+              </div>
+            </a>
+
+            <a id='tailwind' className='cardWrapper' href="https://github.com/search?q=user%3AA-A-Larson+topic%3Atailwind&type=repositories">
+              <div className={`${'skillCard'} ${techIsVisible ? 'column2-grid-animation' : ''}`}>
+                <div className='skillLogo'>
+                  <SiTailwindcss color='teal' />
+                </div>
+                <div className='skillName'>
+                  Tailwind    
+                </div>
+              </div> 
+            </a>
+
+            <a id='java' className='cardWrapper' href="https://github.com/search?q=user%3AA-A-Larson+topic%3Ajava&type=repositories">
+              <div className={`${'skillCard'} ${techIsVisible ? 'column5-grid-animation' : ''}`}>
+                <div className='skillLogo'>
+                  <FaJava color='darkblue' />
+                </div>
+                <div className='skillName'>
+                  Java    
+                </div>                         
+              </div>
+            </a>
+
+            <a id='php' className='cardWrapper' href="https://github.com/search?q=user%3AA-A-Larson+topic%3Aphp&type=repositories">
+              <div  className={`${'skillCard'} ${techIsVisible ? 'column4-grid-animation' : ''}`}>
+                <div className='skillLogo'>
+                <SiPhp /> 
+                </div>
+                <div className='skillName'>
+                  PHP    
+                </div>    
+              </div>
+            </a>
+
+            <a id='javascript' className='cardWrapper' href="https://github.com/search?q=user%3AA-A-Larson+topic%3Ajavascript&type=repositories">
+              <div className={`${'skillCard'} ${techIsVisible ? 'column3-grid-animation' : ''}`}>
+                <div className='skillLogo'>
+                  <SiJavascript color='yellow' /> 
+                </div>
+                <div className='skillName'>
+                  Javascript
+                </div>    
+              </div>
+            </a>
+
+            <a id='css' className='cardWrapper' href="https://github.com/search?q=user%3AA-A-Larson+topic%3Acss&type=repositories">
+              <div className={`${'skillCard'} ${techIsVisible ? 'column2-grid-animation' : ''}`}>
+                <div className='skillLogo'>
+                  <FaCss3Alt color='blue' />
+                </div>
+                <div className='skillName'>
+                  CSS
+                </div>    
+              </div>
+            </a>
+            
+            <a id='html' className='cardWrapper' href="https://github.com/search?q=user%3AA-A-Larson+topic%3Ahtml&type=repositories">
+              <div className={`${'skillCard'} ${techIsVisible ? 'column1-grid-animation' : ''}`}>
+                <div className='skillLogo'>
+                  <FaHtml5 color='red' /> 
+                </div>    
+                <div className='skillName'>
+                  HTML
+                </div>
+              </div>
+            </a>
 
           </div>  
         </div>                                        

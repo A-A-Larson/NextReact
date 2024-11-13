@@ -172,7 +172,7 @@ section {
   grid-template-areas: '.... ........ .........  ...  ....'
                        '.... ........ .........  ...  ....'
                        '.... ........ react      ...  ....'
-                       '.... tailwind next       sql  ....'
+                       '.... tailwind next       sql  pyth'
                        'html css      javascript php  java';  
   justify-items: center;
   align-items: center;
@@ -207,9 +207,7 @@ section {
 } 
 
 .cardWrapper:active {
-  animation: onHover .3s forwards;
-  z-index: -1;
-  
+  animation: offHover .3s both; 
 } 
 
 .skillLogo {
@@ -229,17 +227,14 @@ section {
 
 #css {
   grid-area: css;
-  z-index: 1;
 }
 
 #javascript {
   grid-area: javascript;
-  z-index: 1;
 }
 
 #php {
   grid-area: php;
-  z-index: 1;
 }
 
 #php > * {
@@ -264,6 +259,10 @@ section {
 
 #sql > * {
   color: #db7533;
+}
+
+#python {
+  grid-area: pyth;
 }
 
 #react {
