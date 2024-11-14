@@ -46,8 +46,7 @@ section {
                        "navHead navHead navHead"
                        "aboutMe aboutMe aboutMe"
                        "project project project"
-                       "techSec techSec techSec"
-                       "footers footers footers";
+                       "techSec techSec techSec";
 }
 
 .landingSection {
@@ -56,16 +55,15 @@ section {
 
 .parallax {
   position: relative;
-  height: 80vh;
+  height: 75vh;
   display: flex;
   justify-content: center;
 }
 
 .parallax > * {
   position: absolute;
-  height: 80vh;
+  height: 75vh;
   object-fit: cover;
-  z-index: 1;
 }
 
 .backgroundLayer {
@@ -80,7 +78,7 @@ section {
 
 .headerLayer {
   position: relative;
-  height: 20vh;
+  height: 25vh;
   z-index: 1;
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -438,25 +436,23 @@ section {
 /* FOOTER START */
 
 .footerSection {
-  grid-area: footers;
-  height: 50vh;
+  height: 35vh;
+  width: 100%;
   overflow: hidden;
-  z-index: 1;
 }
 
 .footerParallax {
-  position: relative;
-  z-index: 0;
+  position: fixed;
   width: 100%;
+  height: 35vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  bottom: 0;
 }
 
 .footerParallax > * {
   position: absolute;
-  z-index: 1;
   object-fit: cover;
 }
 
@@ -467,7 +463,6 @@ section {
 }
 
 .footer-bg {
-  object-fit: cover;
 }
 
 .footerImg {
@@ -547,6 +542,7 @@ section {
 
   .hands {
     max-width: 100%;
+    z-index: 9;
   }
 
   .techObserve {    

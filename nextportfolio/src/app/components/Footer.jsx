@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import FooterImg from '../img/footlayer3.png';
+import FooterImg from '../img/footlayer7.png';
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
