@@ -1,10 +1,12 @@
 'use client';
 import Image from 'next/image';
-import FooterImg from '../img/footlayer7.png';
+import FooterImgL from '../img/footlayer7.png';
+import FooterImgD from '../img/footlayer7v2.png';
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
-import FooterBG from '../img/footbg8.JPG';
+import FooterBGL from '../img/footbg13.png';
+import FooterBGD from '../img/footbg14.png';
 
 
 export default function Footer() {
@@ -13,8 +15,17 @@ export default function Footer() {
           <div className='footerParallax'>
 
             <Image
-              className='footer-bg'    
-              src={FooterBG}   
+              className='footer-bg block dark:hidden'    
+              src={FooterBGL}   
+              quality={100}
+              priority={true}
+              fill
+              alt='Cement pavement with the name Andrew Larson written in chalk'
+            />   
+
+            <Image
+              className='footer-bg hidden dark:block'    
+              src={FooterBGD}   
               quality={100}
               priority={true}
               fill
@@ -22,25 +33,32 @@ export default function Footer() {
             />      
 
             <div className='footer-icon-wrapper'>      
-              <div className='footer-icon'>
+              <div className='footer-icon dark:text-darkIcon'>
                 <FaLinkedin size={40} />
               </div>
-              <div className='footer-icon'>
+              <div className='footer-icon dark:text-darkIcon'>
                 <FaGithub size={40} />
               </div>
-              <div className='footer-icon'>
+              <div className='footer-icon dark:text-darkIcon'>
                 <IoIosMail size={40} />
               </div>                          
             </div>
 
             <Image
-              className='footerImg'                
-              width={3024}
-              height={828}
-              src={FooterImg}   
+              className='footerImg block dark:hidden'     
+              src={FooterImgL}   
               quality={100}
+              fill
               alt='Feet sticking out from the bottom of the webpage.'
             />
+
+            <Image
+              className='footerImg hidden dark:block'    
+              src={FooterImgD}   
+              quality={100}
+              fill
+              alt='Feet sticking out from the bottom of the webpage.'
+            /> 
 
           </div>
         </footer>        

@@ -11,6 +11,7 @@
   --headercolorDark: #EEEEEE;
   --buttonColorLight: rgb(23, 68, 182);
   --buttonColorDark: rgb(235, 204, 126);
+  --iconcolorDark: #b7d0e1
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,7 +47,8 @@ section {
                        "navHead navHead navHead"
                        "aboutMe aboutMe aboutMe"
                        "project project project"
-                       "techSec techSec techSec";
+                       "techSec techSec techSec"
+                       "footers footers footers";
 }
 
 .landingSection {
@@ -74,6 +76,10 @@ section {
 
 .bodyLayer {
   position: fixed;
+}
+
+.hands {
+  z-index: 9;
 }
 
 .headerLayer {
@@ -439,6 +445,7 @@ section {
   height: 35vh;
   width: 100%;
   overflow: hidden;
+  grid-area: footers;
 }
 
 .footerParallax {
@@ -486,6 +493,10 @@ section {
 
 @media (min-width: 768px) {
 
+  .bodyLayer {
+    max-width: 1024px;
+  }
+
   .navUL {
     display: flex;
     justify-content: space-evenly;
@@ -532,6 +543,7 @@ section {
                          "techSec  techSec  techSec"
                          "footers  footers  footers";
   }
+  
 
   .backgroundLayer {
   }

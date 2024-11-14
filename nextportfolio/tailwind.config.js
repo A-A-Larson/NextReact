@@ -20,6 +20,7 @@ module.exports = {
         'darkHdrClr': 'var(--headercolorDark)',
         'lightBttnBG': 'var(--buttonColorLight)',
         'darkBttnBG': 'var(--buttonColorDark)',
+        'darkIcon': 'var(--iconcolorDark)'
       },
       fontFamily: {
         sans: ['var(--font-inter)'],
