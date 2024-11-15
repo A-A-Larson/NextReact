@@ -48,7 +48,6 @@ export default function Footer() {
               className='footerImg block dark:hidden'     
               src={FooterImgL}   
               quality={100}
-              fill
               alt='Feet sticking out from the bottom of the webpage.'
             />
 
@@ -56,7 +55,6 @@ export default function Footer() {
               className='footerImg hidden dark:block'    
               src={FooterImgD}   
               quality={100}
-              fill
               alt='Feet sticking out from the bottom of the webpage.'
             /> 
 
