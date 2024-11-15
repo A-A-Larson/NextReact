@@ -32,7 +32,7 @@ const ThemeToggle = () => {
                         dark:visible
                         text-white
                         ' 
-                    size={30} 
+                    size={25} 
                     onClick={() => setDarkMode(!darkMode)}
                 />
                 

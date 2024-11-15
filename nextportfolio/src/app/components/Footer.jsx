@@ -19,7 +19,6 @@ export default function Footer() {
               src={FooterBGL}   
               quality={100}
               priority={true}
-              fill
               alt='Cement pavement with the name Andrew Larson written in chalk'
             />   
 
@@ -28,7 +27,6 @@ export default function Footer() {
               src={FooterBGD}   
               quality={100}
               priority={true}
-              fill
               alt='Cement pavement with the name Andrew Larson written in chalk'
             />      
 

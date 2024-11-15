@@ -33,6 +33,7 @@ body {
 
 section {
   min-height: 100vh;
+  min-height: 100svh;
   /* scroll-snap-align: start;
   scroll-snap-stop: always; */
 }
@@ -57,14 +58,16 @@ section {
 
 .parallax {
   position: relative;
-  height: 75vh;
+  height: 45vh;
+  height: 45svh;
   display: flex;
   justify-content: center;
 }
 
 .parallax > * {
   position: absolute;
-  height: 75vh;
+  height: 45vh;
+  height: 45svh;
   object-fit: cover;
 }
 
@@ -76,6 +79,7 @@ section {
 
 .bodyLayer {
   position: fixed;
+  max-width: 540px;
 }
 
 .hands {
@@ -84,7 +88,8 @@ section {
 
 .headerLayer {
   position: relative;
-  height: 25vh;
+  height: 55vh;
+  height: 55svh;
   z-index: 1;
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -307,15 +312,15 @@ section {
 
 .circular-menu {
   position: fixed;
-  bottom: 0.5em;
+  bottom: 1.5em;
   right: 0.5em;
   z-index: 20;
 }
 
 .circular-menu .floating-btn {
   display: block;
-  width: 2.6em;
-  height: 2.6em;
+  width: 2em;
+  height: 2em;
   border-radius: 50%;
   background-color: hsl(0, 0%, 100%);
   box-shadow: 0 2px 5px 0 hsla(0, 0%, 0%, .26);  
@@ -347,8 +352,8 @@ section {
 .circular-menu:after {
   display: block;
   content: ' ';
-  width: 2.5em;
-  height: 2.5em;
+  width: 2em;
+  height: 2em;
   border-radius: 50%;
   position: absolute;
   top: 0;
@@ -360,7 +365,7 @@ section {
 }
 
 .circular-menu.active:after {
-  transform: scale3d(5.5, 5.5, 1);
+  transform: scale3d(6.5, 6.5, 1);
   transition-timing-function: cubic-bezier(.68, 1.55, .265, 1);
 }
 
@@ -378,8 +383,8 @@ section {
   text-decoration: none;
   color: hsl(0, 0%, 100%);
   font-size: 1em;
-  width: 2.4em;
-  height: 2.4em;
+  width: 1.9em;
+  height: 1.9em;
   border-radius: 50%;
   text-align: center;
   line-height: 3;
@@ -414,6 +419,7 @@ section {
   transform: translate3d(-5.1em,0.3em,0);
 }
 
+
 /* NAVIGATION HEADER START */
 .navHeader {
   position: -webkit-sticky; 
@@ -442,7 +448,8 @@ section {
 /* FOOTER START */
 
 .footerSection {
-  height: 35vh;
+  height: 18vh;
+  height: 18svh;
   width: 100%;
   overflow: hidden;
   grid-area: footers;
@@ -451,10 +458,10 @@ section {
 .footerParallax {
   position: fixed;
   width: 100%;
-  height: 35vh;
+  height: 18vh;
+  height: 18svh;
   display: flex;
   justify-content: center;
-  align-items: center;
   bottom: 0;
 }
 
@@ -465,16 +472,18 @@ section {
 
 .footer-icon-wrapper {
   display: flex;
-  justify-content: center;
   z-index: 2;
+  bottom: 25%;
 }
 
 .footer-bg {
+  height: 18vh;
+  height: 18svh;
 }
 
 .footerImg {
   height: 100%;
-  max-width: 1536px;
+  max-width: 1024px;
 }
 
 .footer-icon {
@@ -493,8 +502,36 @@ section {
 
 @media (min-width: 768px) {
 
+  .parallax {
+    position: relative;
+    height: 75vh;
+    height: 75svh;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .parallax > * {
+    position: absolute;
+    height: 75vh;
+    height: 75svh;
+    object-fit: cover;
+  }
+    
+  .backgroundLayer {
+    position: fixed;
+    width: 100vw;
+  }
+  
   .bodyLayer {
-    max-width: 1024px;
+    position: fixed;
+    max-width: 950px;
+  }
+
+  .headerLayer {
+    height: 25vh;
+    height: 25svh;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .navUL {
@@ -528,9 +565,65 @@ section {
   .skillName {
     font-size: 1em;
   }
+
+  /* FOOTER START */
+
+.footerSection {
+  height: 35vh;
+  height: 35svh;
+  width: 100%;
+  overflow: hidden;
+  grid-area: footers;
 }
 
-@media (min-width: 1024px) {
+.footerParallax {
+  position: fixed;
+  width: 100%;
+  height: 35vh;
+  height: 35svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+}
+
+.footerParallax > * {
+  position: absolute;
+  object-fit: cover;
+}
+
+.footer-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.footer-bg {
+  height: 35vh;
+  height: 35svh;
+}
+
+.footerImg {
+  height: 100%;
+  max-width: 1536px;
+}
+
+.footer-icon {
+  rotate: x -55deg;
+  transition: transform 0.5s;
+  padding-right: 1em;
+  color: #f7fefe;
+  filter: blur(0.65px);
+}
+
+.footer-icon:hover {  
+  transform: rotateX(55deg);  
+}
+
+/* FOOTER END */
+}
+
+@media (min-width: 1040px) {
   .mainGrid {
     
     display: grid;
@@ -544,14 +637,6 @@ section {
                          "footers  footers  footers";
   }
   
-
-  .backgroundLayer {
-  }
-
-  .bodyLayer {
-    max-width: 1024px;
-  }
-
   .hands {
     max-width: 100%;
     z-index: 9;
@@ -562,12 +647,12 @@ section {
     flex-direction: row;
     justify-items: center;
     align-items: center;
-    }
+  }
 
     .techGrid {      
     padding-left: 3rem;
     padding-top: 0;
-    }
+  }
   
 }
 

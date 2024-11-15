@@ -211,7 +211,7 @@ export default function Home() {
                 </div>
               </a>       
 
-              <a id='python' className='cardWrapper' href="https://github.com/search?q=user%3AA-A-Larson+topic%3Areact&type=repositories">
+              <a id='python' className='cardWrapper' href="https://github.com/search?q=user%3AA-A-Larson+topic%3Apython&type=repositories">
                 <div className={`${'skillCard'} ${techIsVisible ? 'column5-grid-animation' : ''}`}>
                   <div className='skillLogo'>
                     <FaPython color="#0172b6" />
