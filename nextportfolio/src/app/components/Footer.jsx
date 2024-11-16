@@ -5,7 +5,7 @@ import FooterImgD from '../img/footlayer7v2.png';
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
-import FooterBGL from '../img/footbg13.png';
+import FooterBGL from '../img/footbg15.png';
 import FooterBGD from '../img/footbg14.png';
 
 
