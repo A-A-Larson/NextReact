@@ -2,8 +2,9 @@
 import React from 'react';
 import ThemeToggle from './ThemeToggle';
 import { FaHome } from "react-icons/fa";
-import { FaCode } from "react-icons/fa";
-import { IoMdContact } from "react-icons/io";
+import { FaGithub } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
+import { FaLinkedin } from "react-icons/fa";
 
 export default function NavHeader() {
     return (
@@ -13,37 +14,44 @@ export default function NavHeader() {
                 dark:bg-darkBG
                 '>
             <ul className='navUL'>
-                <li className='navLI dark:text-darkTxtClr'>
+                <li className='navLI dark:text-darkTxtClr cardWrapper'>
                     <a 
                         href="#"
                         className='navAnchor'
                     >
                         <FaHome size={30} />
-                    </a>
+                    </a>Home
                 </li>
-                <li className='navLI dark:text-darkTxtClr'>
+                <li className='navLI dark:text-darkTxtClr cardWrapper'>
                     <a 
-                        href="https://github.com/drewdarko0"
+                        href="https://github.com/A-A-Larson"
                         className='navAnchor'
                     >
-                        <FaCode size={30} />
-                    </a>
+                        <FaGithub size={28} />
+                    </a>GitHub
                 </li>
-                <li className='navLI dark:text-darkTxtClr'>
+                <li className='navLI dark:text-darkTxtClr cardWrapper'>
+                    <a 
+                        href="https://www.linkedin.com/in/andrew-larson-0bb59b218"
+                        className='navAnchor'
+                    >
+                        <FaLinkedin size={28} />
+                    </a>LinkedIn
+                </li>
+                <li className='navLI dark:text-darkTxtClr cardWrapper'>
                     <a 
                         href="mailto:drewlars83@gmail.com"
                         className='navAnchor'
                     >
-                        <IoMdContact size={30} />
-                    </a>
+                        <IoIosMail size={30} />
+                    </a>Contact Me
                 </li>
-                <li className='navLI'>
-                    <a 
-                        
+                <li className='navLI dark:text-darkTxtClr cardWrapper'>
+                    <a                         
                         className='navAnchor'
                     >
                         <ThemeToggle />
-                    </a>
+                    </a>On/Off
                 </li>
             </ul>
         </nav>

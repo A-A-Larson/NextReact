@@ -136,8 +136,6 @@ export default function Home() {
               <div
                 className='  
                   headerName 
-                  xs:text-5xl
-                  sm:text-6xl 
                   '
               >
                 Andrew Larson
