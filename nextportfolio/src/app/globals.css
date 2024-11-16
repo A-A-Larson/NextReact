@@ -82,9 +82,32 @@ section {
   max-width: 540px;
 }
 
-.hands {
-  z-index: 9;
+.handsbg {
+  z-index: 2;
 }
+
+.handsLayers{
+  position: absolute;
+  height: 45vh;
+  height: 45svh;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  z-index: 2;
+}
+
+.hand {
+  height: 45vh;
+  height: 45svh;
+  width: fit-content;
+}
+
+.LHand {
+}
+
+.RHand {
+}
+
 
 .headerLayer {
   position: relative;
@@ -526,6 +549,26 @@ section {
     position: fixed;
     max-width: 950px;
   }
+  
+  .hands {
+    max-width: 100%;
+    z-index: 1;
+  }
+  
+  .handsLayers{
+    position: absolute;
+    height: 75vh;
+    height: 75svh;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .hand {
+    height: 75vh;
+    height: 75svh;
+    width: fit-content;
+  }
 
   .headerLayer {
     height: 25vh;
@@ -635,11 +678,6 @@ section {
                          "project  project  project"
                          "techSec  techSec  techSec"
                          "footers  footers  footers";
-  }
-  
-  .hands {
-    max-width: 100%;
-    z-index: 9;
   }
 
   .techObserve {    

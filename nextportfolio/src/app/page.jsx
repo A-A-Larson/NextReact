@@ -4,8 +4,10 @@ import NavHeader from './components/NavHeader';
 import BGImg from './img/BGImg4.jpg';
 import BGImgDark from './img/BGImg11.jpg';
 import BodyImg from './img/BlueshirtV2HSave.png';
-import HandsLight from './img/HandsUWv2.png';
-import HandsDark from './img/HandsUWDarkv2.png';
+import HandsLight from './img/HandsUWlbg.png';
+import HandsDark from './img/HandsUWdbg.png';
+import LHand from './img/LHand.png';
+import RHand from './img/RHand.png';
 import Image from 'next/image';
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
@@ -41,7 +43,7 @@ export default function Home() {
         
           <div className='parallax'>
             <Image
-              className='backgroundLayer'
+              className='backgroundLayer block dark:hidden'
               src={BGImg}  
               priority={true}
               alt='Cloudy sky during the day'
@@ -49,35 +51,54 @@ export default function Home() {
             <Image  
               className='backgroundLayer hidden dark:block'             
               src={BGImgDark}
-              alt='Night sky'
-              priority={true}                   
+              priority={true} 
+              alt='Night sky'                  
             />  
             <Image
               className='bodyLayer'                
               width={3024}
-              height={2016}
+              height={1500}
               src={BodyImg}   
               quality={100}
               priority={true}
               alt='Man with hands overlapping the top of the webpage as if he is holding onto it'
             />    
             <Image       
-              className='hands block dark:hidden'        
-              src={HandsLight}
-              alt='Floating hands'
-              width={3024}
-              height={1500}   
-              priority={true}                     
-            />      
-            <Image  
-              className='hands hidden dark:block'             
-              src={HandsDark}
-              alt='Floating hands'
-              width={3024}
-              height={1500}     
-              priority={true}                   
-            />  
+                className='handsbg block dark:hidden'        
+                src={HandsLight}
+                alt='Floating hands'
+                width={6880}
+                height={1440}   
+                priority={true}                     
+              />    
+              <Image  
+                className='handsbg hidden dark:block'             
+                src={HandsDark}
+                alt='Floating hands'
+                width={6880}
+                height={1440}     
+                priority={true}                   
+              />    
 
+              <div className="handsLayers">                
+                <Image       
+                  className='hand LHand'        
+                  src={LHand}
+                  alt='Floating hand'
+                  width={575}
+                  height={1440}   
+                  priority={true}                     
+                />      
+                <Image       
+                  className='hand RHand'        
+                  src={RHand}
+                  alt='Floating hand'
+                  width={592}
+                  height={1440}   
+                  priority={true}                     
+                />    
+              </div>
+              
           </div>
           
           <header 
