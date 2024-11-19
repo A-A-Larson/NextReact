@@ -117,7 +117,6 @@ export default function Home() {
             <h1 
               className='
                 text-base
-                sm:text-xl
                 flex
                 flex-col
                 justify-center
@@ -181,17 +180,17 @@ export default function Home() {
             <h1 className="aboutH1">This Project</h1> <br/>
             <h1 className="projectH1">Goals</h1>
             <br />
-            <ul>
-              <li className="oppli">Build a portfolio <GiCheckMark className="goalsSVG" color="green" /></li>
-              <li className="oppli">Get more experience using Next.js, Tailwind CSS, and React <GiCheckMark className="goalsSVG" color="green" /></li>
-              <li className="oppli">Practiced what I've learned of responsive web design and accessibility <GiCheckMark className="goalsSVG" color="green" /></li>
+            <ul className="goalsul">
+              <li className="goalsli">Build a portfolio</li><br />
+              <li className="goalsli">Get more experience using Next.js, Tailwind CSS, and React</li><br />
+              <li className="goalsli">Practiced what I've learned of responsive web design and accessibility</li>
             </ul>
             <br />
             <h1 className="projectH1">Opportunities</h1>
             <br />
-            <ul>
-              <li className="oppli"> <BsExclamation className="oppSVG" color="yellow" /> Learned about animations, content creation and even photography</li>
-              <li className="oppli"> <BsExclamation className="oppSVG" color="yellow" /> Learned about polyfills and scripts to get the animations to work on more browsers</li>
+            <ul className="oppul">
+              <li className="oppli">Learned about animations, content creation and even photography</li><br />
+              <li className="oppli">Learned about polyfills and scripts to get the animations to work on more browsers</li>
             </ul>
           </div>
         </section>
