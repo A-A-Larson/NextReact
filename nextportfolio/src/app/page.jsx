@@ -42,6 +42,7 @@ export default function Home() {
         <section className='landingSection'>
         
           <div className='parallax'>
+
             <Image
               className='backgroundLayer block dark:hidden'
               src={BGImg}  
@@ -64,40 +65,40 @@ export default function Home() {
               alt='Man with hands overlapping the top of the webpage as if he is holding onto it'
             />    
             <Image       
-                className='handsbg block dark:hidden'        
-                src={HandsLight}
-                alt='Floating hands'
-                width={6880}
+              className='handsbg block dark:hidden'        
+              src={HandsLight}
+              alt='Floating hands'
+              width={6880}
+              height={1440}   
+              priority={true}                     
+            />    
+            <Image  
+              className='handsbg hidden dark:block'             
+              src={HandsDark}
+              alt='Floating hands'
+              width={6880}
+              height={1440}     
+              priority={true}                   
+            />    
+
+            <div className="handsLayers">                
+              <Image       
+                className='hand LHand'        
+                src={LHand}
+                alt='Floating hand'
+                width={575}
+                height={1440}   
+                priority={true}                     
+              />      
+              <Image       
+                className='hand RHand'        
+                src={RHand}
+                alt='Floating hand'
+                width={592}
                 height={1440}   
                 priority={true}                     
               />    
-              <Image  
-                className='handsbg hidden dark:block'             
-                src={HandsDark}
-                alt='Floating hands'
-                width={6880}
-                height={1440}     
-                priority={true}                   
-              />    
-
-              <div className="handsLayers">                
-                <Image       
-                  className='hand LHand'        
-                  src={LHand}
-                  alt='Floating hand'
-                  width={575}
-                  height={1440}   
-                  priority={true}                     
-                />      
-                <Image       
-                  className='hand RHand'        
-                  src={RHand}
-                  alt='Floating hand'
-                  width={592}
-                  height={1440}   
-                  priority={true}                     
-                />    
-              </div>
+            </div>
               
           </div>
           
@@ -107,39 +108,36 @@ export default function Home() {
               bg-lightBG
               dark:bg-darkBG
               text-lightHdrClr 
-              dark:text-darkHdrClr  
-              flex
-              flex-col  
-              justify-center
-              items-center                        
+              dark:text-darkHdrClr                 
               '
           >       
-            <h1 
-              className='
-                text-base
-                flex
-                flex-col
-                justify-center
-                items-center
-                
-                ' 
-            > 
-              <div
-                className='                            
-                  mr-auto
-                  '    
-              >                 
-                  Hi, I&apos;m 
+
+            <h1 className='headerH1'> 
+
+              <div className='headerIntro'>                 
+                Hi, I&apos;m 
               </div>  
-              <br/>  
-              <div
-                className='  
-                  headerName 
-                  '
-              >
+
+              <div className='headerName'>
                 Andrew Larson
               </div>
-            </h1>                                       
+              <div class="main__action">
+                <a class="main__scroll" href="#Scroll-Location">              
+                  <div class="main__scroll-box">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                      <path className="fill-lightHdrClr dark:fill-darkHdrClr" 
+                            d="M11.9997 13.1716L7.04996     8.22186L5.63574 9.63607L11.9997 16L18.3637 9.63607L16.9495 8.22186L11.9997 13.1716Z">
+                      </path>
+                    </svg>
+                  </div>    
+                  <span class="main__scroll-text headerIntro">Learn More</span>
+                </a>
+              </div>  
+            </h1>   
+             
+             
+
           </header>             
         </section>  
       
@@ -151,6 +149,7 @@ export default function Home() {
             bg-lightBG
             dark:bg-darkBG
             '
+          id="Scroll-Location"
         >
           
           <div
