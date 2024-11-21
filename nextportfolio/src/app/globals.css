@@ -67,7 +67,7 @@ section {
 .parallax > * {
   position: absolute;
   height: 45vh;
-  height: 45svh;
+  height: 46svh;
   object-fit: cover;
 }
 
@@ -89,7 +89,7 @@ section {
 .handsLayers{
   position: absolute;
   height: 45vh;
-  height: 45svh;
+  height: 46svh;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -98,7 +98,7 @@ section {
 
 .hand {
   height: 45vh;
-  height: 45svh;
+  height: 46svh;
   width: fit-content;
 }
 
@@ -147,34 +147,12 @@ section {
   height: 4em;
 }
 
-.main__scroll-box svg {
-  
-}
-
 .main__scroll-text {  
   font-size: 1rem;
 }
 
 .main__action .main__scroll-box {
   animation: scroll-down 3s infinite;
-}
-
-/* Animate scroll icon */
-@keyframes scroll-down {
-  0%, 100% {
-    transform: translateY(0rem);
-    opacity: 1;
-  }
-
-  35% {
-    transform: translateY(1rem);
-    opacity: 0;
-  }
-
-  70% {
-    transform: translateY(-1rem);
-    opacity: 0;
-  }
 }
 
 .aboutSection {
@@ -1089,6 +1067,24 @@ section {
             transform: translateY(0);
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
+  }
+}
+
+
+@keyframes scroll-down {
+  0%, 100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+
+  35% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+
+  70% {
+    transform: translateY(-1rem);
+    opacity: 0;
   }
 }
 
