@@ -2,13 +2,14 @@
 import { useInView } from "react-intersection-observer";
 import NavHeader from './components/NavHeader';
 import BGImg from './img/BGImg4.jpg';
-import BGImgDark from './img/BGImg11.jpg';
+import BGImgDark from './img/BGImg22.jpg';
 import BodyImg from './img/BlueshirtV2HSave.png';
 import HandsLight from './img/HandsUWlbg.png';
 import HandsDark from './img/HandsUWdbg.png';
 import LHand from './img/LHand.png';
 import RHand from './img/RHand.png';
 import Image from 'next/image';
+import About from './img/aboutbust1.png'
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { SiJavascript } from "react-icons/si";
@@ -19,14 +20,13 @@ import { SiNextdotjs } from "react-icons/si";
 import { SiPhp } from "react-icons/si";
 import { SiTailwindcss } from "react-icons/si";
 import { BsFiletypeSql } from "react-icons/bs";
-import { BsExclamation } from "react-icons/bs";
-import { GiCheckMark } from "react-icons/gi";
 import Footer from './components/Footer';
 
 
 
 export default function Home() {
   const { ref: techRef, inView: techIsVisible } = useInView({});
+  const { ref: aboutRef, inView: aboutIsVisible } = useInView({});
     
   return (
     <div>
@@ -145,7 +145,7 @@ export default function Home() {
       
         <NavHeader />
 
-        <section
+        <section 
           className='
             aboutSection
             bg-lightBG
@@ -153,17 +153,47 @@ export default function Home() {
             '
         >
           
-          <div className='aboutPara 
-                          text-lightHdrClr 
-                          dark:text-darkHdrClr'>
-            <h1 className="aboutH1">About Me</h1> <br/>
-            <p className=''>
-            I have 18 years of experience diagnosing and repairing everything from cars to xrays. I made a career change to software development to continue to learn and problem solve new things.
-            <br/><br/>
-            My Computer Science degree and certificates are focused on full stack web/mobile app development and computer programming. Front end, UI design and graphic design are areas that I have enjoyed the most so far. Most of my recent projects were made with React or Python.  
+          <div
+            ref={aboutRef}
+            className='aboutLayout 
+                      text-lightHdrClr 
+                      dark:text-darkHdrClr'>
 
-            </p>
+            <h1 className={`${'aboutH1'} ${aboutIsVisible ? 'aboutH1-animation' : ''}`}>About Me</h1>
+
+            <div className={`${'about1'} ${aboutIsVisible ? 'about1-animation' : ''}`}>
+              <h2 className="aboutH2">What am I doing now?</h2>
+              <p className='aboutP1'>
+              I am finishing a degree in full stack web development with a certificate in computer programming and another in web and mobile app development while doing an internship at a data analytics firm.
+              </p>
+            </div>
+
+            <div className={`${'about2'} ${aboutIsVisible ? 'about2-animation' : ''}`}>
+              <h2 className="aboutH2">How did I get here?</h2>
+              <p className='aboutP2'>
+              In 2007 I started a career as a mechanic with a degree in automotive technology. Since then I've been a self starter, working independently in a commision shop with tight deadlines. A mechanical team lead on a production line that used Six Sigma methodology and Lean production with weekly sprints. I've achieved the title of Master Automotive Techician and run out of new things to learn. <br /><br />As a lifelong learner, I'm starting a new chapter in my life as I trade in my wrenches for a keyboard.
+              </p>
+            </div>
+
+            <div className={`${'about3'} ${aboutIsVisible ? 'about3-animation' : ''}`}>
+              <h2 className="aboutH2">Where do I want to go from here?</h2>
+              <p className='aboutP3'>
+              As I approach graduation I will continue working on projects, building my portfolio and looking for opportunities to gain real world experience. Use the email button in the navigation bar or footer to connect!
+              </p>
+            </div>
+
+            <Image
+              className='aboutImg'
+              src={About}  
+              width={663}
+              height={695}
+              alt='A profile picture of Andrew Larson'
+            />
+
           </div>
+
+          
+
         </section>
 
         <section
@@ -179,8 +209,8 @@ export default function Home() {
                           dark:text-darkHdrClr'>
             <h1 className="aboutH1">This Project</h1> <br/>
             <h1 className="projectH1">Goals</h1>
-            <br />
-            <ul className="goalsul">
+            
+            <ul className="goalsul"><br />
               <li className="goalsli">Build a portfolio</li><br />
               <li className="goalsli">Get more experience using Next.js, Tailwind CSS, and React</li><br />
               <li className="goalsli">Practiced what I've learned of responsive web design and accessibility</li>
