@@ -1,6 +1,7 @@
 'use client';
 import { useInView } from "react-intersection-observer";
 import NavHeader from './components/NavHeader';
+import ApiDemo from "./components/ApiDemo";
 import BGImg from './img/BGImg4.jpg';
 import BGImgDark from './img/BGImg22.jpg';
 import BodyImg from './img/BlueshirtV2HSave.png';
@@ -10,6 +11,8 @@ import LHand from './img/LHand.png';
 import RHand from './img/RHand.png';
 import Image from 'next/image';
 import About from './img/aboutbust1.png'
+import constructionTapeImg from './img/construction.png'
+import constructionFrameImg from './img/constructionFrame.png'
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { SiJavascript } from "react-icons/si";
@@ -27,6 +30,7 @@ import Footer from './components/Footer';
 export default function Home() {
   const { ref: techRef, inView: techIsVisible } = useInView({});
   const { ref: aboutRef, inView: aboutIsVisible } = useInView({});
+  const { ref: projectRef, inView: projectIsVisible } = useInView({});
     
   return (
     <div>
@@ -121,9 +125,9 @@ export default function Home() {
               <div className='headerName'>
                 Andrew Larson
               </div>
-              <div class="main__action">
-                <a class="main__scroll" href="#Scroll-Location">              
-                  <div class="main__scroll-box">
+              <div className="main__action">
+                <a className="main__scroll" href="#Scroll-Location">              
+                  <div className="main__scroll-box">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path d="M0 0h24v24H0z" fill="none"></path>
                       <path className="fill-lightHdrClr dark:fill-darkHdrClr" 
@@ -131,7 +135,7 @@ export default function Home() {
                       </path>
                     </svg>
                   </div>    
-                  <span class="main__scroll-text headerIntro">Learn More</span>
+                  <span className="main__scroll-text headerIntro">Learn More</span>
                 </a>
               </div>  
             </h1>   
@@ -189,9 +193,7 @@ export default function Home() {
               alt='A profile picture of Andrew Larson'
             />
 
-          </div>
-
-          
+          </div>          
 
         </section>
 
@@ -203,23 +205,25 @@ export default function Home() {
             '
         >
           
-          <div className='aboutPara 
-                          text-lightHdrClr 
-                          dark:text-darkHdrClr'>
-            <h1 className="aboutH1">This Project</h1> <br/>
-            <h1 className="projectH1">Goals</h1>
+          <div
+              ref={projectRef}
+              className='projectDiv 
+                        text-lightHdrClr 
+                        dark:text-darkHdrClr'>
+            <h1 className={`${'projectH1'} ${projectIsVisible ? 'projectH-animation' : ''}`}>This Project</h1> <br/>
+            <h2 className={`${'projectH2-1'} ${projectIsVisible ? 'projectH-animation' : ''}`}>Goals</h2>
             
             <ul className="goalsul"><br />
-              <li className="goalsli">Build a portfolio</li><br />
-              <li className="goalsli">Get more experience using Next.js, Tailwind CSS, and React</li><br />
-              <li className="goalsli">Practiced what I've learned of responsive web design and accessibility</li>
+              <li className={`${'goalsli1'} ${projectIsVisible ? 'goalsli1-animation' : ''}`}>Build a modular portfolio I can add to over time</li><br />
+              <li className={`${'goalsli2'} ${projectIsVisible ? 'goalsli2-animation' : ''}`}>Get more experience using Next.js, Tailwind CSS, and React</li><br />
+              <li className={`${'goalsli3'} ${projectIsVisible ? 'goalsli3-animation' : ''}`}>Practiced what I've learned of responsive web design and accessibility</li>
             </ul>
             <br />
-            <h1 className="projectH1">Opportunities</h1>
+            <h2 className={`${'projectH2-2'} ${projectIsVisible ? 'projectH-animation' : ''}`}>Opportunities</h2>
             <br />
             <ul className="oppul">
-              <li className="oppli">Learned about animations, content creation and even photography</li><br />
-              <li className="oppli">Learned about polyfills and scripts to get the animations to work on more browsers</li>
+              <li className={`${'oppli1'} ${projectIsVisible ? 'oppli1-animation' : ''}`}>Learned about animations, content creation and even photography</li><br />
+              <li className={`${'oppli2'} ${projectIsVisible ? 'oppli2-animation' : ''}`}>Learned about polyfills and scripts to get the animations to work on more browsers</li>
             </ul>
           </div>
         </section>
@@ -360,7 +364,12 @@ export default function Home() {
             </div>  
           </div>                                        
         </section>            
-        
+        <section className="
+                  APIDemoSection 
+                  bg-lightBG
+                  dark:bg-darkBG">
+                    <ApiDemo/>
+        </section>
       </main>
       <Footer /> 
     </div>

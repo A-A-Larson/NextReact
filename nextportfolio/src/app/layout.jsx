@@ -11,7 +11,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <Script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js" strategy='beforeInteractive' async />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <link rel="icon" href="/favicon.ico" sizes="any" />        
       </head>
