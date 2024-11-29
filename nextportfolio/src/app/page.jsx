@@ -11,8 +11,6 @@ import LHand from './img/LHand.png';
 import RHand from './img/RHand.png';
 import Image from 'next/image';
 import About from './img/aboutbust1.png'
-import constructionTapeImg from './img/construction.png'
-import constructionFrameImg from './img/constructionFrame.png'
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { SiJavascript } from "react-icons/si";
@@ -28,9 +26,10 @@ import Footer from './components/Footer';
 
 
 export default function Home() {
-  const { ref: techRef, inView: techIsVisible } = useInView({});
-  const { ref: aboutRef, inView: aboutIsVisible } = useInView({});
-  const { ref: projectRef, inView: projectIsVisible } = useInView({});
+  const { ref: aboutRef, inView: aboutIsVisible } = useInView({"triggerOnce": true});
+  const { ref: projectRef, inView: projectIsVisible } = useInView({"triggerOnce": true});
+  const { ref: techRef, inView: techIsVisible } = useInView({"triggerOnce": true});
+  
     
   return (
     <div>
@@ -162,7 +161,7 @@ export default function Home() {
                       text-lightHdrClr 
                       dark:text-darkHdrClr'>
 
-            <h1 className={`${'aboutH1'} ${aboutIsVisible ? 'aboutH1-animation' : ''}`}>About Me</h1>
+            <h1 className={`${'aboutH1'} ${aboutIsVisible && 'aboutH1-animation'}`}>About Me</h1>
 
             <div className={`${'about1'} ${aboutIsVisible ? 'about1-animation' : ''}`}>
               <h2 className="aboutH2">What am I doing now?</h2>

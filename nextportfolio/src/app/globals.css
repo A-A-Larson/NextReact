@@ -34,6 +34,7 @@ body {
 section {
   min-height: 100vh;
   min-height: 100svh;
+  overflow: hidden;
   /* scroll-snap-align: start;
   scroll-snap-stop: always; */
 }
@@ -163,7 +164,6 @@ section {
   align-content: center;
   z-index: 1;
   padding: 1rem;
-  overflow: hidden;
 }
 
 .aboutLayout {
@@ -247,7 +247,6 @@ section {
   z-index: 1;
   padding: 3em;  
   font-size: 1.2rem;
-  overflow: hidden;
 }
 
 .projectH1 {  
@@ -477,23 +476,12 @@ section {
 }
 
 .apiP {
-  width: 60ch;
+  max-width: 60ch;
+  padding: 1em;
 }
 
 .apiForm {
   padding-top: 1em;
-}
-
-.apiTableContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 1em;
-}
-
-.apiValueColumn {  
-  max-width: 60ch;
 }
 
 #vinput {  
@@ -505,8 +493,30 @@ section {
   border-radius: 4px;
   padding-left: .2em;
   padding-right: .2em;
-  margin-left: 1em;
+  margin-left: .5em;
 }
+
+.apiTableContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1em;
+}
+
+.apiTable {
+  border-collapse: collapse;
+}
+
+.apiFieldColumn {
+  max-width: 15ch;
+}
+
+.apiValueColumn {  
+  max-width: 15ch;
+}
+
+
 
 /* NAVIGATION START */
 
@@ -880,6 +890,14 @@ section {
   
   .skillName {
     font-size: 1em;
+  }
+
+  .apiFieldColumn {
+
+  }
+  
+  .apiValueColumn {  
+    max-width: 60ch;
   }
 
   /* FOOTER START */

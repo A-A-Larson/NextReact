@@ -70,10 +70,10 @@ const ApiDemo = () => {
             {error && <div style={{ color: 'red' }}>{error}</div>}
 
             {vehicle && vehicle.Results && vehicle.Results.length > 0 && (
-                
+
             <div className='apiTableContainer'>
                 <h2 className='apiH2'>Vehicle Information:</h2>
-                <table className='apiTable' border="1" style={{ width: '100%', borderCollapse: 'collapse' }}>
+                <table className='apiTable border border-lightHdrClr dark:border-darkHdrClr' border="1">
                     <thead>
                         <tr>
                             <th>Field</th>
@@ -86,8 +86,8 @@ const ApiDemo = () => {
                         if (result.Variable && result.Value) {
                         return (
                             <tr key={index}>
-                            <td><strong>{result.Variable}</strong></td>
-                            <td className='apiValueColumn'>{result.Value}</td>
+                            <td className='apiFieldColumn border border-lightHdrClr dark:border-darkHdrClr'><strong>{result.Variable}:</strong></td>
+                            <td className='apiValueColumn border border-lightHdrClr dark:border-darkHdrClr'>{result.Value}</td>
                             </tr>
                         );
                         }
