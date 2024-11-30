@@ -136,22 +136,14 @@ section {
 .main__action {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  height: 10vh;
+  align-items: center;
+  margin-top: 1em;
 }
 
 .main__scroll {
-  height: 10vh;
-  
+  width: 15%;  
 }
 
-.main__scroll-box {
-  height: 4em;
-}
-
-.main__scroll-text {  
-  font-size: 1rem;
-}
 
 .main__action .main__scroll-box {
   animation: scroll-down 3s infinite;
@@ -167,9 +159,6 @@ section {
 }
 
 .aboutLayout {
-  font-size: 1.2rem;
-  line-height: 1.75rem;
-  padding-top: 3rem;
   display: grid;
   gap: 1em;
   grid-template-columns: repeat(2, 1fr);
@@ -192,7 +181,7 @@ section {
 }
 
 .aboutH1-animation {
-  animation: slideRight 3s both;
+  animation: slideRight 1s both;
 }
 
 .about1 {
@@ -200,7 +189,7 @@ section {
 }
 
 .about1-animation {
-  animation: slideRight 3s both;
+  animation: slideRight 1s both;
 }
 
 .about2 {
@@ -208,7 +197,7 @@ section {
 }
 
 .about2-animation {
-  animation: slideRight 3.5s both;
+  animation: slideRight 1.5s both;
 }
 
 .about3 {
@@ -216,14 +205,12 @@ section {
 }
 
 .about3-animation {
-  animation: slideRight 4s both;
+  animation: slideRight 2s both;
 }
 
 .aboutH2 {
   font-size: 1.5rem;
   font-weight: 700;
-  padding-top: 1em;
-  padding-bottom: .4em;
 }
 
 .aboutImg {
@@ -235,18 +222,13 @@ section {
   align-self: end;
 }
 
-.about-animation {
-  animation: textReveal 1.1s both;
-}
-
 .projectSection {
   grid-area: project;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1;
-  padding: 3em;  
-  font-size: 1.2rem;
+  padding: 1em;  
 }
 
 .projectH1 {  
@@ -256,7 +238,7 @@ section {
 }
 
 .projectH-animation {  
-  animation: slideLeft 3s both;
+  animation: slideLeft 1.5s both;
 }
 
 .projectDiv H2 {
@@ -264,20 +246,28 @@ section {
   font-weight: 600;
 }
 
+.goalsul {
+  padding-left: 1em;
+}
+
+.oppul {
+  padding-left: 1em;
+}
+
 .goalsul li::marker {
   content: "✔️";
 }
 
 .goalsli1-animation {
-  animation: slideLeft 4s both;
+  animation: slideLeft 1.5s both;
 }
 
 .goalsli2-animation {
-  animation: slideLeft 4.5s both;
+  animation: slideLeft 2s both;
 }
 
 .goalsli3-animation {
-  animation: slideLeft 5s both;
+  animation: slideLeft 2.5s both;
 }
 
 .oppul li::marker {
@@ -285,11 +275,11 @@ section {
 }
 
 .oppli1-animation {
-  animation: slideLeft 6s both;
+  animation: slideLeft 3s both;
 }
 
 .oppli2-animation {
-  animation: slideLeft 6.5s both;
+  animation: slideLeft 3.5s both;
 }
 
 /* TECH STACK START */
@@ -482,18 +472,18 @@ section {
 
 .apiForm {
   padding-top: 1em;
+  font-size: .9rem;
 }
 
 #vinput {  
-  border-radius: 4px;
-  
+  border-radius: 4px;  
 }
 
 .vinButton {
   border-radius: 4px;
-  padding-left: .2em;
-  padding-right: .2em;
-  margin-left: .5em;
+  padding-left: .1em;
+  padding-right: .1em;
+  margin-left: .25em;
 }
 
 .apiTableContainer {
@@ -849,8 +839,8 @@ section {
     line-height: 3.8rem;
   }
 
-  .main__scroll-box {
-    height: 1.3em;
+  .main__action {
+    margin-top: 0;
   }
 
   .navUL {
@@ -874,6 +864,10 @@ section {
                          "grid2    grid4"
   }
 
+  .about3-animation {
+    animation: slideLeft 2s both;
+  }
+
   .techGrid {
     max-width: 504px;
     max-height: 504px;
@@ -890,10 +884,6 @@ section {
   
   .skillName {
     font-size: 1em;
-  }
-
-  .apiFieldColumn {
-
   }
   
   .apiValueColumn {  
@@ -990,6 +980,10 @@ section {
                          "grid1    grid4 "
                          "grid2    grid4 "
                          "grid3    grid4"
+  }
+
+  .about3-animation {
+    animation: slideRight 2s both;
   }
 
   .aboutImg {

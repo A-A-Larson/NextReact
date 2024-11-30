@@ -127,14 +127,14 @@ export default function Home() {
               <div className="main__action">
                 <a className="main__scroll" href="#Scroll-Location">              
                   <div className="main__scroll-box">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="main__scroll-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path d="M0 0h24v24H0z" fill="none"></path>
                       <path className="fill-lightHdrClr dark:fill-darkHdrClr" 
                             d="M11.9997 13.1716L7.04996     8.22186L5.63574 9.63607L11.9997 16L18.3637 9.63607L16.9495 8.22186L11.9997 13.1716Z">
                       </path>
                     </svg>
                   </div>    
-                  <span className="main__scroll-text headerIntro">Learn More</span>
+                  
                 </a>
               </div>  
             </h1>   
@@ -222,7 +222,7 @@ export default function Home() {
             <br />
             <ul className="oppul">
               <li className={`${'oppli1'} ${projectIsVisible ? 'oppli1-animation' : ''}`}>Learned about animations, content creation and even photography</li><br />
-              <li className={`${'oppli2'} ${projectIsVisible ? 'oppli2-animation' : ''}`}>Learned about polyfills and scripts to get the animations to work on more browsers</li>
+              <li className={`${'oppli2'} ${projectIsVisible ? 'oppli2-animation' : ''}`}>Learned about polyfills and scripts to get animations to work on more browsers</li>
             </ul>
           </div>
         </section>

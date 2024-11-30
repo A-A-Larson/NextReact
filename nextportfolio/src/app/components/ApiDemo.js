@@ -35,7 +35,7 @@ const ApiDemo = () => {
 
     return (
         <div className='apiDemoContainer text-lightHdrClr dark:text-darkHdrClr'>
-            <h1 className='apiH1 '>API Demo: VIN Decoder</h1>
+            <h1 className='apiH1'>API Demo: VIN Decoder</h1>
             <p className='apiP'>
                 I created this section to demonstrate API calls. 
                 I often need to decode Vehicle Identification Numbers 
@@ -43,14 +43,16 @@ const ApiDemo = () => {
                 information on a vehicle. So I decided I would make my own!
             </p> <br/>
 
-            <ul>Try these:
+            <ul className='apiUL'><strong>Try these VINs:</strong>
+                <li>SCEDT26T1CD020105</li>
+                <li>1G2AW87S8DN206835</li> 
+                <li>WP0AA2Y18PSA00103</li>
                 <li>2HGEJ6611YH548121</li>
-                <li>1N4AZ0CP1DC422632</li> 
             </ul> <br/> 
 
             <form className='apiForm' method='post' onSubmit={handleSubmit}>
                 <label htmlFor='vinput'>
-                    Enter VIN:  <input 
+                        VIN: <input 
                                     className='bg-lightBG dark:bg-darkBG border border-lightHdrClr dark:border-darkHdrClr'
                                     type='text' 
                                     id='vinput' 
