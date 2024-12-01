@@ -1,4 +1,3 @@
-import { aboutRef, aboutIsVisible } from "../hooks/useRefs.jsx";
 import Image from 'next/image';
 import About from '../img/aboutbust1.png';
 import { useInView } from "react-intersection-observer";

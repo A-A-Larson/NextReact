@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState } from 'react';
 
 const ApiDemo = () => {
     const [vehicle, setVehicle] = useState(null);

@@ -156,6 +156,7 @@ section {
   align-content: center;
   z-index: 1;
   padding: 1rem;
+  font-size: 1.2rem;
 }
 
 .aboutLayout {
@@ -229,6 +230,7 @@ section {
   align-items: center;
   z-index: 1;
   padding: 1em;  
+  font-size: 1.2rem;
 }
 
 .projectH1 {  
@@ -238,7 +240,7 @@ section {
 }
 
 .projectH-animation {  
-  animation: slideLeft 1.5s both;
+  animation: slideLeft 1s both;
 }
 
 .projectDiv H2 {
@@ -247,11 +249,11 @@ section {
 }
 
 .goalsul {
-  padding-left: 1em;
+  padding-left: 1.3em;
 }
 
 .oppul {
-  padding-left: 1em;
+  padding-left: 1.3em;
 }
 
 .goalsul li::marker {
@@ -259,15 +261,15 @@ section {
 }
 
 .goalsli1-animation {
-  animation: slideLeft 1.5s both;
+  animation: slideLeft 1s both;
 }
 
 .goalsli2-animation {
-  animation: slideLeft 2s both;
+  animation: slideLeft 1.25s both;
 }
 
 .goalsli3-animation {
-  animation: slideLeft 2.5s both;
+  animation: slideLeft 1.5s both;
 }
 
 .oppul li::marker {
@@ -275,11 +277,11 @@ section {
 }
 
 .oppli1-animation {
-  animation: slideLeft 3s both;
+  animation: slideLeft 1.75s both;
 }
 
 .oppli2-animation {
-  animation: slideLeft 3.5s both;
+  animation: slideLeft 2s both;
 }
 
 /* TECH STACK START */
