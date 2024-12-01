@@ -53,15 +53,15 @@ const ApiDemo = () => {
             <form className='apiForm' method='post' onSubmit={handleSubmit}>
                 <label htmlFor='vinput'>
                         VIN: <input 
-                                    className='bg-lightBG dark:bg-darkBG border border-lightHdrClr dark:border-darkHdrClr'
-                                    type='text' 
-                                    id='vinput' 
-                                    value={VIN}
-                                    onChange={e => setVIN(e.target.value)}
-                                    minLength="17" 
-                                    maxLength="17"
-                                    size="17"
-                                />    
+                                className='bg-lightBG dark:bg-darkBG border border-lightHdrClr dark:border-darkHdrClr'
+                                type='text' 
+                                id='vinput' 
+                                value={VIN}
+                                onChange={e => setVIN(e.target.value)}
+                                minLength="17" 
+                                maxLength="17"
+                                size="17"
+                             />    
                 </label> 
                 <button className='vinButton border border-lightHdrClr dark:border-darkHdrClr' 
                         type='submit' value="Submit">
