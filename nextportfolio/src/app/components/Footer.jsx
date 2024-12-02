@@ -16,17 +16,13 @@ export default function Footer() {
 
             <Image
               className='footer-bg block dark:hidden'    
-              src={FooterBGL}   
-              quality={100}
-              priority={true}
+              src={FooterBGL} 
               alt='Cement pavement with the name Andrew Larson written in chalk'
             />   
 
             <Image
               className='footer-bg hidden dark:block'    
-              src={FooterBGD}   
-              quality={100}
-              priority={true}
+              src={FooterBGD} 
               alt='Cement pavement with the name Andrew Larson written in chalk'
             />      
 
@@ -44,15 +40,13 @@ export default function Footer() {
 
             <Image
               className='footerImg block dark:hidden'     
-              src={FooterImgL}   
-              quality={100}
+              src={FooterImgL} 
               alt='Feet sticking out from the bottom of the webpage.'
             />
 
             <Image
               className='footerImg hidden dark:block'    
-              src={FooterImgD}   
-              quality={100}
+              src={FooterImgD}  
               alt='Feet sticking out from the bottom of the webpage.'
             /> 
 

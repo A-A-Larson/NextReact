@@ -15,13 +15,12 @@ export default function Landing() {
                 <Image
                 className='backgroundLayer block dark:hidden'
                 src={BGImg}  
-                priority={true}
+                priority={true}  
                 alt='Cloudy sky during the day'
                 /> 
                 <Image  
                 className='backgroundLayer hidden dark:block'             
                 src={BGImgDark}
-                priority={true} 
                 alt='Night sky'                  
                 />  
                 <Image
@@ -29,25 +28,23 @@ export default function Landing() {
                 width={3024}
                 height={1500}
                 src={BodyImg}   
-                quality={100}
-                priority={true}
+                priority={true}  
                 alt='Man with hands overlapping the top of the webpage as if he is holding onto it'
                 />    
                 <Image       
                 className='handsbg block dark:hidden'        
                 src={HandsLight}
+                priority={true} 
                 alt='Floating hands'
                 width={6880}
-                height={1440}   
-                priority={true}                     
+                height={1440}                    
                 />    
                 <Image  
                 className='handsbg hidden dark:block'             
                 src={HandsDark}
                 alt='Floating hands'
                 width={6880}
-                height={1440}     
-                priority={true}                   
+                height={1440}                     
                 />    
 
                 <div className="handsLayers">                
@@ -56,16 +53,14 @@ export default function Landing() {
                     src={LHand}
                     alt='Floating hand'
                     width={575}
-                    height={1440}   
-                    priority={true}                     
+                    height={1440}                     
                 />      
                 <Image       
                     className='hand RHand'        
                     src={RHand}
                     alt='Floating hand'
                     width={592}
-                    height={1440}   
-                    priority={true}                     
+                    height={1440}                      
                 />    
                 </div>
               

@@ -24,7 +24,7 @@ html {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   color-scheme: dark light;
-  font-family: system-ui, sans-serif;
+  font-family: inter, system-ui, sans-serif;
 }
 
 body {
@@ -119,17 +119,18 @@ section {
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  font-family: var(--font-just-another-hand);
 }
 
 .headerIntro {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   margin-right: auto;
   font-weight: 600;
 }
 
 .headerName {
-  font-weight: 900;
-  font-size: 2rem;
+  font-weight: 500;
+  font-size: 4rem;
   line-height: .8;
 }
 
@@ -660,6 +661,7 @@ section {
   width: 100%;
   overflow: hidden;
   grid-area: footers;
+  
 }
 
 .footerParallax {
@@ -705,7 +707,9 @@ section {
   align-items: center;
   font-size: 1rem;
   text-shadow: 0px 0px 4px black;
-  font-weight: 600;
+  font-weight: 500;
+  font-family: var(--font-just-another-hand);
+  letter-spacing: .05em;
 }
 
 .footer-icon:hover {  
@@ -722,9 +726,10 @@ section {
   }
   
   .headerName {
-    font-weight: 900;
-    font-size: 2.5rem;
+    font-weight: 500;
+    font-size: 4rem;
     line-height: 2.5rem;
+    letter-spacing: .075em;
   }
 
   .footer-icon-wrapper {
@@ -746,6 +751,7 @@ section {
     font-size: 1.2rem;
     text-shadow: 0px 0px 4px black;
     font-weight: 600;
+    letter-spacing: .05em;
   }
 }
 
@@ -771,9 +777,10 @@ section {
 @media (min-width: 600px) {
   
   .headerName {
-    font-weight: 900;
-    font-size: 3.8rem;
-    line-height: .9;
+    font-weight: 500;
+    font-size: 6rem;
+    line-height: .75;
+    letter-spacing: .075em;
   }
 }
 
@@ -836,9 +843,10 @@ section {
   }
 
   .headerName {
-    font-weight: 900;
-    font-size: 5rem;
-    line-height: 3.8rem;
+    font-weight: 500;
+    font-size: 6rem;
+    line-height: 4.8rem;
+    letter-spacing: .075em;
   }
 
   .main__action {
@@ -940,13 +948,14 @@ section {
   transition: transform 0.5s;
   padding-right: 1em;
   color: #f7fefe;
-  filter: blur(0.65px);
+  filter: blur(0.4px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-shadow: 0px 0px 4px black;
+  letter-spacing: .05em;
 }
 
 .footer-icon:hover {  
