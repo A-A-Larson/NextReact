@@ -16,7 +16,7 @@ export default function Project() {
             <ul className="goalsul"><br />
               <li className={`${'goalsli1'} ${projectIsVisible ? 'goalsli1-animation' : ''}`}>Build a modular portfolio I can add to over time</li><br />
               <li className={`${'goalsli2'} ${projectIsVisible ? 'goalsli2-animation' : ''}`}>Get more experience using Next.js, Tailwind CSS, and React</li><br />
-              <li className={`${'goalsli3'} ${projectIsVisible ? 'goalsli3-animation' : ''}`}>Practiced what I've learned of responsive web design and accessibility</li>
+              <li className={`${'goalsli3'} ${projectIsVisible ? 'goalsli3-animation' : ''}`}>Practiced what I&apos;ve learned of responsive web design and accessibility</li>
             </ul>
             <br />
             <h2 className={`${'projectH2-2'} ${projectIsVisible ? 'projectH-animation' : ''}`}>Opportunities</h2>

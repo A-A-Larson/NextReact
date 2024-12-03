@@ -24,7 +24,7 @@ export default function AboutMe() {
             <div className={`${'about2'} ${aboutIsVisible ? 'about2-animation' : ''}`}>
               <h2 className="aboutH2">How did I get here?</h2>
               <p className='aboutP2'>
-              In 2007 I started a career as a mechanic with a degree in automotive technology. Since then I've been a self starter, working independently in a commision shop with tight deadlines. A mechanical team lead on a production line that used Six Sigma methodology and Lean production with weekly sprints. I've achieved the title of Master Automotive Techician and run out of new things to learn. <br /><br />As a lifelong learner, I'm starting a new chapter in my life as I trade in my wrenches for a keyboard.
+              In 2007 I started a career as a mechanic with a degree in automotive technology. Since then I&apos;ve been a self starter, working independently in a commision shop with tight deadlines. A mechanical team lead on a production line that used Six Sigma methodology and Lean production with weekly sprints. I&apos;ve achieved the title of Master Automotive Techician and run out of new things to learn. <br /><br />As a lifelong learner, I&apos;m starting a new chapter in my life as I trade in my wrenches for a keyboard.
               </p>
             </div>
 
