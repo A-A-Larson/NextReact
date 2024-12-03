@@ -18,6 +18,7 @@ export default function NavHeader() {
                     <a 
                         href="#"
                         className='navAnchor'
+                        aria-label="Home button that scrolls to the top of the page."
                     >
                         <FaHome size={30} />
                     </a>Home
@@ -26,6 +27,7 @@ export default function NavHeader() {
                     <a 
                         href="https://github.com/A-A-Larson"
                         className='navAnchor'
+                        aria-label="A link to my GitHub profile"
                     >
                         <FaGithub size={28} />
                     </a>GitHub
@@ -34,6 +36,7 @@ export default function NavHeader() {
                     <a 
                         href="https://www.linkedin.com/in/andrew-larson-0bb59b218"
                         className='navAnchor'
+                        aria-label="A link to my linkedin profile."
                     >
                         <FaLinkedin size={28} />
                     </a>LinkedIn
@@ -42,16 +45,15 @@ export default function NavHeader() {
                     <a 
                         href="mailto:drewlars83@gmail.com"
                         className='navAnchor'
+                        aria-label="A link to my email address."
                     >
                         <IoIosMail size={30} />
                     </a>Contact Me
                 </li>
                 <li className='navLI dark:text-darkTxtClr cardWrapper'>
-                    <a                         
-                        className='navAnchor'
-                    >
-                        <ThemeToggle />
-                    </a>On/Off
+                    
+                    <ThemeToggle />
+                    On/Off
                 </li>
             </ul>
         </nav>

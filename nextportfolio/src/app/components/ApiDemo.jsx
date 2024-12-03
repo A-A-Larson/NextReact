@@ -42,8 +42,8 @@ const ApiDemo = () => {
                 to verify vehicle specs when looking up parts or service
                 information on a vehicle. So I decided I would make my own!
             </p> <br/>
-
-            <ul className='apiUL'><strong>Try these VINs:</strong>
+            <h2 className='apiH2'>Try these VINs:</h2>
+            <ul className='apiUL'>
                 <li>SCEDT26T1CD020105</li>
                 <li>1G2AW87S8DN206835</li> 
                 <li>WP0AA2Y18PSA00103</li>
