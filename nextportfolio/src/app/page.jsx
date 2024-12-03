@@ -12,7 +12,7 @@ export default function Home() {
     
   return (
     <div>
-      <main className="mainGrid bg-lightBG text-lightTxtClr dark:bg-darkBG dark:text-darkTxtClr">           
+      <main className="mainGrid bg-lightBG text-lightTxtClr dark:bg-darkBG dark:text-darkTxtClr" role="main">           
         <section className='landingSection'>        
           <Landing/>            
         </section>        
