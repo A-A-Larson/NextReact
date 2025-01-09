@@ -4,10 +4,11 @@
 
 :root {
   --backgroundLight: rgb(255, 255, 255);
-  --backgroundDark: #222831;
-  --textcolorLight: rgb(0, 0, 0);
+  --backgroundLightAccent: lightgrey;
+  --backgroundDark: #222c31;
+  --textcolorLight: #a9a9a9;
   --textcolorDark: rgb(255, 255, 255);
-  --headercolorLight: rgb(51, 59, 165);
+  --headercolorLight: #3f3f3f;
   --headercolorDark: #EEEEEE;
   --buttonColorLight: rgb(23, 68, 182);
   --buttonColorDark: rgb(235, 204, 126);
@@ -16,7 +17,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --backgroundDark: #222c31;
+    
+    
   }
 }
 
@@ -47,9 +49,9 @@ section {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: "landing landing landing"
                        "navHead navHead navHead"
-                       "aboutMe aboutMe aboutMe"
-                       "project project project"
+                       "aboutMe aboutMe aboutMe"                       
                        "techSec techSec techSec"
+                       "project project project"
                        "APIDemo APIDemo APIDemo"
                        "footers footers footers";
 }
@@ -73,10 +75,45 @@ section {
   object-fit: cover;
 }
 
-.backgroundLayer {
+.slideshow-container {
+  height: 45vh;
+  height: 45svh;
+  position: absolute;
+  object-fit: cover;  
+}
+
+.slideshow-images {
+  height: 100%;
+  width: 100%;
   object-fit: cover;
-  position: fixed;
-  width: 100vw;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fade {
+  0% {opacity: 0} 
+  50% {opacity: 1}
+  100% {opacity: 0} 
+}
+
+.fadeComponent {
+  height: 100%;
+  width: 100%;
+}
+
+.react-slideshow-container {
+  height: 100%;
+}
+
+.each-slide {  
+  height: 100%;
+  width: 100%;
 }
 
 .bodyLayer {
@@ -318,6 +355,13 @@ section {
   grid-area: techHead;
 }
 
+.techHead {
+  font-size: 3rem /* 48px */;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+}
+
 .techGrid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -325,7 +369,8 @@ section {
                        '.... ........ .........  ...  ....'
                        '.... ........ react      ...  ....'
                        '.... tailwind next       sql  pyth'
-                       'html css      javascript php  java';  
+                       'html css      javascript php  java'
+                       '.... ........ click  ...  ....';  
   justify-items: center;
   align-items: center;
   max-width: 304px;
@@ -371,6 +416,10 @@ section {
   margin-top: auto;
   font-size: 0.7em;
   color: black;
+}
+
+.clickText {
+  padding-top: 1em;
 }
 
 #html {
@@ -419,6 +468,10 @@ section {
 
 #react {
   grid-area: react;  
+}
+
+#clickText {
+  grid-area: click;
 }
 
 .column1-grid-animation{
@@ -684,6 +737,7 @@ section {
   height: 18svh;
   display: flex;
   justify-content: center;
+  align-items: end;
   bottom: 0;
 }
 
@@ -692,34 +746,47 @@ section {
   object-fit: cover;
 }
 
+.footer-content-container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.copyright-content {
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  font-family: var(--font-just-another-hand);
+  font-size: 1.75rem;
+}
+
 .footer-icon-wrapper {
   display: flex;
+  justify-content: center;
   z-index: 2;
   bottom: 8%;
 }
 
-.footer-bg {
+/* .footer-bg {
   height: 18vh;
   height: 18svh;
-}
+} removed with footerV1*/
 
 .footerImg {
   height: 100%;
-  max-width: 1024px;
+  max-width: 1150px;
 }
 
 .footer-icon {
   rotate: x -60deg;
   transition: transform 0.5s;
-  padding-right: .5em;
-  color: #f7fefe;
-  filter: blur(0.4px);
+  padding-right: .25em;
+  padding-left: .25em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  text-shadow: 0px 0px 4px black;
   font-weight: 500;
   font-family: var(--font-just-another-hand);
   letter-spacing: .05em;
@@ -745,6 +812,10 @@ section {
     letter-spacing: .075em;
   }
 
+  .copyright-content {
+    font-size: 2rem;
+  }
+
   .footer-icon-wrapper {
     display: flex;
     z-index: 2;
@@ -754,15 +825,13 @@ section {
   .footer-icon {
     rotate: x -60deg;
     transition: transform 0.5s;
-    padding-right: .75em;
-    color: #f7fefe;
-    filter: blur(0.4px);
+    padding-right: .35em;
+    padding-left: .35em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-    text-shadow: 0px 0px 4px black;
     font-weight: 600;
     letter-spacing: .05em;
   }
@@ -891,6 +960,11 @@ section {
     animation: slideLeft 2s both;
   }
 
+  .techHead {
+    font-size: 3.75rem /* 60px */;
+    line-height: 1;
+  }
+
   .techGrid {
     max-width: 504px;
     max-height: 504px;
@@ -916,8 +990,8 @@ section {
   /* FOOTER START */
 
 .footerSection {
-  height: 35vh;
-  height: 35svh;
+  height: 25vh;
+  height: 25svh;
   width: 100%;
   overflow: hidden;
   grid-area: footers;
@@ -926,11 +1000,11 @@ section {
 .footerParallax {
   position: fixed;
   width: 100%;
-  height: 35vh;
-  height: 35svh;
+  height: 25vh;
+  height: 25svh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
   bottom: 0;
 }
 
@@ -946,28 +1020,31 @@ section {
   bottom: 25%;
 }
 
-.footer-bg {
+.copyright-content {
+  font-size: 2.5rem;
+  letter-spacing: .05em;
+}
+
+/* .footer-bg {
   height: 35vh;
   height: 35svh;
-}
+} removed with footerV1 */
 
 .footerImg {
   height: 100%;
-  max-width: 1500px;
+  max-width: 1900px;
 }
 
 .footer-icon {
   rotate: x -55deg;
-  transition: transform 0.5s;
-  padding-right: 1em;
-  color: #f7fefe;
-  filter: blur(0.4px);
+  transition: transform 0.5s;  
+  padding-right: .35em;
+  padding-left: .35em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  text-shadow: 0px 0px 4px black;
   letter-spacing: .05em;
 }
 
@@ -987,8 +1064,8 @@ section {
     grid-template-areas: "landing  landing  landing"
                          "navHead  navHead  navHead"
                          "aboutMe  aboutMe  aboutMe"
-                         "project  project  project"
                          "techSec  techSec  techSec"
+                         "project  project  project"
                          "APIDemo  APIDemo  APIDemo"
                          "footers  footers  footers";
   }  

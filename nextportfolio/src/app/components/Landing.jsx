@@ -1,28 +1,23 @@
-import BGImg from '../img/BGImg4.jpg';
-import BGImgDark from '../img/BGImg22.jpg';
 import BodyImg from '../img/BlueshirtV2HSave.png';
 import HandsLight from '../img/HandsUWlbg.png';
 import HandsDark from '../img/HandsUWdbg.png';
 import LHand from '../img/LHand.png';
 import RHand from '../img/RHand.png';
 import Image from 'next/image';
+import Carousel from '../components/Carousel';
 
 export default function Landing() {
     return (
         <>
-            <div className='parallax'>
+            <div className='
+                  parallax
+                  bg-lightAccent
+                  text-lightHdrClr 
+                  dark:text-darkHdrClr'
+            >
 
-                <Image
-                className='backgroundLayer block dark:hidden'
-                src={BGImg}  
-                priority={true}  
-                alt='Cloudy sky during the day'
-                /> 
-                <Image  
-                className='backgroundLayer hidden dark:block'             
-                src={BGImgDark}
-                alt='Night sky'                  
-                />  
+                {/* <Carousel/> */}
+                
                 <Image
                 className='bodyLayer'                
                 width={3024}

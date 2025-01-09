@@ -16,22 +16,16 @@ export default function Tech() {
 
     return (
         <div ref={techRef} className='techObserve'>
+          <div>
             <h1 className={`${'techHead'} 
-                            ${'text-4xl'}
-                            ${'xs:text-5xl'}
-                            ${'md:text-6xl'}
-                            ${'font-black'}
-                            ${'tracking-tighter'}
-                            ${'leading-snug'}
-                            ${'text-center'}
                             ${'text-lightHdrClr'}
                             ${'dark:text-darkHdrClr'}
                             ${techIsVisible ? 'techHead-grid-animation' : ''}
                           `}>
-              Tech Stack:
+              Tech Stack:              
             </h1>
-
-            <div className='techGrid'>           
+            </div>
+            <div className='techGrid text-lightHdrClr dark:text-darkHdrClr'>           
 
               <a id='react' className='cardWrapper' href="https://github.com/search?q=user%3AA-A-Larson+topic%3Areact&type=repositories">
                 <div className={`${'skillCard'} ${techIsVisible ? 'column3-grid-animation' : ''}`}>
@@ -142,7 +136,8 @@ export default function Tech() {
                   </div>
                 </div>
               </a>
-
+              <div id="clickText" className="clickText">(Click One)</div>
+              
             </div>  
           </div>    
     )

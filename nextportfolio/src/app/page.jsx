@@ -5,7 +5,7 @@ import AboutMe from './components/AboutMe';
 import Project from './components/Project';
 import Tech from './components/Tech';
 import ApiDemo from "./components/ApiDemo";
-import Footer from './components/Footer';
+import Footer2 from './components/Footer2';
 
 
 export default function Home() {    
@@ -20,17 +20,17 @@ export default function Home() {
         <section className='aboutSection bg-lightBG dark:bg-darkBG' id="Scroll-Location">
           <AboutMe />
         </section>
-        <section className='projectSection bg-lightBG dark:bg-darkBG'>          
-          <Project/>
-        </section>
         <section className='techSection bg-lightBG dark:bg-darkBG'>        
           <Tech/>                      
-        </section>            
+        </section> 
+        <section className='projectSection bg-lightBG dark:bg-darkBG'>          
+          <Project/>
+        </section>                   
         <section className="APIDemoSection bg-lightBG dark:bg-darkBG">
           <ApiDemo/>
         </section>
       </main>
-      <Footer /> 
+      <Footer2 /> 
     </div>
   )
 };

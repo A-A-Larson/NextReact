@@ -14,6 +14,7 @@ module.exports = {
       colors: {
         'lightBG': 'var(--backgroundLight)',
         'darkBG': 'var(--backgroundDark)',
+        'lightAccent': 'var(--backgroundLightAccent)',
         'lightTxtClr': 'var(--textcolorLight)',
         'darkTxtClr': 'var(--textcolorDark)',
         'lightHdrClr': 'var(--headercolorLight)',
