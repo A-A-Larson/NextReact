@@ -963,6 +963,7 @@ section {
   .bodyLayer {
     position: fixed;
     max-width: 950px;
+    top: -1px;
   }
   
   .hands {
