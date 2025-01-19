@@ -14,7 +14,7 @@ export default function NavHeader() {
                 dark:bg-darkBG
                 '>
             <ul className='navUL'>
-                <li className='navLI dark:text-darkTxtClr cardWrapper'>
+                <li className='navLI dark:text-darkTxtClr navHeaderButtons'>
                     <a 
                         href="#"
                         className='navAnchor'
@@ -24,7 +24,7 @@ export default function NavHeader() {
                         <FaHome size={30} />
                     </a>Home
                 </li>
-                <li className='navLI dark:text-darkTxtClr cardWrapper'>
+                <li className='navLI dark:text-darkTxtClr navHeaderButtons'>
                     <a 
                         href="https://github.com/A-A-Larson"
                         className='navAnchor'
@@ -34,7 +34,7 @@ export default function NavHeader() {
                         <FaGithub size={28} />
                     </a>GitHub
                 </li>
-                <li className='navLI dark:text-darkTxtClr cardWrapper'>
+                <li className='navLI dark:text-darkTxtClr navHeaderButtons'>
                     <a 
                         href="https://www.linkedin.com/in/andrew-larson-0bb59b218"
                         className='navAnchor'
@@ -44,7 +44,7 @@ export default function NavHeader() {
                         <FaLinkedin size={28} />
                     </a>LinkedIn
                 </li>
-                <li className='navLI dark:text-darkTxtClr cardWrapper'>
+                <li className='navLI dark:text-darkTxtClr navHeaderButtons'>
                     <a 
                         href="mailto:drewlars83@gmail.com"
                         className='navAnchor'
@@ -54,7 +54,7 @@ export default function NavHeader() {
                         <IoIosMail size={30} />
                     </a>Contact Me
                 </li>
-                <li className='navLI dark:text-darkTxtClr cardWrapper'>
+                <li className='navLI dark:text-darkTxtClr navHeaderButtons'>
                     
                     <ThemeToggle />
                     On/Off

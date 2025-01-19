@@ -9,24 +9,24 @@ export default function AboutMe() {
                       text-lightHdrClr 
                       dark:text-darkHdrClr'>
 
-            <h1 className='aboutH1'>About Me</h1>
+            <h2 className='aboutH2'>About Me</h2>
 
             <div className='about1'>
-              <h2 className="aboutH2">What am I doing now?</h2>
+              <h3 className="aboutH3">What am I doing now?</h3>
               <p className='aboutP1'>
               I am finishing a degree in full stack web development with a certificate in computer programming and another in web and mobile app development while doing an internship at a data analytics firm.
               </p>
             </div>
 
             <div className='about2'>
-              <h2 className="aboutH2">How did I get here?</h2>
+              <h3 className="aboutH3">How did I get here?</h3>
               <p className='aboutP2'>
               In 2007 I started a career as a mechanic with a degree in automotive technology. Since then I&apos;ve been a self starter, working independently in a commision shop with tight deadlines. A mechanical team lead on a production line that used Six Sigma methodology and Lean production with weekly sprints. I&apos;ve achieved the title of Master Automotive Techician and run out of new things to learn. <br /><br />As a lifelong learner, I&apos;m starting a new chapter in my life as I trade in my wrenches for a keyboard.
               </p>
             </div>
 
             <div className='about3'>
-              <h2 className="aboutH2">Where do I want to go from here?</h2>
+              <h3 className="aboutH3">Where do I want to go from here?</h3>
               <p className='aboutP3'>
               As I approach graduation I will continue working on projects, building my portfolio and looking for opportunities to gain real world experience. Use the email button in the navigation bar or footer to connect!
               </p>

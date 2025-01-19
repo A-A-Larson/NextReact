@@ -1,17 +1,15 @@
 'use client';
 import Image from 'next/image';
 import FooterImgL from '../img/footlayer8.png';
-import FooterImgD from '../img/footlayer8v2.png';
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
-import FooterBGL from '../img/footbg16.png';
-import FooterBGD from '../img/footbg14.png';
 
 
 export default function Footer() {
     return (
-        <footer className='footerSection
+        <footer className='
+                  footerSection
                   bg-lightAccent'>   
           <div className='footerParallax'>
 

@@ -15,6 +15,10 @@ const ApiDemo = () => {
         }
         setLoading(true);
         setError(null); // Clear any previous errors
+
+        if (loading) {
+            return '<div>Loading</div>'
+        }
     
         try {
           const response = await fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVin/${VIN}?format=json`);
@@ -23,7 +27,7 @@ const ApiDemo = () => {
           if (!response.ok) {
             throw new Error("Failed to fetch vehicle data.");
           }
-    
+          
           const data = await response.json(); // Parse the JSON response
           setVehicle(data);
         } catch (error) {
@@ -35,20 +39,25 @@ const ApiDemo = () => {
 
     return (
         <div className='apiDemoContainer text-lightHdrClr dark:text-darkHdrClr'>
-            <h1 className='apiH1'>API Demo: VIN Decoder</h1>
-            <p className='apiP'>
-                I created this section to demonstrate API calls. 
-                I often need to decode Vehicle Identification Numbers 
-                to verify vehicle specs when looking up parts or service
-                information on a vehicle. So I decided I would make my own!
-            </p> <br/>
-            <h2 className='apiH2'>Try these VINs:</h2>
-            <ul className='apiUL'>
-                <li>SCEDT26T1CD020105</li>
-                <li>1G2AW87S8DN206835</li> 
-                <li>WP0AA2Y18PSA00103</li>
-                <li>2HGEJ6611YH548121</li>
-            </ul> <br/> 
+            
+                <h2 className='apiH2'>API Demo: VIN Decoder</h2>
+                <div className='apiTextContainer'>
+                    <p className='apiP'>
+                        I created this section to demonstrate API calls. 
+                        I often need to decode Vehicle Identification Numbers 
+                        to verify vehicle specs when looking up parts or service
+                        information on a vehicle. So I decided I would make my own!
+                    </p> <br/>
+                    <div className='examplesContainer dark:border-inherit'>
+                        <h3 className='apiH3'>Try these VINs:</h3>
+                        
+                            <p className='apiLI'>SCEDT26T1CD020105</p>
+                            <p className='apiLI'>1G2AW87S8DN206835</p> 
+                            <p className='apiLI'>WP0AA2Y18PSA00103</p>
+                            <p className='apiLI'>2HGEJ6611YH548121</p>
+                        
+                    </div>
+                </div>
 
             <form className='apiForm' method='post' onSubmit={handleSubmit}>
                 <label htmlFor='vinput'>
@@ -74,7 +83,7 @@ const ApiDemo = () => {
             {vehicle && vehicle.Results && vehicle.Results.length > 0 && (
 
             <div className='apiTableContainer'>
-                <h2 className='apiH2'>Vehicle Information:</h2>
+                <h3 className='apiH3'>Vehicle Information:</h3>
                 <table className='apiTable border border-lightHdrClr dark:border-darkHdrClr' border="1">
                     <thead>
                         <tr>
