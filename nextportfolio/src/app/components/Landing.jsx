@@ -1,4 +1,4 @@
-import BodyImg from '../img/BlueshirtV2HSave.png';
+import BodyImg from '../img/BlueshirtV3HSave.png';
 import HandsLight from '../img/HandsUWlbg.png';
 import HandsDark from '../img/HandsUWdbg.png';
 import LHand from '../img/LHand.png';
