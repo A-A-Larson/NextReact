@@ -1,6 +1,5 @@
 // app/components/RepositoryCard.jsx
 "use client";
-import Image from 'next/image';
 import React, { useState } from 'react';
 
 export default function RepositoryCard({ repo }) {
@@ -15,7 +14,7 @@ export default function RepositoryCard({ repo }) {
       className="block"
     >
       <div className="card h-96 flex flex-col border rounded-lg shadow hover:shadow-lg transition p-4">
-        <Image
+        <img
           src={imgSrc}
           alt={`${repo.name} project image`}
           className="w-full h-48 object-contain rounded mb-4"
