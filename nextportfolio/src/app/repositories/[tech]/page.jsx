@@ -59,7 +59,7 @@ export default async function RepositoryPage({ params }) {
     <main className="techPageMain p-4 text-lightHdrClr dark:text-darkHdrClr bg-lightBG dark:bg-darkBG">
       <h1 className="text-2xl font-bold mb-6">{tech.toUpperCase()} Projects</h1>
       {enrichedRepos.length === 0 ? (
-        <p>No repositories found using the topic "{tech}".</p>
+        <p>No repositories found using the topic &quot;{tech}&quot;.</p>
       ) : (
         <div className="bg-lightBG dark:bg-darkBG grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {enrichedRepos.map((repo) => (
