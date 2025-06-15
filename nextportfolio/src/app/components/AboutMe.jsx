@@ -39,7 +39,7 @@ export default function AboutMe() {
             <div className='about3'>
               <h3 className="aboutH3">Where do I want to go from here?</h3>              
               <p className='aboutP3'>
-              I'll continue working on personal projects, building my portfolio and 
+              I&apos;ll continue working on personal projects, building my portfolio and 
               looking for opportunities to gain real world experience. Use the email 
               button in the navigation bar or footer to connect!
               </p>
