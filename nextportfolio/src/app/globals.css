@@ -234,18 +234,30 @@ section {
   grid-area: grid1;
 }
 
+.aboutP1 {
+  padding-top: 1em;
+}
+
 .about2 {
   grid-area: grid2;
+}
+
+.aboutP2 {
+  padding-top: 1em;
 }
 
 .about3 {
   grid-area: grid3;
 }
 
+.aboutP3 {
+  padding-top: 1em;
+}
+
 .aboutH3 {
   font-size: 1.5rem;
   font-weight: 700;
-  padding-bottom: .5em;
+  padding-top: .5em;
 }
 
 .aboutImg {
@@ -352,9 +364,6 @@ section {
 /* TECH STACK START */
 .techSection {
   grid-area: techSec;  
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 1;
   min-height: 80vh;
   min-height: 80svh;
@@ -380,23 +389,23 @@ section {
   letter-spacing: -0.05em;
   width: 12ch;
   text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .techGrid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-areas: '.... ........ .........  ...  ....'
-                       '.... ........ .........  ...  ....'
-                       '.... ........ react      ...  ....'
-                       '.... tailwind next       sql  pyth'
-                       'html css      javascript php  java'
-                       '.... click    click      click ....';  
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: '....       ........    react         ....'
+                       '....       tailwind    sql           pyth'
+                       'flutter    css         javascript    java'
+                       '....       click       click         ....';  
   justify-content: center;
   align-items: center;
   gap: .25em;
   height: 70vh;
   width: 100%;
-  max-width: 550px;
+  max-width: 450px;
   padding-left: 1em;
   padding-right: 1em;
 }
@@ -446,8 +455,8 @@ section {
   text-align: center;
 }
 
-#html {
-  grid-area: html;
+#flutter {
+  grid-area: flutter;
 }
 
 #css {
@@ -458,24 +467,12 @@ section {
   grid-area: javascript;
 }
 
-#php {
-  grid-area: php;
-}
-
-#php > * {
-  color: #7a86b8;
-}
-
 #java {
   grid-area: java;
 }
 
 #tailwind {
   grid-area: tailwind;
-}
-
-#next {
-  grid-area: next;
 }
 
 #sql {
@@ -941,7 +938,7 @@ section {
   
   .techGrid {    
     width: 100%;
-    max-width: 550px;
+    max-width: 450px;
   }
   
 }
@@ -1154,26 +1151,22 @@ section {
  
   .techObserve {    
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     height: 100%;
     width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .techHead {    
     text-align: left;
   }
 
-  .techObserve {    
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
   .techGrid {      
     padding-right: .7em;
     margin: 0; 
-    justify-content: flex-end;
     padding-left: 0;
     padding-right: 0;
   }

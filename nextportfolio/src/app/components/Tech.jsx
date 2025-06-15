@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
-import { FaReact, FaCss3Alt, FaHtml5, FaJava } from 'react-icons/fa';
+import { FaReact, FaCss3Alt, FaJava } from 'react-icons/fa';
 import { FaPython } from 'react-icons/fa';
+import { SiFlutter } from "react-icons/si";
 import { BsFiletypeSql } from 'react-icons/bs';
-import { SiNextdotjs, SiTailwindcss, SiPhp, SiJavascript } from 'react-icons/si';
+import { SiTailwindcss, SiJavascript } from 'react-icons/si';
 
 export default function Tech() {
   const { ref: techRef, inView: techIsVisible } = useInView({ triggerOnce: true });
@@ -46,15 +47,6 @@ export default function Tech() {
           </div>
         </Link>
 
-        <Link href="/repositories/nextjs" className="cardWrapper" id="next">
-          <div className={`skillCard ${techIsVisible ? 'column3-grid-animation' : ''}`}>
-            <div className="skillLogo">
-              <SiNextdotjs color="black" />
-            </div>
-            <div className="skillName">Next.js</div>
-          </div>
-        </Link>
-
         <Link href="/repositories/tailwind" className="cardWrapper" id="tailwind">
           <div className={`skillCard ${techIsVisible ? 'column2-grid-animation' : ''}`}>
             <div className="skillLogo">
@@ -70,15 +62,6 @@ export default function Tech() {
               <FaJava color="darkblue" />
             </div>
             <div className="skillName">Java</div>
-          </div>
-        </Link>
-
-        <Link href="/repositories/php" className="cardWrapper" id="php">
-          <div className={`skillCard ${techIsVisible ? 'column4-grid-animation' : ''}`}>
-            <div className="skillLogo">
-              <SiPhp />
-            </div>
-            <div className="skillName">PHP</div>
           </div>
         </Link>
 
@@ -100,12 +83,12 @@ export default function Tech() {
           </div>
         </Link>
 
-        <Link href="/repositories/html" className="cardWrapper" id="html">
+        <Link href="/repositories/flutter" className="cardWrapper" id="flutter">
           <div className={`skillCard ${techIsVisible ? 'column1-grid-animation' : ''}`}>
             <div className="skillLogo">
-              <FaHtml5 color="red" />
+              <SiFlutter color="#03569b"/>
             </div>
-            <div className="skillName">HTML</div>
+            <div className="skillName">Flutter</div>
           </div>
         </Link>
         <div id="clickText" className="clickText">

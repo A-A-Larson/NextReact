@@ -20,7 +20,7 @@ export default function Home() {
         <section className='aboutSection bg-lightBG dark:bg-darkBG' id="Scroll-Location">
           <AboutMe />
         </section>
-        <section className='techSection bg-lightBG dark:bg-darkBG'>        
+        <section className='techSection bg-lightBG dark:bg-darkBG'> 
           <Tech/>                      
         </section> 
         <section className='projectSection bg-lightBG dark:bg-darkBG'>          
