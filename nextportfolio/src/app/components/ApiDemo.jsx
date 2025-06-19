@@ -45,7 +45,7 @@ const ApiDemo = () => {
                     <p className='apiP'>
                         I created this section to demonstrate API calls. 
                         I often need to decode Vehicle Identification Numbers 
-                        to verify vehicle specs when looking up parts or service
+                        to verify specs when looking up parts or service
                         information on a vehicle. So I decided I would make my own!
                     </p> <br/>
                     <div className='examplesContainer dark:border-inherit'>
