@@ -11,7 +11,7 @@ export default function RepositoryCard({ repo }) {
       href={repo.html_url}
       target="_blank"
       rel="noopener noreferrer"
-      className="block"
+      className="repositoryCard block"
     >
       <div className="card h-96 flex flex-col border rounded-lg shadow hover:shadow-lg transition p-4">
         <img

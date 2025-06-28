@@ -12,12 +12,12 @@
   --headercolorDark: #EEEEEE;
   --buttonColorLight: rgb(23, 68, 182);
   --buttonColorDark: rgb(235, 204, 126);
-  --iconcolorDark: #b7d0e1
+  --iconcolorDark: #b7d0e1;
+  --darkHoverClr: #2e3a3f;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    
+  :root {    
     
   }
 }
@@ -39,6 +39,20 @@ body {
 
 .techPageMain {  
   height: 100vh;
+}
+
+.techPageH1 {
+  font-size: 4rem;
+  line-height: 1;
+  font-weight: 900;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-family: var(--font-just-another-hand);
+}
+
+.repositoryCard {
+  padding-bottom: 1rem;
 }
 
 section {
@@ -751,30 +765,25 @@ section {
 
 .navLI {
   color: var(--headercolorLight);  
+  border-radius: 8px;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .navAnchor {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .themetoggle {
   cursor: pointer;
 }
-
-.navHeaderButtons {
-  animation: offHover .3s both;
-}
-
-.navHeaderButtons:hover {
-  animation: onHover .3s forwards;
-  z-index: 99;
-} 
-
-.navHeaderButtons:active {
-  animation: offHover .3s both; 
-} 
 
 /* NAVIGATION HEADER END */
 /* NAVIGATION END */
@@ -1156,8 +1165,7 @@ section {
     align-items: center;
     height: 100%;
     width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 1rem;
   }
 
   .techHead {    
