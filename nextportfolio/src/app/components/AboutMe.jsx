@@ -14,9 +14,9 @@ export default function AboutMe() {
             <div className='about1'>
               <h3 className="aboutH3">What am I doing now?</h3>
               <p className='aboutP1'>
-              Now that I&apos;ve recently graduated, I&apos;m working part-time as a 
-              Junior Developer on an Angular project while working full-time as a 
-              Mobile App Developer Intern on a Flutter project. 
+              Now that I&apos;ve recently graduated, I&apos;m working as a 
+              Junior Developer on an Angular project. In my spare time I&apos;ve
+              been building personal projects using Flutter. 
               </p>
             </div>
 
