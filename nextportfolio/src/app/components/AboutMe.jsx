@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import About from '../img/aboutbust2.png';
+import About from '../img/aboutbust3.png';
 
 export default function AboutMe() {
     
