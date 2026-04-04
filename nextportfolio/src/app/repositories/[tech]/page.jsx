@@ -29,7 +29,19 @@ function extractFirstImageUrl(markdown) {
 }
 
 export default async function RepositoryPage({ params }) {
-  const { tech } = params;
+  // Await params to ensure it's resolved (Next.js 15+)
+  const resolvedParams = await params;
+  const { tech } = resolvedParams;
+  
+  // Add safety check
+  if (!tech) {
+    return (
+      <main className="p-4">
+        <h1>Technology parameter is missing</h1>
+      </main>
+    );
+  }
+
   let repoData;
 
   try {
@@ -69,4 +81,18 @@ export default async function RepositoryPage({ params }) {
       )}
     </main>
   );
+}
+
+// Add this to pre-generate static pages
+export async function generateStaticParams() {
+  return [
+    { tech: 'react' },
+    { tech: 'python' },
+    { tech: 'sql' },
+    { tech: 'tailwind' },
+    { tech: 'java' },
+    { tech: 'javascript' },
+    { tech: 'css' },
+    { tech: 'flutter' },
+  ];
 }
